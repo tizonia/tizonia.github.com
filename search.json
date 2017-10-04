@@ -1,0 +1,88 @@
+[
+
+  
+    
+    
+    {
+      "title": "Debian/Ubuntu/Raspbian",
+      "url": "/docs/debian/"
+
+    },
+  
+    
+    
+    {
+      "title": "Arch Linux",
+      "url": "/docs/aur/"
+
+    },
+  
+    
+    
+    {
+      "title": "From Source",
+      "url": "/docs/building/"
+
+    },
+  
+
+  
+    
+    
+    {
+      "title": "Spotify",
+      "url": "/docs/spotify/"
+
+    },
+  
+    
+    
+    {
+      "title": "Google Play Music",
+      "url": "/docs/googlemusic/"
+
+    },
+  
+    
+    
+    {
+      "title": "YouTube",
+      "url": "/docs/youtube/"
+
+    },
+  
+    
+    
+    {
+      "title": "SoundCloud",
+      "url": "/docs/soundcloud/"
+
+    },
+  
+    
+    
+    {
+      "title": "Dirble Internet Radio Stations",
+      "url": "/docs/dirble/"
+
+    },
+  
+
+  
+    
+    
+    {
+      "title": "Official Documentation",
+      "url": "/docs/documentation/"
+
+    },
+  
+
+
+  
+  {
+  "title": "Tizonia&#39;s new web!",
+  "url": "/news/2017/10/02/tizonia-new-web/"
+  }
+  
+]
