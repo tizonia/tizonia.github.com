@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Debian/Ubuntu/Raspbian</title>
+    <title>Open Source</title>
     <meta name="description" content="        ">
 
 
@@ -15,22 +15,22 @@
 
     <link rel="shortcut icon" href="/favicon.ico?1">
     <!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>Debian/Ubuntu/Raspbian | The Tizonia Project</title>
-<meta property="og:title" content="Debian/Ubuntu/Raspbian" />
+<title>Open Source | The Tizonia Project</title>
+<meta property="og:title" content="Open Source" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble." />
 <meta property="og:description" content="Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble." />
-<link rel="canonical" href="https://www.tizonia.com/docs/debian/" />
-<meta property="og:url" content="https://www.tizonia.com/docs/debian/" />
+<link rel="canonical" href="https://www.tizonia.com/docs/development/" />
+<meta property="og:url" content="https://www.tizonia.com/docs/development/" />
 <meta property="og:site_name" content="The Tizonia Project" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2017-10-05T22:00:24+01:00" />
 <script type="application/ld+json">
-{"name":null,"description":"Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.","author":null,"@type":"WebPage","url":"https://www.tizonia.com/docs/debian/","publisher":null,"image":null,"headline":"Debian/Ubuntu/Raspbian","dateModified":"2017-10-05T22:00:24+01:00","datePublished":"2017-10-05T22:00:24+01:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":null,"description":"Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.","author":null,"@type":"WebPage","url":"https://www.tizonia.com/docs/development/","publisher":null,"image":null,"headline":"Open Source","dateModified":"2017-10-05T22:00:24+01:00","datePublished":"2017-10-05T22:00:24+01:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="canonical" href="https://www.tizonia.com/docs/debian/">
+    <link rel="canonical" href="https://www.tizonia.com/docs/development/">
     <link rel="alternate" type="application/rss+xml" title="The Tizonia Project" href="https://www.tizonia.com/feed.xml" />
 </head>
 
@@ -92,7 +92,7 @@
         
           
           
-          <a class="list-group-item active" href="/docs/debian/">Debian/Ubuntu/Raspbian</a>
+          <a class="list-group-item " href="/docs/debian/">Debian/Ubuntu/Raspbian</a>
         
           
           
@@ -158,7 +158,7 @@
         
           
           
-          <a class="list-group-item " href="/docs/development/">Open Source</a>
+          <a class="list-group-item active" href="/docs/development/">Open Source</a>
         
       </ul>
     </div>
@@ -169,139 +169,51 @@
         </div>
 
         <div class="col-md-8">
-            <h1>Debian/Ubuntu/Raspbian</h1>
+            <h1>Open Source</h1>
             <div id="markdown-content-container"><div class="header-container jumbotron">
     <div class="container">
     </div>
 </div>
 
-<h2 id="installation">Installation</h2>
+<h3 id="license">License</h3>
 
 <div class="well">
- <p>Install Tizonia on a Debian-compatible distro by simply running:</p>
+ <p>Tizonia is an Open Source project licensed under the <a href="https://opensource.org/licenses/LGPL-3.0" class="alert-link">LGPLv3</a>.</p>
 </div>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>   <span class="nv">$ </span>curl -kL https://github.com/tizonia/tizonia-openmax-il/raw/master/tools/install.sh | bash
-   <span class="c"># Or its shortened version:</span>
-   <span class="nv">$ </span>curl -kL https://goo.gl/Vu8qGR | bash
-</code></pre>
-</div>
-
-<div class="panel panel-warning">
-  <div class="panel-heading">
-    <h3 class="panel-title">Important</h3>
-  </div>
-  <div class="panel-body">
-  This above commands download and execute a script called 'install.sh' that installs Tizonia and all of its dependencies on a Debian-compatible system.
-  The script is hosted on <a href="https://github.com/tizonia/tizonia-openmax-il/blob/master/tools/install.sh" class="alert-link">
-GitHub</a>. Please have a look at it before running it on your system.
-  </div>
-</div>
-
-<h3 id="debian-packages-on-bintray">Debian Packages on Bintray</h3>
+<h3 id="source-code">Source Code</h3>
 
 <div class="well">
- <p>Tizonia's Debian/Ubuntu packages are hosted on <a href="https://bintray.com/tizonia">Bintray</a> for the following distro/arch combinations:</p>
+ <p>Development is hosted on <a href="https://github.com/tizonia/tizonia-openmax-il" class="alert-link">GitHub</a>.</p>
+ <p>Go ahead and <a href="https://github.com/tizonia/tizonia-openmax-il/issues">file an issue</a> if you have tried
+ Tizonia and found a problem while at it.</p>
+ <p>Visit the <a href="https://github.com/tizonia/tizonia-openmax-il/releases">releases</a> section on GitHub for information
+ on the lastest changes in the project.</p>
+ <p>The <a href="https://github.com/tizonia/tizonia-openmax-il#roadmap">project roadmap</a> is on the README.md file in the repo.</p>
 </div>
 
-<div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Supported Debian-derived distros</div>
+<h3 id="continuous-integration">Continuous Integration</h3>
 
-  <!-- Table -->
-<table class="table table-striped table-hover ">
-  <thead>
-    <tr>
-      <th>Distro</th>
-      <th>amd64</th>
-      <th>armhf</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Ubuntu Xenial</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr class="active">
-      <td>Ubuntu Trusty</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr class="active">
-      <td>Debian Jessie</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr class="active">
-      <td>Debian Stretch</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr class="active">
-      <td>Raspbian Jessie</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr class="active">
-      <td>Raspbian Stretch</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
+<div class="well">
+ <p>Continuous build and testing occurs on <a href="https://travis-ci.org/tizonia/tizonia-openmax-il" class="alert-link">Travis CI</a>.</p>
 </div>
 
-<div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="../../img/debian-logo.png" alt="Debian" />
-      <div class="caption">
-      <center>
-        <p><a href="https://bintray.com/tizonia/debian" class="btn btn-primary" role="button">Download</a></p>
-      </center>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="../../img/ubuntu-logo.png" alt="Ubuntu" />
-      <div class="caption">
-      <center>
-        <p><a href="https://bintray.com/tizonia/ubuntu" class="btn btn-primary" role="button">Download</a></p>
-      </center>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="../../img/raspbian-logo.png" alt="Raspbian" />
-      <div class="caption">
-      <center>
-        <p><a href="https://bintray.com/tizonia/raspbian" class="btn btn-primary" role="button">Download</a></p>
-      </center>
-      </div>
-    </div>
-  </div>
+<h3 id="static-analysis">Static Analysis</h3>
+
+<div class="well">
+ <p>Static analysis builds on <a href="https://scan.coverity.com/projects/594" class="alert-link">Coverity Scan</a> </p>
 </div>
 
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">Other Ubuntu-based Distros</h3>
-  </div>
-  <div class="panel-body">
-  <p>Elementary OS and Linux Mint are supported on releases based on
-  Ubuntu 'Trusty' or Ubuntu 'Xenial'.</p>
-  </div>
+<h3 id="code-coverage">Code Coverage</h3>
+
+<div class="well">
+ <p>Code coverage analysis on <a href="https://codecov.io/gh/tizonia/tizonia-openmax-il" class="alert-link">Codecov.io</a></p>
 </div>
 
-<div class="alert alert-warning" role="alert">
-  For further installation instructions, please visit the
-  <a href="https://github.com/tizonia/tizonia-openmax-il/blob/master/README.md" class="alert-link">
-  README.md</a> file on GitHub or the official documentation on
-  <a href="http://docs.tizonia.org/development/BUILDING.html" class="alert-link">
-  Read the Docs</a>.
+<h3 id="tizonia-on-openhub">Tizonia on OpenHub</h3>
+
+<div class="well">
+ <p>Project stats on <a href="https://www.openhub.net/p/tizonia" class="alert-link">OpenHub</a></p>
 </div>
 </div>
             <p class="text-center">
@@ -316,20 +228,47 @@ GitHub</a>. Please have a look at it before running it on your system.
 
   
   
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
     <ul class="pager">
       
-        <li class="previous disabled">
-          <a>
+        
+        
+        <li class="previous">
+          <a href="/docs/documentation/">
             <span aria-hidden="true">&larr;</span> Previous
           </a>
         </li>
       
 
       
-        
-        
-        <li class="next">
-          <a href="/docs/aur/">
+        <li class="next disabled">
+          <a>
             Next <span aria-hidden="true">&rarr;</span>
           </a>
         </li>

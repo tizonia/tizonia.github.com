@@ -24,9 +24,9 @@
 <meta property="og:url" content="https://www.tizonia.com/docs/aur/" />
 <meta property="og:site_name" content="The Tizonia Project" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-10-05T15:20:43+01:00" />
+<meta property="article:published_time" content="2017-10-05T22:00:24+01:00" />
 <script type="application/ld+json">
-{"name":null,"description":"Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.","author":null,"@type":"WebPage","url":"https://www.tizonia.com/docs/aur/","publisher":null,"image":null,"headline":"Arch Linux","dateModified":"2017-10-05T15:20:43+01:00","datePublished":"2017-10-05T15:20:43+01:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":null,"description":"Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.","author":null,"@type":"WebPage","url":"https://www.tizonia.com/docs/aur/","publisher":null,"image":null,"headline":"Arch Linux","dateModified":"2017-10-05T22:00:24+01:00","datePublished":"2017-10-05T22:00:24+01:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -54,6 +54,7 @@
             <ul class="nav navbar-nav">
                 <li  class="active" ><a href="/docs/debian/">Explore</a></li>
                 <li  class="active" ><a href="/news/2017/10/02/tizonia-new-web/">News</a></li>
+                <li class="active"><a href="https://github.com/tizonia/tizonia-openmax-il">GitHub</a></li>
             </ul>
             <div class="navbar-right">
                 <form class="navbar-form navbar-left">
@@ -144,7 +145,7 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
-          Documentation
+          Docs
         </a>
       </h4>
     </div>
@@ -154,6 +155,10 @@
           
           
           <a class="list-group-item " href="/docs/documentation/">Official Documentation</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs/development/">Open Source</a>
         
       </ul>
     </div>
@@ -172,27 +177,29 @@
 
 <h2 id="arch-user-repository-aur">Arch User Repository (AUR)</h2>
 
-<div class="alert alert-warning" role="alert">
-Tizonia is also installable on Arch Linux with package descriptions available to
+<div class="well">
+ <p>Tizonia is installable on Arch Linux with package descriptions available to
 download from the
-<a href="https://aur.archlinux.org/" class="alert-link">Arch User Repository</a>
+<a href="https://aur.archlinux.org/" class="alert-link">Arch User Repository</a></p>
 </div>
 
 <h3 id="aur-packages">AUR Packages</h3>
 
-<div class="panel panel-primary">
-  <div class="panel-heading">
-    <h3 class="panel-title">AUR Packages</h3>
-  </div>
-  <div class="panel-body">
-  <center>
-  <p><a href="https://aur.archlinux.org/packages/tizonia-all" class="btn btn-primary" role="button">tizonia-all (0.9.0)</a>
-  <a href="https://aur.archlinux.org/packages/tizonia-all-git/" class="btn btn-primary" role="button">tizonia-all-git</a></p>
-  </center>
-  </div>
+<!-- Table -->
+<div class="table-responsive">
+<table class="table table-striped table-hover ">
+<tbody>
+  <tr>
+    <td align="center"><a href="https://aur.archlinux.org/packages/tizonia-all" class="btn btn-primary" role="button">tizonia-all (0.9.0)</a></td>
+    <td align="center"><a href="https://aur.archlinux.org/packages/tizonia-all-git/" class="btn btn-primary" role="button">tizonia-all-git</a></td>
+  </tr>
+</tbody>
+</table>
 </div>
 
-<p>To install Tizonia on an Arch-compatible system, do something like this:</p>
+<div class="well">
+ <p>To install Tizonia on an Arch-compatible system, do something like this:</p>
+</div>
 
 <div class="language-bash highlighter-rouge"><pre class="highlight"><code>   <span class="nv">$ </span>yaourt -S tizonia-all <span class="c"># for the latest released version</span>
    <span class="c"># or</span>

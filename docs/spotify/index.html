@@ -24,9 +24,9 @@
 <meta property="og:url" content="https://www.tizonia.com/docs/spotify/" />
 <meta property="og:site_name" content="The Tizonia Project" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2017-10-05T15:20:43+01:00" />
+<meta property="article:published_time" content="2017-10-05T22:00:24+01:00" />
 <script type="application/ld+json">
-{"name":null,"description":"Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.","author":null,"@type":"WebPage","url":"https://www.tizonia.com/docs/spotify/","publisher":null,"image":null,"headline":"Spotify","dateModified":"2017-10-05T15:20:43+01:00","datePublished":"2017-10-05T15:20:43+01:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":null,"description":"Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.","author":null,"@type":"WebPage","url":"https://www.tizonia.com/docs/spotify/","publisher":null,"image":null,"headline":"Spotify","dateModified":"2017-10-05T22:00:24+01:00","datePublished":"2017-10-05T22:00:24+01:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -54,6 +54,7 @@
             <ul class="nav navbar-nav">
                 <li  class="active" ><a href="/docs/debian/">Explore</a></li>
                 <li  class="active" ><a href="/news/2017/10/02/tizonia-new-web/">News</a></li>
+                <li class="active"><a href="https://github.com/tizonia/tizonia-openmax-il">GitHub</a></li>
             </ul>
             <div class="navbar-right">
                 <form class="navbar-form navbar-left">
@@ -144,7 +145,7 @@
     <div class="panel-heading">
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
-          Documentation
+          Docs
         </a>
       </h4>
     </div>
@@ -154,6 +155,10 @@
           
           
           <a class="list-group-item " href="/docs/documentation/">Official Documentation</a>
+        
+          
+          
+          <a class="list-group-item " href="/docs/development/">Open Source</a>
         
       </ul>
     </div>
@@ -177,20 +182,52 @@
     <h3 class="panel-title">Stream Playlists from your Spotify account</h3>
   </div>
   <div class="panel-body">
-  <p>Simply provide a playlist from your library as shown below.</p>
+  <div class="well">
+   <p>Simply provide a playlist from your library as shown below.</p>
+  </div>
   <img src="../../img/tizonia-spotify-screencast.gif" alt="tizonia-spotify-screencast.gif" />
   </div>
 </div>
+
+<h3 id="configuration">Configuration</h3>
 
 <div class="panel panel-warning">
   <div class="panel-heading">
     <h3 class="panel-title">NOTE</h3>
   </div>
   <div class="panel-body">
-  <p>Spotify playback with Tizonia requires a Premium subscription.</p>
+  <p>Spotify playback requires a Premium subscription.</p>
+  <p>No OAuth support at the moment for Spotify.</p>
   </div>
 </div>
 
+<div class="well">
+ <p>To use Spotify, introduce your credentials in Tizonia's config file.</p>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>    <span class="c"># If you are configuring Tizonia for the first time,</span>
+    <span class="c"># copy the template to your $HOME folder, like this:</span>
+
+    <span class="nv">$ </span>mkdir -p <span class="nv">$HOME</span>/.config/tizonia
+    <span class="nv">$ </span>cp /etc/tizonia/tizonia.conf <span class="nv">$HOME</span>/.config/tizonia/tizonia.conf
+
+    <span class="c"># ( now edit $HOME/.config/tizonia/tizonia.conf )</span>
+</code></pre>
+</div>
+
+<div class="well">
+ <p>See instructions inside the file for more information:</p>
+</div>
+
+<div class="language-ini highlighter-rouge"><pre class="highlight"><code><span class="c"># Spotify configuration
+# -------------------------------------------------------------------------
+# To avoid passing this information on the command line, uncomment
+# and configure accordingly
+#
+</span><span class="py">spotify.user</span>     <span class="p">=</span> <span class="s">user</span>
+<span class="py">spotify.password</span> <span class="p">=</span> <span class="s">pass</span>
+</code></pre>
+</div>
 </div>
             <p class="text-center">
               <br />
