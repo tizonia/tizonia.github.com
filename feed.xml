@@ -1,28 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://www.tizonia.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.tizonia.com/" rel="alternate" type="text/html" /><updated>2017-10-05T13:51:45+01:00</updated><id>https://www.tizonia.com/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
-</subtitle><entry><title type="html">Tizonia’s new web!</title><link href="https://www.tizonia.com/news/2017/10/02/tizonia-new-web/" rel="alternate" type="text/html" title="Tizonia's new web!" /><published>2017-10-02T23:23:00+01:00</published><updated>2017-10-02T23:23:00+01:00</updated><id>https://www.tizonia.com/news/2017/10/02/tizonia-new-web</id><content type="html" xml:base="https://www.tizonia.com/news/2017/10/02/tizonia-new-web/">&lt;p&gt;The Tizonia Project has from today a new web site!.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://www.tizonia.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.tizonia.com/" rel="alternate" type="text/html" /><updated>2017-10-05T15:20:43+01:00</updated><id>https://www.tizonia.com/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+</subtitle><entry><title type="html">New Website!</title><link href="https://www.tizonia.com/news/2017/10/02/tizonia-new-web/" rel="alternate" type="text/html" title="New Website!" /><published>2017-10-02T23:23:00+01:00</published><updated>2017-10-02T23:23:00+01:00</updated><id>https://www.tizonia.com/news/2017/10/02/tizonia-new-web</id><content type="html" xml:base="https://www.tizonia.com/news/2017/10/02/tizonia-new-web/">&lt;p&gt;The Tizonia Project has from today a new web site!.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.simplybuilt.com/&quot;&gt;SimplyBuilt&lt;/a&gt;, the web builder app and hosting
 shop that has been very kindly (and for free) hosting Tizonia’s website in the
 last few years is &lt;a href=&quot;http://www.simplybuilt.com/farewell-and-thanks&quot;&gt;closing
 down&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;So it has been necessary to find a new place.&lt;/p&gt;
+&lt;p&gt;So long SimplyBuilt, and thanks for all the fish!&lt;/p&gt;
 
-&lt;p&gt;Luckily, finding a replacement has been extremely easy. &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub
-Pages&lt;/a&gt; and &lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; are
-these days the ‘de-facto’ standard in free hosting for open source
-projects.&lt;/p&gt;
+&lt;p&gt;So.. it was necessary to find a new place. Luckily, finding a replacement has
+not been difficult. &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; and
+&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; are these days the ‘de-facto’ standard in free
+hosting for open source projects.&lt;/p&gt;
 
-&lt;p&gt;So here it is, the new site and blog for Tizonia.&lt;/p&gt;
+&lt;p&gt;So there your go, a new web site and blog for Tizonia.&lt;/p&gt;
 
-&lt;p&gt;The site is based on the really nice
-&lt;a href=&quot;https://github.com/aksakalli/jekyll-doc-theme&quot;&gt;jekyll-doc-theme&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&quot;credits&quot;&gt;Credits&lt;/h3&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;    &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get remove ruby
-    &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get autoremove
-    &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-add-repository ppa:brightbox/ruby-ng
-    &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get update
-    &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get upgrade
-    &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo apt-get install ruby2.4 ruby2.4-dev
-    &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo gem update --system
-    &lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;sudo gem install jekyll bundler bundle&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;</content><author><name>juanrubio</name></author><summary type="html">The Tizonia Project has from today a new web site!.</summary></entry></feed>
+&lt;p&gt;This site is based on the ‘Jekyll Documentation Theme’ developed by &lt;a href=&quot;https://aksakalli.github.io/&quot;&gt;Can Güney Aksakalli&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The GitHub repo for this theme is &lt;a href=&quot;https://github.com/aksakalli/jekyll-doc-theme&quot;&gt;https://github.com/aksakalli/jekyll-doc-theme&lt;/a&gt; and the demo is at &lt;a href=&quot;https://aksakalli.github.io/jekyll-doc-theme/&quot;&gt;https://aksakalli.github.io/jekyll-doc-theme/&lt;/a&gt;.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">The Tizonia Project has from today a new web site!.</summary></entry></feed>
