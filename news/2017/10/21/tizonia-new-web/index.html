@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>New release Tizonia v0.10.0</title>
+    <meta name="description" content="Tizonia version 0.10.0 codenamed “Cuevas delAlmanzora” is out!.">
+
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>New release Tizonia v0.10.0 | The Tizonia Project</title>
+<meta property="og:title" content="New release Tizonia v0.10.0" />
+<meta name="author" content="juanrubio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tizonia version 0.10.0 codenamed “Cuevas del Almanzora” is out!." />
+<meta property="og:description" content="Tizonia version 0.10.0 codenamed “Cuevas del Almanzora” is out!." />
+<link rel="canonical" href="https://www.tizonia.com/news/2017/10/21/tizonia-new-web/" />
+<meta property="og:url" content="https://www.tizonia.com/news/2017/10/21/tizonia-new-web/" />
+<meta property="og:site_name" content="The Tizonia Project" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-10-21T23:10:00+01:00" />
+<script type="application/ld+json">
+{"name":null,"description":"Tizonia version 0.10.0 codenamed “Cuevas del Almanzora” is out!.","author":{"@type":"Person","name":"juanrubio"},"@type":"BlogPosting","url":"https://www.tizonia.com/news/2017/10/21/tizonia-new-web/","publisher":null,"image":null,"headline":"New release Tizonia v0.10.0","dateModified":"2017-10-21T23:10:00+01:00","datePublished":"2017-10-21T23:10:00+01:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"https://www.tizonia.com/news/2017/10/21/tizonia-new-web/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="https://www.tizonia.com/news/2017/10/21/tizonia-new-web/">
+    <link rel="alternate" type="application/rss+xml" title="The Tizonia Project" href="https://www.tizonia.com/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/img/logonav.png"></span> The Tizonia Project
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="/docs/debian/">Explore</a></li>
+                <li  class="active" ><a href="/news/2017/10/21/tizonia-new-web/">News</a></li>
+                <li class="active"><a href="https://github.com/tizonia/tizonia-openmax-il">GitHub</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/tizonia/tizonia-openmax-il"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="well">
+                <h4>RECENT POSTS</h4>
+                <ul class="list-unstyled post-list-container">
+                    
+                    <li><a href="/news/2017/10/21/tizonia-new-web/"  class="active" >New release Tizonia v0.10.0</a></li>
+                    
+                    <li><a href="/news/2017/10/02/release-0-10-0/" >New Website!</a></li>
+                    
+                    <li><a href="/allposts">All posts ...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h1>New release Tizonia v0.10.0</h1>
+            <p>Oct 21, 2017 • juanrubio</p>
+            <div  id="markdown-content-container"><p>Tizonia version 0.10.0 codenamed “<a href="https://en.wikipedia.org/wiki/Cuevas_del_Almanzora">Cuevas del
+Almanzora</a>” is out!.</p>
+
+<p>A total of 188 commits have gone into this release (354 files changed, 11755 insertions(+), 1664 deletions(-)).</p>
+
+<p>The focus was:</p>
+<ul>
+  <li>general bug-fixing, including some Coverity Scan issues,</li>
+  <li>better support for Raspberry Pi and Arch Linux,</li>
+  <li>and preparation work for the upcoming Chromecast support.</li>
+</ul>
+
+<p>What follows is a summary of the most revelant fixes and improvements in this release (see
+<a href="https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md">CHANGELOG.md</a>
+for full details).</p>
+
+<h3 id="fixes-related-to-the-use-of-tizonia-on-raspberry-pis">Fixes related to the use of Tizonia on Raspberry Pis</h3>
+<ul>
+  <li>distribution: raspbian stretch <a href="https://github.com/tizonia/tizonia-openmax-il/issues/370">#370</a></li>
+  <li>pcm_renderer_alsa: OMX_ErrorInsufficientResources on Raspberry Pi (one-channel playback through FiiO USB DAC) <a href="https://github.com/tizonia/tizonia-openmax-il/issues/378">#378</a></li>
+  <li>player: OMX_ErrorInsufficientResources while pausing on Raspberry PI (using alsa renderer) <a href="https://github.com/tizonia/tizonia-openmax-il/issues/374">#374</a></li>
+  <li>“Illegal instrunction” on “2017-07-05-raspbian-jessie-lite.img” <a href="https://github.com/tizonia/tizonia-openmax-il/issues/372">#372</a></li>
+  <li>player: the terminal is occasionally left in an inconsistent state when the application fails <a href="https://github.com/tizonia/tizonia-openmax-il/issues/369">#369</a></li>
+  <li>tizonia: pulsearprc.c:592: init_pulseaudio_stream: Assertion `ap_prc-&gt;p_pa_context_’ failed. Aborted (core dumped) <a href="https://github.com/tizonia/tizonia-openmax-il/issues/301">#301</a></li>
+</ul>
+
+<h3 id="fixes-related-to-the-use-of-tizonia-on-arch-linux">Fixes related to the use of Tizonia on Arch Linux</h3>
+<ul>
+  <li>arch pl0x <a href="https://github.com/tizonia/tizonia-openmax-il/issues/335">#335</a></li>
+  <li>Build failure on Arch Linux <a href="https://github.com/tizonia/tizonia-openmax-il/issues/376">#376</a></li>
+  <li>Current AUR build is broken on at least two levels <a href="https://github.com/tizonia/tizonia-openmax-il/issues/375">#375</a></li>
+  <li>Various warnings while building with gcc 7.1.1 (Manjaro Linux) <a href="https://github.com/tizonia/tizonia-openmax-il/issues/367">#367</a></li>
+  <li>The PKGBUILD installs config files to /usr/etc instead of /etc <a href="https://github.com/tizonia/tizonia-openmax-il/issues/366">#366</a></li>
+  <li>PKGBUILD: Fix style inconsistencies <a href="https://github.com/tizonia/tizonia-openmax-il/pull/365">#365</a> (<a href="https://github.com/sylveon">sylveon</a>)</li>
+</ul>
+
+<h3 id="fixes-in-google-play-music-dirble-and-youtube-streaming">Fixes in Google Play Music, Dirble, and YouTube streaming.</h3>
+<ul>
+  <li>player: dirble graph’s default sampling rate should be 44100 instead of 48000 <a href="https://github.com/tizonia/tizonia-openmax-il/issues/382">#382</a></li>
+  <li>dirble: update country search to accept country names in addition to country ISO 3166 codes <a href="https://github.com/tizonia/tizonia-openmax-il/issues/381">#381</a></li>
+  <li>youtube: add APIs to query the playback queue progress (e.g. currently playing stream 5 or 17) <a href="https://github.com/tizonia/tizonia-openmax-il/issues/380">#380</a></li>
+  <li>youtube: URLs are permanently deleted from the playback queue in the presence of temporary communication errors <a href="https://github.com/tizonia/tizonia-openmax-il/issues/379">#379</a></li>
+  <li>‘tizonia –youtube-audio-mix-search’ fails with ‘TypeError: sequence item 9: expected string or Unicode, dict found’ <a href="https://github.com/tizonia/tizonia-openmax-il/issues/377">#377</a></li>
+</ul>
+
+<h3 id="credits">Credits</h3>
+
+<p>Many thanks to the following contributors for their pull requests in this release:</p>
+<ul>
+  <li><a href="https://github.com/CapOM">CapOM</a>, pull request <a href="https://github.com/tizonia/tizonia-openmax-il/pull/363">#363</a>.</li>
+  <li><a href="https://github.com/sylveon">Sylveon</a>, pull request <a href="https://github.com/tizonia/tizonia-openmax-il/pull/365">#365</a>.</li>
+</ul>
+
+<p>And also thanks to those who have provided feedback via the project’s <a href="https://github.com/tizonia/tizonia-openmax-il/issues">bug
+tracker</a> on GitHub.</p>
+</div>
+            <hr>
+            <ul class="pager">
+                
+                <li class="previous">
+                    <a href="/news/2017/10/02/release-0-10-0/">
+                        <span aria-hidden="true">&larr;</span> Older
+                    </a>
+                </li>
+                 
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            The Tizonia Project 2017 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js "></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+
+    
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21817639-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-21817639-6');
+</script>
+
+    
+</body>
+
+</html>
