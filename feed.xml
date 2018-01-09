@@ -1,5 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://www.tizonia.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.tizonia.com/" rel="alternate" type="text/html" /><updated>2018-01-09T16:29:42+00:00</updated><id>https://www.tizonia.com/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
-</subtitle><entry><title type="html">New Tizonia release v0.10.0</title><link href="https://www.tizonia.com/news/2017/10/21/tizonia-new-web/" rel="alternate" type="text/html" title="New Tizonia release v0.10.0" /><published>2017-10-21T23:10:00+01:00</published><updated>2017-10-21T23:10:00+01:00</updated><id>https://www.tizonia.com/news/2017/10/21/tizonia-new-web</id><content type="html" xml:base="https://www.tizonia.com/news/2017/10/21/tizonia-new-web/">&lt;p&gt;Tizonia version 0.10.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Cuevas_del_Almanzora&quot;&gt;Cuevas del
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://www.tizonia.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.tizonia.com/" rel="alternate" type="text/html" /><updated>2018-01-09T17:16:26+00:00</updated><id>https://www.tizonia.com/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+</subtitle><entry><title type="html">New Tizonia release v0.11.0</title><link href="https://www.tizonia.com/news/2017/12/17/release-0-11-0/" rel="alternate" type="text/html" title="New Tizonia release v0.11.0" /><published>2017-12-17T10:15:00+00:00</published><updated>2017-12-17T10:15:00+00:00</updated><id>https://www.tizonia.com/news/2017/12/17/release-0-11-0</id><content type="html" xml:base="https://www.tizonia.com/news/2017/12/17/release-0-11-0/">&lt;p&gt;Tizonia version 0.11.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Roquetas_de_Mar&quot;&gt;Roquetas de Mar&lt;/a&gt;” is out!.&lt;/p&gt;
+
+&lt;p&gt;129 commits have gone into this release (300 files changed, 14109 insertions(+), 2478 deletions(-)).&lt;/p&gt;
+
+&lt;p&gt;The focus has been:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;various improvements and fixes in YouTube playback,&lt;/li&gt;
+  &lt;li&gt;fixed regression introduced in v0.10.0 that broke playback from local files for most audio formats,&lt;/li&gt;
+  &lt;li&gt;Bash and Zsh completion files,&lt;/li&gt;
+  &lt;li&gt;fixes to support building on Ubuntu 17.10 and 18.04,&lt;/li&gt;
+  &lt;li&gt;more preparation work for Chromecast support.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;As usual &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md&quot;&gt;CHANGELOG.md&lt;/a&gt; contains the full details.&lt;/p&gt;
+
+&lt;h3 id=&quot;credits&quot;&gt;Credits&lt;/h3&gt;
+
+&lt;p&gt;Many thanks to the following contributors for their pull requests in this release:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/djsiddz2&quot;&gt;djsiddz2&lt;/a&gt;, pull request &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/415&quot;&gt;#415&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;And thanks as well to those who have provided feedback via the project’s &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;bug
+tracker&lt;/a&gt; on GitHub.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.11.0 codenamed “Roquetas de Mar” is out!.</summary></entry><entry><title type="html">New Tizonia release v0.10.0</title><link href="https://www.tizonia.com/news/2017/10/22/release-0-10-0/" rel="alternate" type="text/html" title="New Tizonia release v0.10.0" /><published>2017-10-22T23:10:00+01:00</published><updated>2017-10-22T23:10:00+01:00</updated><id>https://www.tizonia.com/news/2017/10/22/release-0-10-0</id><content type="html" xml:base="https://www.tizonia.com/news/2017/10/22/release-0-10-0/">&lt;p&gt;Tizonia version 0.10.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Cuevas_del_Almanzora&quot;&gt;Cuevas del
 Almanzora&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;A total of 188 commits have gone into this release (354 files changed, 11755 insertions(+), 1664 deletions(-)).&lt;/p&gt;
@@ -53,7 +76,7 @@ for full details).&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;And also thanks to those who have provided feedback via the project’s &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;bug
-tracker&lt;/a&gt; on GitHub.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.10.0 codenamed “Cuevas del Almanzora” is out!.</summary></entry><entry><title type="html">New Website!</title><link href="https://www.tizonia.com/news/2017/10/02/release-0-10-0/" rel="alternate" type="text/html" title="New Website!" /><published>2017-10-02T23:23:00+01:00</published><updated>2017-10-02T23:23:00+01:00</updated><id>https://www.tizonia.com/news/2017/10/02/release-0-10-0</id><content type="html" xml:base="https://www.tizonia.com/news/2017/10/02/release-0-10-0/">&lt;p&gt;The Tizonia Project has from today a new web site!.&lt;/p&gt;
+tracker&lt;/a&gt; on GitHub.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.10.0 codenamed “Cuevas del Almanzora” is out!.</summary></entry><entry><title type="html">New Website!</title><link href="https://www.tizonia.com/news/2017/10/02/tizonia-new-web/" rel="alternate" type="text/html" title="New Website!" /><published>2017-10-02T23:23:00+01:00</published><updated>2017-10-02T23:23:00+01:00</updated><id>https://www.tizonia.com/news/2017/10/02/tizonia-new-web</id><content type="html" xml:base="https://www.tizonia.com/news/2017/10/02/tizonia-new-web/">&lt;p&gt;The Tizonia Project has from today a new web site!.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://www.simplybuilt.com/&quot;&gt;SimplyBuilt&lt;/a&gt;, the web builder app and hosting
 shop that has been very kindly (and for free) hosting Tizonia’s website in the
