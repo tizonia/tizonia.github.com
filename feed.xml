@@ -1,5 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://www.tizonia.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.tizonia.com/" rel="alternate" type="text/html" /><updated>2018-01-13T17:31:22+00:00</updated><id>https://www.tizonia.com/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
-</subtitle><entry><title type="html">New Tizonia release v0.11.0</title><link href="https://www.tizonia.com/news/2017/12/17/release-0-11-0/" rel="alternate" type="text/html" title="New Tizonia release v0.11.0" /><published>2017-12-17T10:15:00+00:00</published><updated>2017-12-17T10:15:00+00:00</updated><id>https://www.tizonia.com/news/2017/12/17/release-0-11-0</id><content type="html" xml:base="https://www.tizonia.com/news/2017/12/17/release-0-11-0/">&lt;p&gt;Tizonia version 0.11.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Roquetas_de_Mar&quot;&gt;Roquetas de Mar&lt;/a&gt;” is out!.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://www.tizonia.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.tizonia.com/" rel="alternate" type="text/html" /><updated>2018-01-14T12:21:19+00:00</updated><id>https://www.tizonia.com/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+</subtitle><entry><title type="html">Snap package and Docker image available now!</title><link href="https://www.tizonia.com/news/2017/12/30/snap-package-and-docker-image/" rel="alternate" type="text/html" title="Snap package and Docker image available now!" /><published>2017-12-30T09:15:00+00:00</published><updated>2017-12-30T09:15:00+00:00</updated><id>https://www.tizonia.com/news/2017/12/30/snap-package-and-docker-image</id><content type="html" xml:base="https://www.tizonia.com/news/2017/12/30/snap-package-and-docker-image/">&lt;p&gt;A lot of people have recently come to &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;Tizonia’s issue
+tracker&lt;/a&gt; on GitHub to
+request binaries for their specific Linux distro, version, and/or platform.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately, packaging a complex piece of software like Tizonia to
+run on many Linux distributions is an incredibly difficult and time-consuming
+activity.&lt;/p&gt;
+
+&lt;p&gt;As of today, Tizonia is written in &lt;strong&gt;three&lt;/strong&gt; languages, C, C++ and Python and
+contains a command-line application, &lt;strong&gt;two&lt;/strong&gt; dameon servers, &lt;strong&gt;twelve&lt;/strong&gt; helper
+libraries to access the various music services and around &lt;strong&gt;twenty-five&lt;/strong&gt;
+OpenMAX IL plugins to support the media decoding activities. Using the
+traditional packaging systems, like Debian &lt;strong&gt;‘deb’&lt;/strong&gt;, or Red Hat &lt;strong&gt;‘rpm’&lt;/strong&gt;
+simply does not scale well without a huge human power behind the packaging
+activities of the project.&lt;/p&gt;
+
+&lt;p&gt;So &lt;a href=&quot;https://www.theverge.com/circuitbreaker/2016/6/17/11963334/ubuntu-snap-app-packaging-for-linux&quot;&gt;new cross-distribution app package
+methods&lt;/a&gt;
+for Linux are starting to show feasibility these days. One of them is the
+&lt;a href=&quot;https://en.wikipedia.org/wiki/Snappy_(package_manager)&quot;&gt;Snappy&lt;/a&gt; package
+system. ‘Snaps’ are containerised software packages that can be installed on
+&lt;a href=&quot;https://snapcraft.io&quot;&gt;many Linux distributions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;tizonia-snap-package&quot;&gt;Tizonia Snap Package&lt;/h3&gt;
+
+&lt;p&gt;From now, a snap package of Tizonia can be downloaded and installed for
+&lt;strong&gt;amd64, i386, and armhf&lt;/strong&gt; devices in Debian, SUSE, Arch, Gentoo,
+Fedora, Ubuntu and derivatives.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;http://tizonia.org/docs/snap/&quot;&gt;Tizonia’s Snap documention&lt;/a&gt; for details on
+how to install it on your distro of choice.&lt;/p&gt;
+
+&lt;h3 id=&quot;tizonia-docker-image&quot;&gt;Tizonia Docker Image&lt;/h3&gt;
+
+&lt;p&gt;Another insteresting software distribution method is
+&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;. Docker is a modern technology to allow
+distribution of containerized software applications.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;http://tizonia.org/docs/docker/&quot;&gt;Tizonia’s Docker image documention&lt;/a&gt; for
+the details on how to download the image and use it on your favorite platform.&lt;/p&gt;
+
+&lt;h3 id=&quot;other-cross-distro-packaging-systems&quot;&gt;Other Cross-distro Packaging Systems&lt;/h3&gt;
+
+&lt;p&gt;There are a couple of other contenders in this Linux cross-distribution
+packaging system space. They are &lt;a href=&quot;https://flatpak.org/&quot;&gt;Flatpak&lt;/a&gt; and
+&lt;a href=&quot;https://appimage.org/&quot;&gt;AppImage&lt;/a&gt;. So far AppImage looks very insteresting,
+since it is the only one that does not require prior downloading of a
+‘run-time’ of some kind, which all the other systems need (Docker, Snap and
+Flatpak). Perhaps Tizonia will be available as an AppImage soon!&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">A lot of people have recently come to Tizonia’s issue tracker on GitHub to request binaries for their specific Linux distro, version, and/or platform.</summary></entry><entry><title type="html">New Tizonia release v0.11.0</title><link href="https://www.tizonia.com/news/2017/12/17/release-0-11-0/" rel="alternate" type="text/html" title="New Tizonia release v0.11.0" /><published>2017-12-17T10:15:00+00:00</published><updated>2017-12-17T10:15:00+00:00</updated><id>https://www.tizonia.com/news/2017/12/17/release-0-11-0</id><content type="html" xml:base="https://www.tizonia.com/news/2017/12/17/release-0-11-0/">&lt;p&gt;Tizonia version 0.11.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Roquetas_de_Mar&quot;&gt;Roquetas de Mar&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;129 commits have gone into this release (300 files changed, 14109 insertions(+), 2478 deletions(-)).&lt;/p&gt;
 
