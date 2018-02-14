@@ -88,6 +88,16 @@
     
     
     {
+      "title": "Chromecast",
+      "url": "/docs/chromecast/"
+
+    },
+  
+
+  
+    
+    
+    {
       "title": "Official Documentation",
       "url": "/docs/documentation/"
 
@@ -103,6 +113,11 @@
   
 
 
+  
+  {
+  "title": "New release v0.12.0 - Chromecast support!",
+  "url": "/news/2018/02/11/release-0-12-0/"
+  },
   
   {
   "title": "Snap package and Docker image available now!",
