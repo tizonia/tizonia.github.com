@@ -1,42 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://www.tizonia.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.tizonia.com/" rel="alternate" type="text/html" /><updated>2018-03-10T16:40:21+00:00</updated><id>https://www.tizonia.com/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://www.tizonia.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.tizonia.com/" rel="alternate" type="text/html" /><updated>2018-03-10T22:56:37+00:00</updated><id>https://www.tizonia.com/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
 </subtitle><entry><title type="html">Tizonia v0.13.0 adds support for Plex media servers</title><link href="https://www.tizonia.com/news/2018/03/09/release-0-13-0/" rel="alternate" type="text/html" title="Tizonia v0.13.0 adds support for Plex media servers" /><published>2018-03-09T22:13:00+00:00</published><updated>2018-03-09T22:13:00+00:00</updated><id>https://www.tizonia.com/news/2018/03/09/release-0-13-0</id><content type="html" xml:base="https://www.tizonia.com/news/2018/03/09/release-0-13-0/">&lt;p&gt;Tizonia version 0.13.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Lubr%C3%ADn&quot;&gt;Lubrin&lt;/a&gt;” is out!.&lt;/p&gt;
 
-&lt;p&gt;173 commits have gone into this release (995 files changed, 12874 insertions(+), 6130 deletions(-)).&lt;/p&gt;
+&lt;p&gt;109 commits have gone into this release (267 files changed, 9477 insertions(+), 576 deletions(-)).&lt;/p&gt;
 
-&lt;p&gt;The release includes only a new major feature, &lt;a href=&quot;http://tizonia.org/docs/plex/&quot;&gt;Plex support&lt;/a&gt;. This has been in the making (on and off) for almost a year!.&lt;/p&gt;
+&lt;p&gt;The release includes a new major feature, &lt;a href=&quot;http://tizonia.org/docs/plex/&quot;&gt;Plex
+support&lt;/a&gt; and various notable improvements:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Improved search with fuzzy matching for Google Play and SoundCloud (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/445&quot;&gt;#445&lt;/a&gt; and &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/446&quot;&gt;#446&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;Lots of fixes in Dirble Internet radio search and playback (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/452&quot;&gt;#452&lt;/a&gt;, &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/454&quot;&gt;#454&lt;/a&gt;, &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/455&quot;&gt;#455&lt;/a&gt;, &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/456&quot;&gt;#456&lt;/a&gt;, &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/457&quot;&gt;#457&lt;/a&gt;, &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/458&quot;&gt;#458&lt;/a&gt;, and &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/459&quot;&gt;#459&lt;/a&gt;).&lt;/li&gt;
+  &lt;li&gt;A fancy progress bar (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/444&quot;&gt;#444&lt;/a&gt;).
+&lt;img src=&quot;https://user-images.githubusercontent.com/3161606/36507118-a4e4166e-1750-11e8-8f00-abd2e9218f8f.png&quot; alt=&quot;alt text&quot; title=&quot;Tizonia progress display&quot; /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;As usual &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md&quot;&gt;CHANGELOG.md&lt;/a&gt; contains all the details.&lt;/p&gt;
+
+&lt;p&gt;Tizonia v0.13.0 will be hitting the various distribution channels in the next few days:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bintray.com/tizonia&quot;&gt;Bintray&lt;/a&gt; (Debian packages)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/tizonia-all/&quot;&gt;AUR&lt;/a&gt; (Arch Linux)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://snapcraft.io/tizonia&quot;&gt;Snap Store&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;credits&quot;&gt;Credits&lt;/h3&gt;
 
 &lt;p&gt;Thanks to the following contributors for their pull requests in this release:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/luigino&quot;&gt;luigino&lt;/a&gt;, pull request &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/422&quot;&gt;#422&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/nlwstein&quot;&gt;nlwstein&lt;/a&gt;, pull request &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/448&quot;&gt;#448&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;And thanks to those who have provided feedback via the project’s &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;bug
+&lt;p&gt;As usual, thanks to those who have provided feedback via the project’s &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;bug
 tracker&lt;/a&gt; on GitHub.&lt;/p&gt;
 
-&lt;h3 id=&quot;whats-coming-up-next&quot;&gt;What’s coming up next?&lt;/h3&gt;
+&lt;h3 id=&quot;coming-up-next&quot;&gt;Coming up next&lt;/h3&gt;
 
-&lt;p&gt;There are a few things that are frequently requested, like:&lt;/p&gt;
+&lt;p&gt;One of these services would be nice to have:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;native packages for Fedora (see &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/390&quot;&gt;#390&lt;/a&gt;) and&lt;/li&gt;
-  &lt;li&gt;support for Mac OS (see &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/316&quot;&gt;#316&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Unfortunately, these will not happen without some help from the community.&lt;/p&gt;
-
-&lt;p&gt;There are also a few other services that would be nice to have, like&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Plex support (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/387&quot;&gt;#387&lt;/a&gt;)&lt;/li&gt;
   &lt;li&gt;Pandora (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/340&quot;&gt;#340&lt;/a&gt;)&lt;/li&gt;
   &lt;li&gt;Tidal (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/440&quot;&gt;#440&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;One of these are more likely to happen in the next release. Which one?. If you
-want to contribute or simply would like to put your vote for one of them, just
-leave a message in the corresponding GitHub issue.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.13.0 codenamed “Lubrin” is out!.</summary></entry><entry><title type="html">New release v0.12.0 - Chromecast support!</title><link href="https://www.tizonia.com/news/2018/02/11/release-0-12-0/" rel="alternate" type="text/html" title="New release v0.12.0 - Chromecast support!" /><published>2018-02-11T11:21:00+00:00</published><updated>2018-02-11T11:21:00+00:00</updated><id>https://www.tizonia.com/news/2018/02/11/release-0-12-0</id><content type="html" xml:base="https://www.tizonia.com/news/2018/02/11/release-0-12-0/">&lt;p&gt;Tizonia version 0.12.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Carboneras&quot;&gt;Carboneras&lt;/a&gt;” is out!.&lt;/p&gt;
+&lt;p&gt;Let’s see what the future brings!&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.13.0 codenamed “Lubrin” is out!.</summary></entry><entry><title type="html">New release v0.12.0 - Chromecast support!</title><link href="https://www.tizonia.com/news/2018/02/11/release-0-12-0/" rel="alternate" type="text/html" title="New release v0.12.0 - Chromecast support!" /><published>2018-02-11T11:21:00+00:00</published><updated>2018-02-11T11:21:00+00:00</updated><id>https://www.tizonia.com/news/2018/02/11/release-0-12-0</id><content type="html" xml:base="https://www.tizonia.com/news/2018/02/11/release-0-12-0/">&lt;p&gt;Tizonia version 0.12.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Carboneras&quot;&gt;Carboneras&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;173 commits have gone into this release (995 files changed, 12874 insertions(+), 6130 deletions(-)).&lt;/p&gt;
 
