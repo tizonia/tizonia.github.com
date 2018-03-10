@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Debian/Ubuntu/Raspbian</title>
+    <title>Plex Servers</title>
     <meta name="description" content="        ">
 
 
@@ -15,22 +15,22 @@
 
     <link rel="shortcut icon" href="/favicon.ico?1">
     <!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>Debian/Ubuntu/Raspbian | The Tizonia Project</title>
-<meta property="og:title" content="Debian/Ubuntu/Raspbian" />
+<title>Plex Servers | The Tizonia Project</title>
+<meta property="og:title" content="Plex Servers" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble." />
 <meta property="og:description" content="Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble." />
-<link rel="canonical" href="https://www.tizonia.com/docs/debian/" />
-<meta property="og:url" content="https://www.tizonia.com/docs/debian/" />
+<link rel="canonical" href="https://www.tizonia.com/docs/plex/" />
+<meta property="og:url" content="https://www.tizonia.com/docs/plex/" />
 <meta property="og:site_name" content="The Tizonia Project" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-03-10T16:40:21+00:00" />
 <script type="application/ld+json">
-{"name":null,"description":"Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.","author":null,"@type":"WebPage","url":"https://www.tizonia.com/docs/debian/","publisher":null,"image":null,"headline":"Debian/Ubuntu/Raspbian","dateModified":"2018-03-10T16:40:21+00:00","datePublished":"2018-03-10T16:40:21+00:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":null,"description":"Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.","author":null,"@type":"WebPage","url":"https://www.tizonia.com/docs/plex/","publisher":null,"image":null,"headline":"Plex Servers","dateModified":"2018-03-10T16:40:21+00:00","datePublished":"2018-03-10T16:40:21+00:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="canonical" href="https://www.tizonia.com/docs/debian/">
+    <link rel="canonical" href="https://www.tizonia.com/docs/plex/">
     <link rel="alternate" type="application/rss+xml" title="The Tizonia Project" href="https://www.tizonia.com/feed.xml" />
 </head>
 
@@ -92,7 +92,7 @@
         
           
           
-          <a class="list-group-item active" href="/docs/debian/">Debian/Ubuntu/Raspbian</a>
+          <a class="list-group-item " href="/docs/debian/">Debian/Ubuntu/Raspbian</a>
         
           
           
@@ -162,7 +162,7 @@
         
           
           
-          <a class="list-group-item " href="/docs/plex/">Plex Servers</a>
+          <a class="list-group-item active" href="/docs/plex/">Plex Servers</a>
         
           
           
@@ -200,139 +200,55 @@
         </div>
 
         <div class="col-md-8">
-            <h1>Debian/Ubuntu/Raspbian</h1>
+            <h1>Plex Servers</h1>
             <div id="markdown-content-container"><div class="header-container jumbotron">
     <div class="container">
     </div>
 </div>
 
-<h2 id="installation">Installation</h2>
-
-<div class="well">
- <p>On a Debian-compatible Linux distribution, install Tizonia and all the dependencies by running:</p>
-</div>
-
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>   <span class="nv">$ </span>curl -kL https://github.com/tizonia/tizonia-openmax-il/raw/master/tools/install.sh | bash
-   <span class="c"># Or its shortened version:</span>
-   <span class="nv">$ </span>curl -kL https://goo.gl/Vu8qGR | bash
-</code></pre>
-</div>
-
-<div class="panel panel-warning">
-  <div class="panel-heading">
-    <h3 class="panel-title">Important</h3>
-  </div>
-  <div class="panel-body">
-  Please have a look at the installation script before running it on your system.
-  The script is hosted on <a href="https://github.com/tizonia/tizonia-openmax-il/blob/master/tools/install.sh" class="alert-link">
-GitHub</a>.
-  </div>
-</div>
-
-<h3 id="debian-packages-on-bintray">Debian Packages on Bintray</h3>
-
-<div class="well">
- <p>Debian/Ubuntu packages are hosted on <a href="https://bintray.com/tizonia">Bintray</a> for the following distro and architecture combinations:</p>
-</div>
-
-<div class="panel panel-default">
-  <!-- Default panel contents -->
-  <div class="panel-heading">Supported Debian-derived distros</div>
-
-  <!-- Table -->
-<table class="table table-striped table-hover ">
-  <thead>
-    <tr>
-      <th>Distro</th>
-      <th>amd64</th>
-      <th>armhf</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Ubuntu Xenial</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr class="active">
-      <td>Ubuntu Trusty</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr class="active">
-      <td>Debian Jessie</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr class="active">
-      <td>Debian Stretch</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr class="active">
-      <td>Raspbian Jessie</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-    <tr class="active">
-      <td>Raspbian Stretch</td>
-      <td>Yes</td>
-      <td>Yes</td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-<div class="row">
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="../../img/debian-logo.png" alt="Debian" />
-      <div class="caption">
-      <center>
-        <p><a href="https://bintray.com/tizonia/debian" class="btn btn-primary" role="button">Download</a></p>
-      </center>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="../../img/ubuntu-logo.png" alt="Ubuntu" />
-      <div class="caption">
-      <center>
-        <p><a href="https://bintray.com/tizonia/ubuntu" class="btn btn-primary" role="button">Download</a></p>
-      </center>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="../../img/raspbian-logo.png" alt="Raspbian" />
-      <div class="caption">
-      <center>
-        <p><a href="https://bintray.com/tizonia/raspbian" class="btn btn-primary" role="button">Download</a></p>
-      </center>
-      </div>
-    </div>
-  </div>
-</div>
+<h2 id="stream-the-music-stored-on-your-plex-media-server">Stream the music stored on your Plex media server</h2>
 
 <div class="panel panel-primary">
   <div class="panel-heading">
-    <h3 class="panel-title">Other Ubuntu-based Distros</h3>
+    <h3 class="panel-title">Listen to the music on your Plex Media Server from the command-line with Tizonia.</h3>
   </div>
   <div class="panel-body">
-  <p>Elementary OS and Linux Mint are supported on releases based on
-  Ubuntu 'Trusty' or Ubuntu 'Xenial'.</p>
+  <div class="well">
+   <p>Supply one of the Plex search options available.</p>
+  </div>
+  <img src="../../img/tizonia-chromecast-screencast.gif" alt="tizonia-chromecast-screencast.gif" />
   </div>
 </div>
 
-<div class="alert alert-warning" role="alert">
-  For further installation instructions, please visit the
-  <a href="https://github.com/tizonia/tizonia-openmax-il/blob/master/README.md" class="alert-link">
-  README.md</a> file on GitHub or the official documentation on
-  <a href="http://docs.tizonia.org/development/BUILDING.html" class="alert-link">
-  Read the Docs</a>.
+<h3 id="configuration">Configuration</h3>
+
+<div class="well">
+ <p>To stream from a Plex server, introduce the server configuration in Tizonia's config file.</p>
+</div>
+
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>    <span class="o">(</span> On first use, Tizonia outputs its configuration file, <span class="k">if </span>it is not there yet <span class="o">)</span>
+
+    <span class="nv">$ </span>tizonia --help
+
+    <span class="o">(</span> now edit <span class="nv">$HOME</span>/.config/tizonia/tizonia.conf <span class="o">)</span>
+</code></pre>
+</div>
+
+<div class="well">
+ <p>See instructions inside the file for more information:</p>
+</div>
+
+<div class="language-ini highlighter-rouge"><pre class="highlight"><code><span class="c"># Plex configuration
+# -------------------------------------------------------------------------
+# To avoid passing this information on the command line, uncomment and
+# configure your Plex server and account auth token here.
+#
+# To find how to obtain a Plex user authentication token, see:
+# https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/
+#
+# plex.base_url = xxxxxxxxxxxxxx (e.g. http://plexserver:32400)
+# plex.auth_token = xxxxxxxxxxxxxx (e.g. SrPEojhap3H5Qj2DmjhX)
+</span></code></pre>
 </div>
 </div>
             <p class="text-center">
@@ -347,10 +263,42 @@ GitHub</a>.
 
   
   
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
     <ul class="pager">
       
-        <li class="previous disabled">
-          <a>
+        
+        
+        <li class="previous">
+          <a href="/docs/dirble/">
             <span aria-hidden="true">&larr;</span> Previous
           </a>
         </li>
@@ -360,7 +308,7 @@ GitHub</a>.
         
         
         <li class="next">
-          <a href="/docs/aur/">
+          <a href="/docs/chromecast/">
             Next <span aria-hidden="true">&rarr;</span>
           </a>
         </li>

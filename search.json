@@ -88,6 +88,14 @@
     
     
     {
+      "title": "Plex Servers",
+      "url": "/docs/plex/"
+
+    },
+  
+    
+    
+    {
       "title": "Chromecast",
       "url": "/docs/chromecast/"
 
@@ -98,21 +106,26 @@
     
     
     {
-      "title": "Official Documentation",
-      "url": "/docs/documentation/"
+      "title": "Open Source",
+      "url": "/docs/development/"
 
     },
   
     
     
     {
-      "title": "Open Source",
-      "url": "/docs/development/"
+      "title": "Official Documentation",
+      "url": "/docs/documentation/"
 
     },
   
 
 
+  
+  {
+  "title": "Tizonia v0.13.0 adds support for Plex media servers",
+  "url": "/news/2018/03/09/release-0-13-0/"
+  },
   
   {
   "title": "New release v0.12.0 - Chromecast support!",
