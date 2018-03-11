@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://www.tizonia.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.tizonia.com/" rel="alternate" type="text/html" /><updated>2018-03-10T22:56:37+00:00</updated><id>https://www.tizonia.com/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="https://www.tizonia.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://www.tizonia.com/" rel="alternate" type="text/html" /><updated>2018-03-11T22:25:23+00:00</updated><id>https://www.tizonia.com/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
 </subtitle><entry><title type="html">Tizonia v0.13.0 adds support for Plex media servers</title><link href="https://www.tizonia.com/news/2018/03/09/release-0-13-0/" rel="alternate" type="text/html" title="Tizonia v0.13.0 adds support for Plex media servers" /><published>2018-03-09T22:13:00+00:00</published><updated>2018-03-09T22:13:00+00:00</updated><id>https://www.tizonia.com/news/2018/03/09/release-0-13-0</id><content type="html" xml:base="https://www.tizonia.com/news/2018/03/09/release-0-13-0/">&lt;p&gt;Tizonia version 0.13.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Lubr%C3%ADn&quot;&gt;Lubrin&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;109 commits have gone into this release (267 files changed, 9477 insertions(+), 576 deletions(-)).&lt;/p&gt;
@@ -33,13 +33,11 @@ tracker&lt;/a&gt; on GitHub.&lt;/p&gt;
 
 &lt;h3 id=&quot;coming-up-next&quot;&gt;Coming up next&lt;/h3&gt;
 
-&lt;p&gt;One of these services would be nice to have:&lt;/p&gt;
+&lt;p&gt;One of these services would definitely be nice to have:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Pandora (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/340&quot;&gt;#340&lt;/a&gt;)&lt;/li&gt;
   &lt;li&gt;Tidal (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/440&quot;&gt;#440&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Let’s see what the future brings!&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.13.0 codenamed “Lubrin” is out!.</summary></entry><entry><title type="html">New release v0.12.0 - Chromecast support!</title><link href="https://www.tizonia.com/news/2018/02/11/release-0-12-0/" rel="alternate" type="text/html" title="New release v0.12.0 - Chromecast support!" /><published>2018-02-11T11:21:00+00:00</published><updated>2018-02-11T11:21:00+00:00</updated><id>https://www.tizonia.com/news/2018/02/11/release-0-12-0</id><content type="html" xml:base="https://www.tizonia.com/news/2018/02/11/release-0-12-0/">&lt;p&gt;Tizonia version 0.12.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Carboneras&quot;&gt;Carboneras&lt;/a&gt;” is out!.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.13.0 codenamed “Lubrin” is out!.</summary></entry><entry><title type="html">New release v0.12.0 - Chromecast support!</title><link href="https://www.tizonia.com/news/2018/02/11/release-0-12-0/" rel="alternate" type="text/html" title="New release v0.12.0 - Chromecast support!" /><published>2018-02-11T11:21:00+00:00</published><updated>2018-02-11T11:21:00+00:00</updated><id>https://www.tizonia.com/news/2018/02/11/release-0-12-0</id><content type="html" xml:base="https://www.tizonia.com/news/2018/02/11/release-0-12-0/">&lt;p&gt;Tizonia version 0.12.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Carboneras&quot;&gt;Carboneras&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;173 commits have gone into this release (995 files changed, 12874 insertions(+), 6130 deletions(-)).&lt;/p&gt;
 
