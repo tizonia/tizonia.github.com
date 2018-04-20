@@ -1,1 +1,1 @@
-Sitemap: https://www.tizonia.com/sitemap.xml
+Sitemap: http://www.tizonia.org/sitemap.xml
