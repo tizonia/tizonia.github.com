@@ -1,5 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-04-20T18:36:50+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
-</subtitle><entry><title type="html">Tizonia v0.13.0 adds support for Plex media servers</title><link href="http://www.tizonia.org/news/2018/03/09/release-0-13-0/" rel="alternate" type="text/html" title="Tizonia v0.13.0 adds support for Plex media servers" /><published>2018-03-09T22:13:00+00:00</published><updated>2018-03-09T22:13:00+00:00</updated><id>http://www.tizonia.org/news/2018/03/09/release-0-13-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/03/09/release-0-13-0/">&lt;p&gt;Tizonia version 0.13.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Lubr%C3%ADn&quot;&gt;Lubrin&lt;/a&gt;” is out!.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-04-22T22:33:15+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+</subtitle><entry><title type="html">Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers</title><link href="http://www.tizonia.org/news/2018/04/21/release-0-14-0/" rel="alternate" type="text/html" title="Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers" /><published>2018-04-21T23:13:00+01:00</published><updated>2018-04-21T23:13:00+01:00</updated><id>http://www.tizonia.org/news/2018/04/21/release-0-14-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/04/21/release-0-14-0/">&lt;p&gt;Tizonia version 0.14.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Los_Gallardos&quot;&gt;Los Gallardos&lt;/a&gt;” is out!.&lt;/p&gt;
+
+&lt;p&gt;A relatively small, incremental release with 45 commits (159 files changed,
+1326 insertions(+), 461 deletions(-)). Nontheless, this release includes a
+number of really interesting new features.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;youtube-channels-support&quot;&gt;YouTube Channels Support&lt;/h4&gt;
+&lt;p&gt;YouTube channels support in Tizonia includes two new command-line options:&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;tizonia---youtube-audio-channel-uploads-channel-name&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --youtube-audio-channel-uploads &amp;lt;channel-name&amp;gt;&lt;/code&gt;&lt;/h6&gt;
+&lt;p&gt;This command lets you play music from all videos uploaded to a particular
+YouTube channel. The command takes an argument, the channel’s name.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/tizonia-youtube-channel-uploads.gif&quot; alt=&quot;tizonia --youtube-audio-channel-uploads&quot; title=&quot;tizonia --youtube-audio-channel-uploads&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h6 id=&quot;tizonia---youtube-audio-channel-playlist-channel-name_space_playlist-search-term&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --youtube-audio-channel-playlist &amp;lt;channel-name_space_playlist-search-term&amp;gt;&lt;/code&gt;&lt;/h6&gt;
+&lt;p&gt;This command lets you play any playlist shared by a YouTube channel. It takes
+a special, multi-word argument. Here the first word is the channel name, and
+followed by a space, a search term (one or more words) that will be
+fuzzy-matched against the playlists in that channel. Remember to add quotes
+to this command’s argument!.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/tizonia-youtube-channel-playlist.gif&quot; alt=&quot;tizonia --youtube-audio-channel-playlist&quot; title=&quot;tizonia --youtube-audio-channel-playlist&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;google-play-music-free-radio-stations&quot;&gt;Google Play Music Free Radio Stations&lt;/h4&gt;
+&lt;p&gt;Google Play Music added recently &lt;a href=&quot;https://support.google.com/googleplaymusic/answer/6250894?hl=en&quot;&gt;radio stations for
+non-subscribers&lt;/a&gt;.
+Google has made this feature available only in the U.S., Canada, and
+India. Note that the free stations feature have some limitations, like skip
+limits. More information on this in this Google help article:
+&lt;a href=&quot;https://support.google.com/googleplaymusic/answer/6230658?hl=en&quot;&gt;About free
+radio&lt;/a&gt;.
+You can create and listen to Google Play free stations with Tizonia with this command:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tizonia --gmusic-station &amp;lt;artist or song name&amp;gt;
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;your-entire-google-play-music-library-in-one-big-playlist&quot;&gt;Your entire Google Play Music Library in one big playlist!&lt;/h4&gt;
+&lt;p&gt;This feature was requested by user &lt;a href=&quot;https://github.com/bbgun7&quot;&gt;bbgun7&lt;/a&gt;, who
+wanted to put the 25.000 songs on his library on to a single playlist, and shuffle it
+for playback. Such a brilliant (and obvious) idea was actually not possible
+with Tizonia… until this release!. Now this is possible with this command:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/tizonia-gmusic-library-screencast.gif&quot; alt=&quot;tizonia --gmusic-library&quot; title=&quot;tizonia --gmusic-library&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;other-updates&quot;&gt;Other updates&lt;/h4&gt;
+
+&lt;p&gt;As usual
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md&quot;&gt;CHANGELOG.md&lt;/a&gt;
+contains all the details.&lt;/p&gt;
+
+&lt;p&gt;Tizonia v0.14.0 will be hitting the following distribution channels in the next few days:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bintray.com/tizonia&quot;&gt;Bintray&lt;/a&gt; (Debian packages)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://snapcraft.io/tizonia&quot;&gt;Snap Store&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Note that there are currently some issues with some of Tizonia’s AUR
+dependencies that prevent us from getting a clean native build of Tizonia on
+Arch.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/tizonia-all/&quot;&gt;AUR&lt;/a&gt; (Arch Linux, currently at v0.12.0)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Until those issues are fixed, the Snap package works quite well on Arch.&lt;/p&gt;
+
+&lt;p&gt;Also, the &lt;a href=&quot;https://github.com/tizonia/docker-tizonia&quot;&gt;docker-tizonia&lt;/a&gt; is in
+need of an update. Hopefully, this will happen sometime soon (in the meantime,
+pull requests are very welcome!).&lt;/p&gt;
+
+&lt;h3 id=&quot;credits&quot;&gt;Credits&lt;/h3&gt;
+
+&lt;p&gt;Thanks to those who have provided feedback via the project’s &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;bug
+tracker&lt;/a&gt; on GitHub.&lt;/p&gt;
+
+&lt;h3 id=&quot;coming-up-next&quot;&gt;Coming up next&lt;/h3&gt;
+
+&lt;p&gt;Pandora support is currently in the making and shaping quite well to be in the next release!:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pandora (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/340&quot;&gt;#340&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.14.0 codenamed “Los Gallardos” is out!.</summary></entry><entry><title type="html">Tizonia v0.13.0 adds support for Plex media servers</title><link href="http://www.tizonia.org/news/2018/03/09/release-0-13-0/" rel="alternate" type="text/html" title="Tizonia v0.13.0 adds support for Plex media servers" /><published>2018-03-09T22:13:00+00:00</published><updated>2018-03-09T22:13:00+00:00</updated><id>http://www.tizonia.org/news/2018/03/09/release-0-13-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/03/09/release-0-13-0/">&lt;p&gt;Tizonia version 0.13.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Lubr%C3%ADn&quot;&gt;Lubrin&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;109 commits have gone into this release (267 files changed, 9477 insertions(+), 576 deletions(-)).&lt;/p&gt;
 
