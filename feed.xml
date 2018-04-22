@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-04-22T22:33:15+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-04-22T22:44:13+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
 </subtitle><entry><title type="html">Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers</title><link href="http://www.tizonia.org/news/2018/04/21/release-0-14-0/" rel="alternate" type="text/html" title="Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers" /><published>2018-04-21T23:13:00+01:00</published><updated>2018-04-21T23:13:00+01:00</updated><id>http://www.tizonia.org/news/2018/04/21/release-0-14-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/04/21/release-0-14-0/">&lt;p&gt;Tizonia version 0.14.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Los_Gallardos&quot;&gt;Los Gallardos&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;A relatively small, incremental release with 45 commits (159 files changed,
@@ -72,7 +72,10 @@ contains all the details.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://snapcraft.io/tizonia&quot;&gt;Snap Store&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Note that there are currently some issues with some of Tizonia’s AUR
+&lt;p&gt;Debian packages for Ubuntu Trusty and Debien Jessie are now being phased
+out. On the other hand, Debian 10 ‘Buster’ is now part of the Bintray roster.&lt;/p&gt;
+
+&lt;p&gt;Regarding Arch/AUR, there are currently some issues with some of Tizonia’s AUR
 dependencies that prevent us from getting a clean native build of Tizonia on
 Arch.&lt;/p&gt;
 &lt;ul&gt;
@@ -81,9 +84,9 @@ Arch.&lt;/p&gt;
 
 &lt;p&gt;Until those issues are fixed, the Snap package works quite well on Arch.&lt;/p&gt;
 
-&lt;p&gt;Also, the &lt;a href=&quot;https://github.com/tizonia/docker-tizonia&quot;&gt;docker-tizonia&lt;/a&gt; is in
-need of an update. Hopefully, this will happen sometime soon (in the meantime,
-pull requests are very welcome!).&lt;/p&gt;
+&lt;p&gt;Also, &lt;a href=&quot;https://github.com/tizonia/docker-tizonia&quot;&gt;docker-tizonia&lt;/a&gt; is in need of
+an update. Hopefully, this will happen sometime soon, but in the meantime, pull
+requests are very welcome!.&lt;/p&gt;
 
 &lt;h3 id=&quot;credits&quot;&gt;Credits&lt;/h3&gt;
 
