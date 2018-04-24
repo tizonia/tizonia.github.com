@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-04-24T20:29:29+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-04-24T21:19:52+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
 </subtitle><entry><title type="html">Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers</title><link href="http://www.tizonia.org/news/2018/04/21/release-0-14-0/" rel="alternate" type="text/html" title="Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers" /><published>2018-04-21T23:13:00+01:00</published><updated>2018-04-21T23:13:00+01:00</updated><id>http://www.tizonia.org/news/2018/04/21/release-0-14-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/04/21/release-0-14-0/">&lt;p&gt;Tizonia version 0.14.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Los_Gallardos&quot;&gt;Los Gallardos&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;A relatively small, incremental release with 45 commits (159 files changed,
@@ -84,6 +84,10 @@ Arch.&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Until those issues are fixed, the Snap package works quite well on Arch.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;NOTE [24/03/2018]: AUR packages have been updated and are now tracking v0.14.0.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;Also, &lt;a href=&quot;https://github.com/tizonia/docker-tizonia&quot;&gt;docker-tizonia&lt;/a&gt; is in need of
 an update. Hopefully, this will happen sometime soon, but in the meantime, pull
