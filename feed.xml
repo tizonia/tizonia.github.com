@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-04-22T22:44:13+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-04-24T20:29:29+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
 </subtitle><entry><title type="html">Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers</title><link href="http://www.tizonia.org/news/2018/04/21/release-0-14-0/" rel="alternate" type="text/html" title="Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers" /><published>2018-04-21T23:13:00+01:00</published><updated>2018-04-21T23:13:00+01:00</updated><id>http://www.tizonia.org/news/2018/04/21/release-0-14-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/04/21/release-0-14-0/">&lt;p&gt;Tizonia version 0.14.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Los_Gallardos&quot;&gt;Los Gallardos&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;A relatively small, incremental release with 45 commits (159 files changed,
@@ -34,14 +34,14 @@ to this command’s argument!.&lt;/p&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;google-play-music-free-radio-stations&quot;&gt;Google Play Music Free Radio Stations&lt;/h4&gt;
-&lt;p&gt;Google Play Music added recently &lt;a href=&quot;https://support.google.com/googleplaymusic/answer/6250894?hl=en&quot;&gt;radio stations for
+&lt;p&gt;Google Play Music has recently added &lt;a href=&quot;https://support.google.com/googleplaymusic/answer/6250894?hl=en&quot;&gt;radio stations for
 non-subscribers&lt;/a&gt;.
 Google has made this feature available only in the U.S., Canada, and
-India. Note that the free stations feature have some limitations, like skip
+India. Free stations have a number of limitations, like for example, skip
 limits. More information on this in this Google help article:
 &lt;a href=&quot;https://support.google.com/googleplaymusic/answer/6230658?hl=en&quot;&gt;About free
 radio&lt;/a&gt;.
-You can create and listen to Google Play free stations with Tizonia with this command:&lt;/p&gt;
+You can create and listen to Google Play free stations with Tizonia using this command:&lt;/p&gt;
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;tizonia --gmusic-station &amp;lt;artist or song name&amp;gt;
 
 &lt;/code&gt;&lt;/pre&gt;
@@ -51,9 +51,9 @@ You can create and listen to Google Play free stations with Tizonia with this co
 
 &lt;h4 id=&quot;your-entire-google-play-music-library-in-one-big-playlist&quot;&gt;Your entire Google Play Music Library in one big playlist!&lt;/h4&gt;
 &lt;p&gt;This feature was requested by user &lt;a href=&quot;https://github.com/bbgun7&quot;&gt;bbgun7&lt;/a&gt;, who
-wanted to put the 25.000 songs on his library on to a single playlist, and shuffle it
+wanted to put the 25.000 songs in his library on to a single playlist, and shuffle it
 for playback. Such a brilliant (and obvious) idea was actually not possible
-with Tizonia… until this release!. Now this is possible with this command:&lt;/p&gt;
+with Tizonia… until this release!. Now it is possible with this command:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/tizonia-gmusic-library-screencast.gif&quot; alt=&quot;tizonia --gmusic-library&quot; title=&quot;tizonia --gmusic-library&quot; /&gt;&lt;/p&gt;
 
@@ -72,8 +72,9 @@ contains all the details.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://snapcraft.io/tizonia&quot;&gt;Snap Store&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Debian packages for Ubuntu Trusty and Debien Jessie are now being phased
-out. On the other hand, Debian 10 ‘Buster’ is now part of the Bintray roster.&lt;/p&gt;
+&lt;p&gt;Debian packages for Ubuntu Trusty, Debian Jessie, and Raspbian Jessie are not
+being built anymore. On the other hand, Debian 10 ‘Buster’ is now part of the
+Bintray roster.&lt;/p&gt;
 
 &lt;p&gt;Regarding Arch/AUR, there are currently some issues with some of Tizonia’s AUR
 dependencies that prevent us from getting a clean native build of Tizonia on
