@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Totally revamped Spotify support in Tizonia 0.15.0</title>
+    <meta name="description" content="Tizonia version 0.15.0 codenamed“Pulpi” is out with 74 commits, 215files changed, 7645 insertions(+), and 785 deletions(-)">
+
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Totally revamped Spotify support in Tizonia 0.15.0 | The Tizonia Project</title>
+<meta property="og:title" content="Totally revamped Spotify support in Tizonia 0.15.0" />
+<meta name="author" content="juanrubio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tizonia version 0.15.0 codenamed “Pulpi” is out with 74 commits, 215 files changed, 7645 insertions(+), and 785 deletions(-)" />
+<meta property="og:description" content="Tizonia version 0.15.0 codenamed “Pulpi” is out with 74 commits, 215 files changed, 7645 insertions(+), and 785 deletions(-)" />
+<link rel="canonical" href="http://www.tizonia.org/news/2018/06/15/release-0-15-0/" />
+<meta property="og:url" content="http://www.tizonia.org/news/2018/06/15/release-0-15-0/" />
+<meta property="og:site_name" content="The Tizonia Project" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-06-15T23:10:00+01:00" />
+<script type="application/ld+json">
+{"name":null,"description":"Tizonia version 0.15.0 codenamed “Pulpi” is out with 74 commits, 215 files changed, 7645 insertions(+), and 785 deletions(-)","author":{"@type":"Person","name":"juanrubio"},"@type":"BlogPosting","url":"http://www.tizonia.org/news/2018/06/15/release-0-15-0/","publisher":null,"image":null,"headline":"Totally revamped Spotify support in Tizonia 0.15.0","dateModified":"2018-06-15T23:10:00+01:00","datePublished":"2018-06-15T23:10:00+01:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://www.tizonia.org/news/2018/06/15/release-0-15-0/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="http://www.tizonia.org/news/2018/06/15/release-0-15-0/">
+    <link rel="alternate" type="application/rss+xml" title="The Tizonia Project" href="http://www.tizonia.org/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/img/logonav.png"></span> The Tizonia Project
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ><a href="/docs/debian/">Explore</a></li>
+                <li  class="active" ><a href="/news/2018/06/15/release-0-15-0/">News</a></li>
+                <li class="active"><a href="https://github.com/tizonia/tizonia-openmax-il">GitHub</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/tizonia/tizonia-openmax-il"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="well">
+                <h4>RECENT POSTS</h4>
+                <ul class="list-unstyled post-list-container">
+                    
+                    <li><a href="/news/2018/06/15/release-0-15-0/"  class="active" >Totally revamped Spotify support in Tizonia 0.15.0</a></li>
+                    
+                    <li><a href="/news/2018/04/21/release-0-14-0/" >Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers</a></li>
+                    
+                    <li><a href="/news/2018/03/09/release-0-13-0/" >Tizonia v0.13.0 adds support for Plex media servers</a></li>
+                    
+                    <li><a href="/news/2018/02/11/release-0-12-0/" >New release v0.12.0 - Chromecast support!</a></li>
+                    
+                    <li><a href="/news/2017/12/30/snap-package-and-docker-image/" >Snap package and Docker image available now!</a></li>
+                    
+                    <li><a href="/news/2017/12/17/release-0-11-0/" >New Tizonia release v0.11.0</a></li>
+                    
+                    <li><a href="/news/2017/10/22/release-0-10-0/" >New Tizonia release v0.10.0</a></li>
+                    
+                    <li><a href="/news/2017/10/02/tizonia-new-web/" >New Website!</a></li>
+                    
+                    <li><a href="/allposts">All posts ...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h1>Totally revamped Spotify support in Tizonia 0.15.0</h1>
+            <p>Jun 15, 2018 • juanrubio</p>
+            <div  id="markdown-content-container"><p>Tizonia version 0.15.0 codenamed
+“<a href="https://en.wikipedia.org/wiki/Pulp%C3%AD">Pulpi</a>” is out with 74 commits, 215
+files changed, 7645 insertions(+), and 785 deletions(-)</p>
+
+<p>Actually this is an emergency release to fix Spotify playlist search
+functionality that became broken in Tizonia just a couple of weeks ago, when
+playlist retrieval suddenly stopped working in the official (but
+<a href="https://pyspotify.mopidy.com/en/latest/#libspotify-s-deprecation">deprecated</a>)
+<code class="highlighter-rouge">libspotify</code>.</p>
+
+<p>Luckily, libspotify’s audio streaming capabilities are, for the time being,
+intact (touch wood!). libspotify is still capable of streaming audio when its
+fed with Spotify
+<a href="https://rsms.me/an-introduction-to-spotify-uris">URIs</a>. Therefore, to ‘fix’
+playlist search in Tizonia, we just needed to obtain playlist metadata (URIs)
+from Spotify. And this can be done through the newer <a href="https://developer.spotify.com/documentation/web-api/">Spotify Web
+API</a>.</p>
+
+<p>Tizonia 0.15.0 integrates the Spotify Web API by making use of the
+<a href="https://github.com/plamere/spotipy">spotipy</a> Python wrapper. This has not only
+allowed us to fix playlist search; Tizonia has also gained Spotify track,
+artist and album playback (see below for more info).</p>
+
+<p>But how long until libspotify audio streaming capabilities are permanently
+switched off? Nobody knows. At some point there has been rumours pointing at a
+<a href="https://stackoverflow.com/questions/28079301/status-of-libspotify-replacement-library-for-desktop-other-platforms">Spotify replacement
+library</a>.
+This probably already exists inside Spotify’s iOS and Android SDKs. But it is
+unknown whether this newer facility would ever be available for non-commercial
+products in other platforms.</p>
+
+<p>So let’s just keep enjoying Spotify streaming from the Linux command-line…,
+while it is still possible!</p>
+
+<p><br /></p>
+
+<h4 id="spotify-track-artist-and-album-search-new">Spotify track, artist and album search [NEW!]</h4>
+<p>Three new Spotify commands are available:</p>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-tracks &lt;track-name&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-artist &lt;artist-name&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-album &lt;album-name&gt;</code></p>
+</blockquote>
+
+<p>No surprises here, these new commands let you search and stream from Spotify by
+track, artist and album names. The performance is really remarkable.</p>
+
+<p><img src="/img/tizonia-spotify-tracks-artist-album.gif" alt="tizonia --spotify-tracks/artist/album" title="tizonia --spotify-tracks/artist/album" /></p>
+
+<p><br />
+<br /></p>
+
+<h4 id="spotify-playlist-search-revamped">Spotify playlist search [REVAMPED!]</h4>
+
+<h6 id="tizonia---spotify-playlist-album-name---spotify-owner-spotify-user-name"><code class="highlighter-rouge">tizonia --spotify-playlist &lt;album-name&gt; [--spotify-owner &lt;spotify-user-name&gt;]</code></h6>
+<p>This command has changed its behaviour in the currently release. Previously
+<code class="highlighter-rouge">--spotify-playlist</code> allowed us to stream any of the configured user’s
+playlists, whether it was a playlist created by the user (private and public)
+or a followed playlist from another user, including Spotify’s own playlists.</p>
+
+<p>In 0.15.0, this command has a different behaviour, as it only streams the
+<em>public</em> playlists <em>owned</em> by the user.</p>
+
+<p>In order to stream a <em>public</em> playlist from another user, a new command-line
+switch has been introduced: <code class="highlighter-rouge">--spotify-owner</code>. When this switch is used in
+conjunction with <code class="highlighter-rouge">--spotify-playlist</code>, we can search and stream <em>public</em>
+playlists from <em>any</em> user. For example, to explore Spotify’s own playlists,
+just give <code class="highlighter-rouge">--spotify-owner 'spotify'</code>.</p>
+
+<p>If you have been paying attention, you will have noticed that the new Spotify
+playlist commands incur in an important omission: private playlists. In 0.15.0
+is not possible to stream private playlists. This is because Tizonia is
+currently unable to access the user’s private data through the Web API. There
+is some work to do to figure out how to do this correctly. So hopefully in the
+next release!</p>
+
+<p><img src="/img/tizonia-spotify-playlist-owner.gif" alt="tizonia --spotify-playlist --spotify-owner" title="tizonia --spotify-playlist --spotify-owner" /></p>
+
+<p><br />
+<br /></p>
+
+<h4 id="other-updates">Other updates</h4>
+
+<p>As usual
+<a href="https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md">CHANGELOG.md</a>
+contains all the details.</p>
+
+<p>Tizonia v0.15.0 will be hitting the usual distribution channels in a few days:</p>
+<ul>
+  <li><a href="https://bintray.com/tizonia">Bintray</a> (Debian packages)</li>
+  <li><a href="https://aur.archlinux.org/packages/tizonia-all/">AUR</a> (Arch Linux)</li>
+  <li><a href="https://snapcraft.io/tizonia">Snap Store</a>.</li>
+</ul>
+
+<p>Note that <a href="https://github.com/tizonia/docker-tizonia">docker-tizonia</a> is still
+in need of an update!.</p>
+
+<h3 id="credits">Credits</h3>
+
+<p>Thanks to those who have provided feedback via the project’s <a href="https://github.com/tizonia/tizonia-openmax-il/issues">bug
+tracker</a> on GitHub.</p>
+
+<h3 id="coming-up">Coming up</h3>
+
+<p>Pandora support is currently work-in-progress:</p>
+<ul>
+  <li>Pandora (<a href="https://github.com/tizonia/tizonia-openmax-il/issues/340">#340</a>)</li>
+</ul>
+
+<p>Airsonic/Subsonic support has been requested:</p>
+<ul>
+  <li>Airsonic/Subsonic (<a href="https://github.com/tizonia/tizonia-openmax-il/issues/496">#496</a>)</li>
+</ul>
+
+</div>
+            <hr>
+            <ul class="pager">
+                
+                <li class="previous">
+                    <a href="/news/2018/04/21/release-0-14-0/">
+                        <span aria-hidden="true">&larr;</span> Older
+                    </a>
+                </li>
+                 
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            The Tizonia Project 2018 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js "></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+
+    
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21817639-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-21817639-6');
+</script>
+
+    
+</body>
+
+</html>
