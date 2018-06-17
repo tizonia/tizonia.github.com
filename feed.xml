@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-06-18T00:05:26+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-06-18T00:08:17+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
 </subtitle><entry><title type="html">Totally revamped Spotify support in Tizonia 0.15.0</title><link href="http://www.tizonia.org/news/2018/06/15/release-0-15-0/" rel="alternate" type="text/html" title="Totally revamped Spotify support in Tizonia 0.15.0" /><published>2018-06-15T23:10:00+01:00</published><updated>2018-06-15T23:10:00+01:00</updated><id>http://www.tizonia.org/news/2018/06/15/release-0-15-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/06/15/release-0-15-0/">&lt;p&gt;Tizonia version 0.15.0 codenamed
 “&lt;a href=&quot;https://en.wikipedia.org/wiki/Pulp%C3%AD&quot;&gt;Pulpi&lt;/a&gt;” is out with 74 commits, 215
 files changed, 7645 insertions(+), and 785 deletions(-)&lt;/p&gt;
@@ -60,7 +60,10 @@ track, artist and album names. The performance is really remarkable.&lt;/p&gt;
 
 &lt;h4 id=&quot;spotify-playlist-search-revamped&quot;&gt;Spotify playlist search [REVAMPED!]&lt;/h4&gt;
 
-&lt;h6 id=&quot;tizonia---spotify-playlist-album-name---spotify-owner-spotify-user-name&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-playlist &amp;lt;album-name&amp;gt; [--spotify-owner &amp;lt;spotify-user-name&amp;gt;]&lt;/code&gt;&lt;/h6&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-playlist &amp;lt;album-name&amp;gt; [--spotify-owner &amp;lt;spotify-user-name&amp;gt;]&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
 &lt;p&gt;This command has changed its behaviour in the currently release. Previously
 &lt;code class=&quot;highlighter-rouge&quot;&gt;--spotify-playlist&lt;/code&gt; allowed us to stream any of the configured user’s
 playlists, whether it was a playlist created by the user (private and public)
