@@ -1,5 +1,176 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-06-18T00:08:17+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
-</subtitle><entry><title type="html">Totally revamped Spotify support in Tizonia 0.15.0</title><link href="http://www.tizonia.org/news/2018/06/15/release-0-15-0/" rel="alternate" type="text/html" title="Totally revamped Spotify support in Tizonia 0.15.0" /><published>2018-06-15T23:10:00+01:00</published><updated>2018-06-15T23:10:00+01:00</updated><id>http://www.tizonia.org/news/2018/06/15/release-0-15-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/06/15/release-0-15-0/">&lt;p&gt;Tizonia version 0.15.0 codenamed
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-12-05T13:11:27+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+</subtitle><entry><title type="html">More ways to discover music on Spotify with Tizonia 0.16.0</title><link href="http://www.tizonia.org/news/2018/12/03/release-0-16-0/" rel="alternate" type="text/html" title="More ways to discover music on Spotify with Tizonia 0.16.0" /><published>2018-12-03T22:10:00+00:00</published><updated>2018-12-03T22:10:00+00:00</updated><id>http://www.tizonia.org/news/2018/12/03/release-0-16-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/12/03/release-0-16-0/">&lt;p&gt;Tizonia version
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.16.0&quot;&gt;0.16.0&lt;/a&gt;
+codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Bacares&quot;&gt;Bacares&lt;/a&gt;” is out with 94
+commits, 161 files changed, 2695 insertions(+), 868 deletions(-).&lt;/p&gt;
+
+&lt;p&gt;This release primarily fixes a number of breakages in Google Play Music
+playlist and station search
+(&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/507&quot;&gt;#507&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/515&quot;&gt;#515&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/519&quot;&gt;#519&lt;/a&gt;,
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/522&quot;&gt;#522&lt;/a&gt;) that appeared
+a couple of months ago. These issues came around due to changes in some of
+Google’s internal APIs. The guys over at
+&lt;a href=&quot;https://github.com/simon-weber/gmusicapi&quot;&gt;gmusicapi&lt;/a&gt; reacted very quickly and
+changed things at &lt;a href=&quot;https://github.com/simon-weber/gmusicapi/issues/614&quot;&gt;their
+end&lt;/a&gt; so that we can
+continue to enjoy playing the playlists and stations from this service.&lt;/p&gt;
+
+&lt;p&gt;In addition to these fixes, 0.16.0 also brings some new functionality for
+Spotify. These are the highlights:&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;spotify-recommendations-by-track-artist-and-genre-new&quot;&gt;Spotify recommendations by track, artist, and genre [NEW!]&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-recommendations-by-track-id &amp;lt;track ID, URI or URL&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-recommendations-by-artist-id &amp;lt;artist ID, URI or URL&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-recommendations-by-genre &amp;lt;genre-name&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With these commands Tizonia returns instant playlists of around 100 tracks. To
+seed Spotify recommendations engine, you can either input a track ID, an artist
+ID or a genre name (e.g. ‘alt-metal’). These commands are a fantastic way to
+discover new music.&lt;/p&gt;
+
+&lt;p&gt;The Spotify &lt;code class=&quot;highlighter-rouge&quot;&gt;id&lt;/code&gt; can have one of these three forms:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;ID: 1dfeR4HaWDbWqFHLkxsg1d&lt;/li&gt;
+  &lt;li&gt;URI: spotify:artist:1dfeR4HaWDbWqFHLkxsg1d&lt;/li&gt;
+  &lt;li&gt;URL: https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/tizonia-spotify-recommendations.gif&quot; alt=&quot;tizonia --spotify-recommendations-by-track/artist/genre&quot; title=&quot;tizonia --spotify-recommendations-by-track/artist/genre&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;spotify-related-artist-search-new&quot;&gt;Spotify related artist search [NEW!]&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-related-artists &amp;lt;artist&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This command searches Spotify for the specified artist and enqueues the top
+tracks (usually 10) from that artist and from 20 related artists. So with this
+command you should end up with an instant playlist of around 210 tracks of a
+similar music style. This command is great in combination with the &lt;code class=&quot;highlighter-rouge&quot;&gt;--shuffle&lt;/code&gt;
+option.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;spotify-featured-playlist-search-new&quot;&gt;Spotify featured playlist search [NEW!]&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-featured-playlist &amp;lt;search-term&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With this command Spotify returns a small list of around 12 playlists. The
+playlists in the list change depending on the day of the week or even the time
+of the day. Try this once with some random search term (e.g. a single space,
+&lt;code class=&quot;highlighter-rouge&quot;&gt;'_'&lt;/code&gt;) to see what Spotify has in store at the moment, and then try once more
+with a refined search term.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;spotify-new-releases-search-new&quot;&gt;Spotify new releases search [NEW!]&lt;/h4&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-featured-playlist &amp;lt;search-term&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With this command Spotify returns a small list of around 20 albums. Try this
+once with some random search term (e.g. a single space, &lt;code class=&quot;highlighter-rouge&quot;&gt;'_'&lt;/code&gt;) to see what new
+releases Spotify has on offer, and then try once more with a refined search
+term.&lt;/p&gt;
+
+&lt;h4 id=&quot;search-by-spotify-track-id-artist-id-album-id-and-playlist-id-new&quot;&gt;Search by Spotify track ID, artist ID, album ID, and playlist ID [NEW!]&lt;/h4&gt;
+&lt;p&gt;These three new Spotify commands are available:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-tracks-id &amp;lt;Spotify track ID, URI or URL&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-artist-id &amp;lt;Spotify artist ID, URI or URL&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-album-id &amp;lt;Spotify album ID, URI or URL&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-playlist-id &amp;lt;Spotify playlist ID, URI or URL&amp;gt;&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;These are useful when the normal text-based search does not always return the
+track, artist, album, or playlist that you want. So at least an option is to
+find its id in the Spotify web service:
+&lt;a href=&quot;https://open.spotify.com&quot;&gt;https://open.spotify.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Remember that with &lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia --spotify-playlist-id&lt;/code&gt; you will need to specify
+&lt;code class=&quot;highlighter-rouge&quot;&gt;--spotify-owner '&amp;lt;spotify-user&amp;gt;'&lt;/code&gt; if the playlist you are trying to listen to
+is owned by another user (i.e. it’s not one of your plublic playlists).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;recovering-from-spurious-play-token-losses-new&quot;&gt;Recovering from spurious play token losses [NEW!]&lt;/h4&gt;
+
+&lt;p&gt;Sometimes Spotify reports that the play token has been lost and the playback
+stops. There are a couple of new options to allow Tizonia to recover the play
+token and keep playing.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;--spotify-recover-lost-token&lt;/code&gt; (a flag that can be added on the command line)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;spotify.recover_lost_token = true | false&lt;/code&gt; (for a more permanent behaviour, add this to your tizonia.conf)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;binaries-and-distribution-updates&quot;&gt;Binaries and distribution updates&lt;/h3&gt;
+
+&lt;p&gt;As usual
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md&quot;&gt;CHANGELOG.md&lt;/a&gt;
+contains all the details.&lt;/p&gt;
+
+&lt;p&gt;Tizonia v0.16.0 is starting to hit the usual distribution channels:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bintray.com/tizonia&quot;&gt;Bintray&lt;/a&gt; (Debian packages)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/tizonia-all/&quot;&gt;AUR&lt;/a&gt; (Arch Linux)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://snapcraft.io/tizonia&quot;&gt;Snap Store&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Finally some great news on
+&lt;a href=&quot;https://github.com/tizonia/docker-tizonia&quot;&gt;docker-tizonia&lt;/a&gt;. The repo is now
+up-to-date and fully caught up with the latest version of Tizonia. All thanks
+to its new maintainer, &lt;a href=&quot;https://github.com/Josh5&quot;&gt;Josh Sunnex&lt;/a&gt;. Kudos to Josh!.&lt;/p&gt;
+
+&lt;h3 id=&quot;credits&quot;&gt;Credits&lt;/h3&gt;
+
+&lt;p&gt;Thanks to those who have provided feedback via the project’s &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;bug
+tracker&lt;/a&gt; on GitHub.&lt;/p&gt;
+
+&lt;h3 id=&quot;coming-up&quot;&gt;Coming up&lt;/h3&gt;
+
+&lt;p&gt;Pandora support is currently work-in-progress:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Pandora (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/340&quot;&gt;#340&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Airsonic/Subsonic support has been requested:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Airsonic/Subsonic (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/496&quot;&gt;#496&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.16.0 codenamed “Bacares” is out with 94 commits, 161 files changed, 2695 insertions(+), 868 deletions(-).</summary></entry><entry><title type="html">Totally revamped Spotify support in Tizonia 0.15.0</title><link href="http://www.tizonia.org/news/2018/06/15/release-0-15-0/" rel="alternate" type="text/html" title="Totally revamped Spotify support in Tizonia 0.15.0" /><published>2018-06-15T23:10:00+01:00</published><updated>2018-06-15T23:10:00+01:00</updated><id>http://www.tizonia.org/news/2018/06/15/release-0-15-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/06/15/release-0-15-0/">&lt;p&gt;Tizonia version 0.15.0 codenamed
 “&lt;a href=&quot;https://en.wikipedia.org/wiki/Pulp%C3%AD&quot;&gt;Pulpi&lt;/a&gt;” is out with 74 commits, 215
 files changed, 7645 insertions(+), and 785 deletions(-)&lt;/p&gt;
 

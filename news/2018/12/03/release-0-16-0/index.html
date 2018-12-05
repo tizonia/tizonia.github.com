@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>More ways to discover music on Spotify with Tizonia 0.16.0</title>
+    <meta name="description" content="Tizonia version0.16.0codenamed “Bacares” is out with 94commits, 161 files changed, 2695 insertions(+), 868 deletions(-).">
+
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>More ways to discover music on Spotify with Tizonia 0.16.0 | The Tizonia Project</title>
+<meta property="og:title" content="More ways to discover music on Spotify with Tizonia 0.16.0" />
+<meta name="author" content="juanrubio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tizonia version 0.16.0 codenamed “Bacares” is out with 94 commits, 161 files changed, 2695 insertions(+), 868 deletions(-)." />
+<meta property="og:description" content="Tizonia version 0.16.0 codenamed “Bacares” is out with 94 commits, 161 files changed, 2695 insertions(+), 868 deletions(-)." />
+<link rel="canonical" href="http://www.tizonia.org/news/2018/12/03/release-0-16-0/" />
+<meta property="og:url" content="http://www.tizonia.org/news/2018/12/03/release-0-16-0/" />
+<meta property="og:site_name" content="The Tizonia Project" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-12-03T22:10:00+00:00" />
+<script type="application/ld+json">
+{"name":null,"description":"Tizonia version 0.16.0 codenamed “Bacares” is out with 94 commits, 161 files changed, 2695 insertions(+), 868 deletions(-).","author":{"@type":"Person","name":"juanrubio"},"@type":"BlogPosting","url":"http://www.tizonia.org/news/2018/12/03/release-0-16-0/","publisher":null,"image":null,"headline":"More ways to discover music on Spotify with Tizonia 0.16.0","dateModified":"2018-12-03T22:10:00+00:00","datePublished":"2018-12-03T22:10:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://www.tizonia.org/news/2018/12/03/release-0-16-0/"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="http://www.tizonia.org/news/2018/12/03/release-0-16-0/">
+    <link rel="alternate" type="application/rss+xml" title="The Tizonia Project" href="http://www.tizonia.org/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/img/logonav.png"></span> The Tizonia Project
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+                <li ><a href="/docs/spotify/">Explore</a></li>
+                <li ><a href="/docs/debian/">Installation</a></li>
+                <li  class="active" ><a href="/news/2018/12/03/release-0-16-0/">News</a></li>
+                <li class="active"><a href="https://github.com/tizonia/tizonia-openmax-il">GitHub</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/tizonia/tizonia-openmax-il"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="well">
+                <h4>RECENT POSTS</h4>
+                <ul class="list-unstyled post-list-container">
+                    
+                    <li><a href="/news/2018/12/03/release-0-16-0/"  class="active" >More ways to discover music on Spotify with Tizonia 0.16.0</a></li>
+                    
+                    <li><a href="/news/2018/06/15/release-0-15-0/" >Totally revamped Spotify support in Tizonia 0.15.0</a></li>
+                    
+                    <li><a href="/news/2018/04/21/release-0-14-0/" >Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers</a></li>
+                    
+                    <li><a href="/news/2018/03/09/release-0-13-0/" >Tizonia v0.13.0 adds support for Plex media servers</a></li>
+                    
+                    <li><a href="/news/2018/02/11/release-0-12-0/" >New release v0.12.0 - Chromecast support!</a></li>
+                    
+                    <li><a href="/news/2017/12/30/snap-package-and-docker-image/" >Snap package and Docker image available now!</a></li>
+                    
+                    <li><a href="/news/2017/12/17/release-0-11-0/" >New Tizonia release v0.11.0</a></li>
+                    
+                    <li><a href="/news/2017/10/22/release-0-10-0/" >New Tizonia release v0.10.0</a></li>
+                    
+                    <li><a href="/news/2017/10/02/tizonia-new-web/" >New Website!</a></li>
+                    
+                    <li><a href="/allposts">All posts ...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h1>More ways to discover music on Spotify with Tizonia 0.16.0</h1>
+            <p>Dec 3, 2018 • juanrubio</p>
+            <div  id="markdown-content-container"><p>Tizonia version
+<a href="https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.16.0">0.16.0</a>
+codenamed “<a href="https://en.wikipedia.org/wiki/Bacares">Bacares</a>” is out with 94
+commits, 161 files changed, 2695 insertions(+), 868 deletions(-).</p>
+
+<p>This release primarily fixes a number of breakages in Google Play Music
+playlist and station search
+(<a href="https://github.com/tizonia/tizonia-openmax-il/issues/507">#507</a>,
+<a href="https://github.com/tizonia/tizonia-openmax-il/issues/515">#515</a>,
+<a href="https://github.com/tizonia/tizonia-openmax-il/issues/519">#519</a>,
+<a href="https://github.com/tizonia/tizonia-openmax-il/issues/522">#522</a>) that appeared
+a couple of months ago. These issues came around due to changes in some of
+Google’s internal APIs. The guys over at
+<a href="https://github.com/simon-weber/gmusicapi">gmusicapi</a> reacted very quickly and
+changed things at <a href="https://github.com/simon-weber/gmusicapi/issues/614">their
+end</a> so that we can
+continue to enjoy playing the playlists and stations from this service.</p>
+
+<p>In addition to these fixes, 0.16.0 also brings some new functionality for
+Spotify. These are the highlights:</p>
+
+<p><br /></p>
+
+<h4 id="spotify-recommendations-by-track-artist-and-genre-new">Spotify recommendations by track, artist, and genre [NEW!]</h4>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-recommendations-by-track-id &lt;track ID, URI or URL&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-recommendations-by-artist-id &lt;artist ID, URI or URL&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-recommendations-by-genre &lt;genre-name&gt;</code></p>
+</blockquote>
+
+<p>With these commands Tizonia returns instant playlists of around 100 tracks. To
+seed Spotify recommendations engine, you can either input a track ID, an artist
+ID or a genre name (e.g. ‘alt-metal’). These commands are a fantastic way to
+discover new music.</p>
+
+<p>The Spotify <code class="highlighter-rouge">id</code> can have one of these three forms:</p>
+<ul>
+  <li>ID: 1dfeR4HaWDbWqFHLkxsg1d</li>
+  <li>URI: spotify:artist:1dfeR4HaWDbWqFHLkxsg1d</li>
+  <li>URL: https://open.spotify.com/artist/1dfeR4HaWDbWqFHLkxsg1d</li>
+</ul>
+
+<p><img src="/img/tizonia-spotify-recommendations.gif" alt="tizonia --spotify-recommendations-by-track/artist/genre" title="tizonia --spotify-recommendations-by-track/artist/genre" /></p>
+
+<p><br /></p>
+
+<h4 id="spotify-related-artist-search-new">Spotify related artist search [NEW!]</h4>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-related-artists &lt;artist&gt;</code></p>
+</blockquote>
+
+<p>This command searches Spotify for the specified artist and enqueues the top
+tracks (usually 10) from that artist and from 20 related artists. So with this
+command you should end up with an instant playlist of around 210 tracks of a
+similar music style. This command is great in combination with the <code class="highlighter-rouge">--shuffle</code>
+option.</p>
+
+<p><br /></p>
+
+<h4 id="spotify-featured-playlist-search-new">Spotify featured playlist search [NEW!]</h4>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-featured-playlist &lt;search-term&gt;</code></p>
+</blockquote>
+
+<p>With this command Spotify returns a small list of around 12 playlists. The
+playlists in the list change depending on the day of the week or even the time
+of the day. Try this once with some random search term (e.g. a single space,
+<code class="highlighter-rouge">'_'</code>) to see what Spotify has in store at the moment, and then try once more
+with a refined search term.</p>
+
+<p><br /></p>
+
+<h4 id="spotify-new-releases-search-new">Spotify new releases search [NEW!]</h4>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-featured-playlist &lt;search-term&gt;</code></p>
+</blockquote>
+
+<p>With this command Spotify returns a small list of around 20 albums. Try this
+once with some random search term (e.g. a single space, <code class="highlighter-rouge">'_'</code>) to see what new
+releases Spotify has on offer, and then try once more with a refined search
+term.</p>
+
+<h4 id="search-by-spotify-track-id-artist-id-album-id-and-playlist-id-new">Search by Spotify track ID, artist ID, album ID, and playlist ID [NEW!]</h4>
+<p>These three new Spotify commands are available:</p>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-tracks-id &lt;Spotify track ID, URI or URL&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-artist-id &lt;Spotify artist ID, URI or URL&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-album-id &lt;Spotify album ID, URI or URL&gt;</code></p>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">tizonia --spotify-playlist-id &lt;Spotify playlist ID, URI or URL&gt;</code></p>
+</blockquote>
+
+<p>These are useful when the normal text-based search does not always return the
+track, artist, album, or playlist that you want. So at least an option is to
+find its id in the Spotify web service:
+<a href="https://open.spotify.com">https://open.spotify.com</a>.</p>
+
+<p>Remember that with <code class="highlighter-rouge">tizonia --spotify-playlist-id</code> you will need to specify
+<code class="highlighter-rouge">--spotify-owner '&lt;spotify-user&gt;'</code> if the playlist you are trying to listen to
+is owned by another user (i.e. it’s not one of your plublic playlists).</p>
+
+<p><br /></p>
+
+<h4 id="recovering-from-spurious-play-token-losses-new">Recovering from spurious play token losses [NEW!]</h4>
+
+<p>Sometimes Spotify reports that the play token has been lost and the playback
+stops. There are a couple of new options to allow Tizonia to recover the play
+token and keep playing.</p>
+
+<blockquote>
+  <p><code class="highlighter-rouge">--spotify-recover-lost-token</code> (a flag that can be added on the command line)</p>
+</blockquote>
+
+<blockquote>
+  <p><code class="highlighter-rouge">spotify.recover_lost_token = true | false</code> (for a more permanent behaviour, add this to your tizonia.conf)</p>
+</blockquote>
+
+<p><br /></p>
+
+<h3 id="binaries-and-distribution-updates">Binaries and distribution updates</h3>
+
+<p>As usual
+<a href="https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md">CHANGELOG.md</a>
+contains all the details.</p>
+
+<p>Tizonia v0.16.0 is starting to hit the usual distribution channels:</p>
+<ul>
+  <li><a href="https://bintray.com/tizonia">Bintray</a> (Debian packages)</li>
+  <li><a href="https://aur.archlinux.org/packages/tizonia-all/">AUR</a> (Arch Linux)</li>
+  <li><a href="https://snapcraft.io/tizonia">Snap Store</a>.</li>
+</ul>
+
+<p>Finally some great news on
+<a href="https://github.com/tizonia/docker-tizonia">docker-tizonia</a>. The repo is now
+up-to-date and fully caught up with the latest version of Tizonia. All thanks
+to its new maintainer, <a href="https://github.com/Josh5">Josh Sunnex</a>. Kudos to Josh!.</p>
+
+<h3 id="credits">Credits</h3>
+
+<p>Thanks to those who have provided feedback via the project’s <a href="https://github.com/tizonia/tizonia-openmax-il/issues">bug
+tracker</a> on GitHub.</p>
+
+<h3 id="coming-up">Coming up</h3>
+
+<p>Pandora support is currently work-in-progress:</p>
+<ul>
+  <li>Pandora (<a href="https://github.com/tizonia/tizonia-openmax-il/issues/340">#340</a>)</li>
+</ul>
+
+<p>Airsonic/Subsonic support has been requested:</p>
+<ul>
+  <li>Airsonic/Subsonic (<a href="https://github.com/tizonia/tizonia-openmax-il/issues/496">#496</a>)</li>
+</ul>
+
+</div>
+            <hr>
+            <ul class="pager">
+                
+                <li class="previous">
+                    <a href="/news/2018/06/15/release-0-15-0/">
+                        <span aria-hidden="true">&larr;</span> Older
+                    </a>
+                </li>
+                 
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            The Tizonia Project 2018 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js "></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+
+    
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21817639-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-21817639-6');
+</script>
+
+    
+</body>
+
+</html>

@@ -4,48 +4,6 @@
     
     
     {
-      "title": "Debian/Ubuntu/Raspbian",
-      "url": "/docs/debian/"
-
-    },
-  
-    
-    
-    {
-      "title": "Arch Linux",
-      "url": "/docs/aur/"
-
-    },
-  
-    
-    
-    {
-      "title": "Snap Package",
-      "url": "/docs/snap/"
-
-    },
-  
-    
-    
-    {
-      "title": "Docker Image",
-      "url": "/docs/docker/"
-
-    },
-  
-    
-    
-    {
-      "title": "From Source",
-      "url": "/docs/building/"
-
-    },
-  
-
-  
-    
-    
-    {
       "title": "Spotify",
       "url": "/docs/spotify/"
 
@@ -106,6 +64,48 @@
     
     
     {
+      "title": "Debian/Ubuntu/Raspbian",
+      "url": "/docs/debian/"
+
+    },
+  
+    
+    
+    {
+      "title": "Arch Linux",
+      "url": "/docs/aur/"
+
+    },
+  
+    
+    
+    {
+      "title": "Snap Package",
+      "url": "/docs/snap/"
+
+    },
+  
+    
+    
+    {
+      "title": "Docker Image",
+      "url": "/docs/docker/"
+
+    },
+  
+    
+    
+    {
+      "title": "From Source",
+      "url": "/docs/building/"
+
+    },
+  
+
+  
+    
+    
+    {
       "title": "Open Source",
       "url": "/docs/development/"
 
@@ -119,8 +119,21 @@
 
     },
   
+    
+    
+    {
+      "title": "",
+      "url": ""
+
+    },
+  
 
 
+  
+  {
+  "title": "More ways to discover music on Spotify with Tizonia 0.16.0",
+  "url": "/news/2018/12/03/release-0-16-0/"
+  },
   
   {
   "title": "Totally revamped Spotify support in Tizonia 0.15.0",
