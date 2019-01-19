@@ -1,15 +1,8 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2019-01-19T23:19:40+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2019-01-19T23:22:31+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
 </subtitle><entry><title type="html">Spotify login issues fixed in Tizonia 0.17.0</title><link href="http://www.tizonia.org/news/2019/01/17/release-0-17-0/" rel="alternate" type="text/html" title="Spotify login issues fixed in Tizonia 0.17.0" /><published>2019-01-17T22:01:00+00:00</published><updated>2019-01-17T22:01:00+00:00</updated><id>http://www.tizonia.org/news/2019/01/17/release-0-17-0</id><content type="html" xml:base="http://www.tizonia.org/news/2019/01/17/release-0-17-0/">&lt;p&gt;Tizonia version
 &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.17.0&quot;&gt;0.17.0&lt;/a&gt;
 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Nijar&quot;&gt;Nijar&lt;/a&gt;” is out with 23
 commits, 995 files changed, 1552 insertions(+), 1154 deletions(-).&lt;/p&gt;
-
-&lt;p&gt;The list of contribuions is as follows:&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     19 Juan A. Rubio
-      3 Seïfane Idouchach
-      1 Jurgen Verhasselt
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
 
 &lt;p&gt;This release primarily fixes a very important issue that was reported soon
 after 0.16.0 was released back in December. Users noticed that they could not
@@ -44,8 +37,10 @@ contains all the details.&lt;/p&gt;
 like to thank the following people that contributed with PRs during this
 cycle:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/548&quot;&gt;Seïfane Idouchach (seifane) PR #548 &lt;/a&gt;
-&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/549&quot;&gt;Jurgen Verhasselt (sjugge) PR #549&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/548&quot;&gt;Seïfane Idouchach (seifane) PR #548 &lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/549&quot;&gt;Jurgen Verhasselt (sjugge) PR #549&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;coming-up&quot;&gt;Coming up&lt;/h3&gt;
 

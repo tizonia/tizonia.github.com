@@ -24,9 +24,9 @@
 <meta property="og:url" content="http://www.tizonia.org/docs/aur/" />
 <meta property="og:site_name" content="The Tizonia Project" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-01-19T23:19:40+00:00" />
+<meta property="article:published_time" content="2019-01-19T23:22:31+00:00" />
 <script type="application/ld+json">
-{"name":null,"description":"Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.","author":null,"@type":"WebPage","url":"http://www.tizonia.org/docs/aur/","publisher":null,"image":null,"headline":"Arch Linux","dateModified":"2019-01-19T23:19:40+00:00","datePublished":"2019-01-19T23:19:40+00:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
+{"name":null,"description":"Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.","author":null,"@type":"WebPage","url":"http://www.tizonia.org/docs/aur/","publisher":null,"image":null,"headline":"Arch Linux","dateModified":"2019-01-19T23:22:31+00:00","datePublished":"2019-01-19T23:22:31+00:00","sameAs":null,"mainEntityOfPage":null,"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -249,9 +249,19 @@ download from the
  <p>To install Tizonia on an Arch-compatible system, do like this:</p>
 </div>
 
-<div class="language-bash highlighter-rouge"><pre class="highlight"><code>   <span class="nv">$ </span>yaourt -S tizonia-all <span class="c"># for the latest released version</span>
-   <span class="c"># or</span>
-   <span class="nv">$ </span>yaourt -S tizonia-all-git <span class="c"># for the bleeding edge</span>
+<div class="language-bash highlighter-rouge"><pre class="highlight"><code>    <span class="c"># Please note that if you are upgrading your existing</span>
+    <span class="c"># Tizonia installation, you *need* to uninstall it before installing a new version.</span>
+    <span class="c"># See GitHub issue https://github.com/tizonia/tizonia-openmax-il/issues/485</span>
+
+    <span class="c"># For the latest stable release</span>
+    <span class="nv">$ </span>git clone https://aur.archlinux.org/tizonia-all.git
+    <span class="nv">$ </span><span class="nb">cd </span>tizonia-all
+    <span class="nv">$ </span>makepkg -si
+
+    <span class="c"># or for the bleeding edge</span>
+    <span class="nv">$ </span>git clone https://aur.archlinux.org/tizonia-all-git.git
+    <span class="nv">$ </span><span class="nb">cd </span>tizonia-all
+    <span class="nv">$ </span>makepkg -si
 </code></pre>
 </div>
 </div>
