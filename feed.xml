@@ -1,5 +1,63 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2018-12-06T22:15:58+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
-</subtitle><entry><title type="html">More ways to discover music on Spotify with Tizonia 0.16.0</title><link href="http://www.tizonia.org/news/2018/12/03/release-0-16-0/" rel="alternate" type="text/html" title="More ways to discover music on Spotify with Tizonia 0.16.0" /><published>2018-12-03T22:10:00+00:00</published><updated>2018-12-03T22:10:00+00:00</updated><id>http://www.tizonia.org/news/2018/12/03/release-0-16-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/12/03/release-0-16-0/">&lt;p&gt;Tizonia version
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2019-01-19T23:19:40+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+</subtitle><entry><title type="html">Spotify login issues fixed in Tizonia 0.17.0</title><link href="http://www.tizonia.org/news/2019/01/17/release-0-17-0/" rel="alternate" type="text/html" title="Spotify login issues fixed in Tizonia 0.17.0" /><published>2019-01-17T22:01:00+00:00</published><updated>2019-01-17T22:01:00+00:00</updated><id>http://www.tizonia.org/news/2019/01/17/release-0-17-0</id><content type="html" xml:base="http://www.tizonia.org/news/2019/01/17/release-0-17-0/">&lt;p&gt;Tizonia version
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.17.0&quot;&gt;0.17.0&lt;/a&gt;
+codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Nijar&quot;&gt;Nijar&lt;/a&gt;” is out with 23
+commits, 995 files changed, 1552 insertions(+), 1154 deletions(-).&lt;/p&gt;
+
+&lt;p&gt;The list of contribuions is as follows:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;     19 Juan A. Rubio
+      3 Seïfane Idouchach
+      1 Jurgen Verhasselt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;This release primarily fixes a very important issue that was reported soon
+after 0.16.0 was released back in December. Users noticed that they could not
+access Spotify using Tizonia:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/531&quot;&gt;Spotify: “unable to login offline: no such user” #531&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This problem turned out to be a regression introduced in v0.16.0. I would like
+to thank all the users that contributed with feedback in
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/531&quot;&gt;#531&lt;/a&gt;. This feedback
+ended up being crucial in finding the actual root cause of the failed login
+attempts. Hats off to all of you!&lt;/p&gt;
+
+&lt;h3 id=&quot;binaries-and-distribution&quot;&gt;Binaries and distribution&lt;/h3&gt;
+
+&lt;p&gt;As usual
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md&quot;&gt;CHANGELOG.md&lt;/a&gt;
+contains all the details.&lt;/p&gt;
+
+&lt;p&gt;Tizonia v0.17.0 will be soon in the following distribution channels:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bintray.com/tizonia&quot;&gt;Bintray&lt;/a&gt; (Debian packages)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/tizonia-all/&quot;&gt;AUR&lt;/a&gt; (Arch Linux)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://snapcraft.io/tizonia&quot;&gt;Snap Store&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tizonia/docker-tizonia&quot;&gt;docker-tizonia&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;credits&quot;&gt;Credits&lt;/h3&gt;
+
+&lt;p&gt;In addition to the users of
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/531&quot;&gt;#531&lt;/a&gt;, I would also
+like to thank the following people that contributed with PRs during this
+cycle:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/548&quot;&gt;Seïfane Idouchach (seifane) PR #548 &lt;/a&gt;
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/549&quot;&gt;Jurgen Verhasselt (sjugge) PR #549&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;coming-up&quot;&gt;Coming up&lt;/h3&gt;
+
+&lt;p&gt;Pandora support is still work-in-progress:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pandora (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/340&quot;&gt;#340&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Chromecast issues need fixing (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/483&quot;&gt;#483&lt;/a&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.17.0 codenamed “Nijar” is out with 23 commits, 995 files changed, 1552 insertions(+), 1154 deletions(-).</summary></entry><entry><title type="html">More ways to discover music on Spotify with Tizonia 0.16.0</title><link href="http://www.tizonia.org/news/2018/12/03/release-0-16-0/" rel="alternate" type="text/html" title="More ways to discover music on Spotify with Tizonia 0.16.0" /><published>2018-12-03T22:10:00+00:00</published><updated>2018-12-03T22:10:00+00:00</updated><id>http://www.tizonia.org/news/2018/12/03/release-0-16-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/12/03/release-0-16-0/">&lt;p&gt;Tizonia version
 &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.16.0&quot;&gt;0.16.0&lt;/a&gt;
 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Bacares&quot;&gt;Bacares&lt;/a&gt;” is out with 94
 commits, 161 files changed, 2695 insertions(+), 868 deletions(-).&lt;/p&gt;
