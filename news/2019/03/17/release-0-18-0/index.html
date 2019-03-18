@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Spotify login issues fixed in Tizonia 0.17.0</title>
-    <meta name="description" content="Tizonia version0.17.0codenamed “Nijar” is out with 23commits, 995 files changed, 1552 insertions(+), 1154 deletions(-).">
+    <title>Fixed 'Google Play Music tracks cut short' in Tizonia 0.18.0</title>
+    <meta name="description" content="Tizonia version0.18.0codenamed “Huercal-Overa” is out with 48commits, 224 files changed, 1825 insertions(+), 729 deletions(-).">
 
 
     <link rel="stylesheet" href="/css/main.css">
@@ -15,23 +15,23 @@
 
     <link rel="shortcut icon" href="/favicon.ico?1">
     <!-- Begin Jekyll SEO tag v2.3.0 -->
-<title>Spotify login issues fixed in Tizonia 0.17.0 | The Tizonia Project</title>
-<meta property="og:title" content="Spotify login issues fixed in Tizonia 0.17.0" />
+<title>Fixed ‘Google Play Music tracks cut short’ in Tizonia 0.18.0 | The Tizonia Project</title>
+<meta property="og:title" content="Fixed ‘Google Play Music tracks cut short’ in Tizonia 0.18.0" />
 <meta name="author" content="juanrubio" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Tizonia version 0.17.0 codenamed “Nijar” is out with 23 commits, 995 files changed, 1552 insertions(+), 1154 deletions(-)." />
-<meta property="og:description" content="Tizonia version 0.17.0 codenamed “Nijar” is out with 23 commits, 995 files changed, 1552 insertions(+), 1154 deletions(-)." />
-<link rel="canonical" href="http://www.tizonia.org/news/2019/01/17/release-0-17-0/" />
-<meta property="og:url" content="http://www.tizonia.org/news/2019/01/17/release-0-17-0/" />
+<meta name="description" content="Tizonia version 0.18.0 codenamed “Huercal-Overa” is out with 48 commits, 224 files changed, 1825 insertions(+), 729 deletions(-)." />
+<meta property="og:description" content="Tizonia version 0.18.0 codenamed “Huercal-Overa” is out with 48 commits, 224 files changed, 1825 insertions(+), 729 deletions(-)." />
+<link rel="canonical" href="http://www.tizonia.org/news/2019/03/17/release-0-18-0/" />
+<meta property="og:url" content="http://www.tizonia.org/news/2019/03/17/release-0-18-0/" />
 <meta property="og:site_name" content="The Tizonia Project" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-01-17T22:01:00+00:00" />
+<meta property="article:published_time" content="2019-03-17T21:11:00+00:00" />
 <script type="application/ld+json">
-{"name":null,"description":"Tizonia version 0.17.0 codenamed “Nijar” is out with 23 commits, 995 files changed, 1552 insertions(+), 1154 deletions(-).","author":{"@type":"Person","name":"juanrubio"},"@type":"BlogPosting","url":"http://www.tizonia.org/news/2019/01/17/release-0-17-0/","publisher":null,"image":null,"headline":"Spotify login issues fixed in Tizonia 0.17.0","dateModified":"2019-01-17T22:01:00+00:00","datePublished":"2019-01-17T22:01:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://www.tizonia.org/news/2019/01/17/release-0-17-0/"},"@context":"http://schema.org"}</script>
+{"name":null,"description":"Tizonia version 0.18.0 codenamed “Huercal-Overa” is out with 48 commits, 224 files changed, 1825 insertions(+), 729 deletions(-).","author":{"@type":"Person","name":"juanrubio"},"@type":"BlogPosting","url":"http://www.tizonia.org/news/2019/03/17/release-0-18-0/","publisher":null,"image":null,"headline":"Fixed ‘Google Play Music tracks cut short’ in Tizonia 0.18.0","dateModified":"2019-03-17T21:11:00+00:00","datePublished":"2019-03-17T21:11:00+00:00","sameAs":null,"mainEntityOfPage":{"@type":"WebPage","@id":"http://www.tizonia.org/news/2019/03/17/release-0-18-0/"},"@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-    <link rel="canonical" href="http://www.tizonia.org/news/2019/01/17/release-0-17-0/">
+    <link rel="canonical" href="http://www.tizonia.org/news/2019/03/17/release-0-18-0/">
     <link rel="alternate" type="application/rss+xml" title="The Tizonia Project" href="http://www.tizonia.org/feed.xml" />
 </head>
 
@@ -84,9 +84,9 @@
                 <h4>RECENT POSTS</h4>
                 <ul class="list-unstyled post-list-container">
                     
-                    <li><a href="/news/2019/03/17/release-0-18-0/" >Fixed 'Google Play Music tracks cut short' in Tizonia 0.18.0</a></li>
+                    <li><a href="/news/2019/03/17/release-0-18-0/"  class="active" >Fixed 'Google Play Music tracks cut short' in Tizonia 0.18.0</a></li>
                     
-                    <li><a href="/news/2019/01/17/release-0-17-0/"  class="active" >Spotify login issues fixed in Tizonia 0.17.0</a></li>
+                    <li><a href="/news/2019/01/17/release-0-17-0/" >Spotify login issues fixed in Tizonia 0.17.0</a></li>
                     
                     <li><a href="/news/2018/12/03/release-0-16-0/" >More ways to discover music on Spotify with Tizonia 0.16.0</a></li>
                     
@@ -110,24 +110,80 @@
         </div>
 
         <div class="col-md-8">
-            <h1>Spotify login issues fixed in Tizonia 0.17.0</h1>
-            <p>Jan 17, 2019 • juanrubio</p>
+            <h1>Fixed 'Google Play Music tracks cut short' in Tizonia 0.18.0</h1>
+            <p>Mar 17, 2019 • juanrubio</p>
             <div  id="markdown-content-container"><p>Tizonia version
-<a href="https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.17.0">0.17.0</a>
-codenamed “<a href="https://en.wikipedia.org/wiki/Nijar">Nijar</a>” is out with 23
-commits, 995 files changed, 1552 insertions(+), 1154 deletions(-).</p>
+<a href="https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.18.0">0.18.0</a>
+codenamed “<a href="https://en.wikipedia.org/wiki/Hu%C3%A9rcal-Overa">Huercal-Overa</a>” is out with 48
+commits, 224 files changed, 1825 insertions(+), 729 deletions(-).</p>
 
-<p>This release primarily fixes a very important issue that was reported soon
-after 0.16.0 was released back in December. Users noticed that they could not
-access Spotify using Tizonia:</p>
+<h3 id="fixed-google-play-music-tracks-cut-short">Fixed ‘Google Play Music tracks cut short’</h3>
 
-<p><a href="https://github.com/tizonia/tizonia-openmax-il/issues/531">Spotify: “unable to login offline: no such user” #531</a></p>
+<p>This release primarily fixes an important issue in the Google Play Music
+service where many tracks were being cut short. Users reported this issue and
+helped out by collecting logs and providing very usuful insights.</p>
 
-<p>This problem turned out to be a regression introduced in v0.16.0. I would like
-to thank all the users that contributed with feedback in
-<a href="https://github.com/tizonia/tizonia-openmax-il/issues/531">#531</a>. This feedback
-ended up being crucial in finding the actual root cause of the failed login
-attempts. Hats off to all of you!</p>
+<p><a href="https://github.com/tizonia/tizonia-openmax-il/issues/547">Google Play music intermittently cutting songs short” #547</a></p>
+
+<p>Until v0.17.0, Tizonia was buffering about 20-40 seconds of track from Google
+Play Music, with further requests being put out periodically as the internal
+buffer utilization falled below a low watermark level. Apparently, the Google
+servers now expect the client to pull the all track data in a shorter period of
+time. This lead to some tracks being cut short, as the Google server would
+close the connection while Tizonia was still pulling data.</p>
+
+<p>The internal buffering scheme in Tizonia has been updated to prevent this
+issue. In addition, the following configuration elements have been added to
+<code class="highlighter-rouge">tizonia.conf</code> in version 0.18.0. These are optional elements that can be used
+to increase the resilence of Tizonia in the presence of track cuts of this kind.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>gmusic.buffer_seconds
+soundcloud.buffer_seconds
+dirble.buffer_seconds
+youtube.buffer_seconds
+plex.buffer_seconds
+</code></pre>
+</div>
+
+<p>Additionally, these values can be set or overriden from the command-line with
+the <code class="highlighter-rouge">--buffer-seconds</code> command-line option, e.g:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ tizonia --gmusic-unlimited-artist 'queen' --buffer-seconds=520
+$ tizonia --soundcloud-genres 'piano' --buffer-seconds=720
+
+etc...
+
+</code></pre>
+</div>
+
+<p>I would like to thank the users that contributed to issue
+<a href="https://github.com/tizonia/tizonia-openmax-il/issues/547">#547</a> with their
+feedback:</p>
+<ul>
+  <li><a href="https://github.com/driador">driador</a></li>
+  <li><a href="https://github.com/timothynott">timothynott</a></li>
+  <li><a href="https://github.com/croxis">croxis</a></li>
+</ul>
+
+<h3 id="filtering-of-spotify-explicit-tracks">Filtering of Spotify ‘explicit’ tracks</h3>
+
+<p>In v0.18.0 there is a new configuration option. This option switches on or off
+the filtering of ‘explicit’ tracks from Spotify. This is useful if you, for
+example, have children running around in the house while you are listening to
+music!.</p>
+
+<p>So in <code class="highlighter-rouge">tizonia.conf</code>, you can do:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>spotify.allow_explicit_tracks = true|false (default: false, set to true to
+                                                     allow explicit tracks)
+</code></pre>
+</div>
+
+<p>or from the command-line:</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>--spotify-allow-explicit-tracks       Allow Tizonia to play explicit tracks
+                                      from Spotify (default: false).
+</code></pre>
+</div>
 
 <h3 id="binaries-and-distribution">Binaries and distribution</h3>
 
@@ -135,24 +191,12 @@ attempts. Hats off to all of you!</p>
 <a href="https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md">CHANGELOG.md</a>
 contains all the details.</p>
 
-<p>Tizonia v0.17.0 will be soon in the following distribution channels:</p>
+<p>Tizonia v0.18.0 will be soon in the following distribution channels:</p>
 <ul>
   <li><a href="https://bintray.com/tizonia">Bintray</a> (Debian packages)</li>
   <li><a href="https://aur.archlinux.org/packages/tizonia-all/">AUR</a> (Arch Linux)</li>
   <li><a href="https://snapcraft.io/tizonia">Snap Store</a>.</li>
   <li><a href="https://github.com/tizonia/docker-tizonia">docker-tizonia</a>.</li>
-</ul>
-
-<h3 id="credits">Credits</h3>
-
-<p>In addition to the users of
-<a href="https://github.com/tizonia/tizonia-openmax-il/issues/531">#531</a>, I would also
-like to thank the following people that contributed with PRs during this
-cycle:</p>
-
-<ul>
-  <li><a href="https://github.com/tizonia/tizonia-openmax-il/pull/548">Seïfane Idouchach (seifane) PR #548 </a></li>
-  <li><a href="https://github.com/tizonia/tizonia-openmax-il/pull/549">Jurgen Verhasselt (sjugge) PR #549</a></li>
 </ul>
 
 <h3 id="coming-up">Coming up</h3>
@@ -171,17 +215,11 @@ cycle:</p>
             <ul class="pager">
                 
                 <li class="previous">
-                    <a href="/news/2018/12/03/release-0-16-0/">
+                    <a href="/news/2019/01/17/release-0-17-0/">
                         <span aria-hidden="true">&larr;</span> Older
                     </a>
                 </li>
                  
-                <li class="next">
-                    <a href="/news/2019/03/17/release-0-18-0/">
-                      Newer <span aria-hidden="true">&rarr;</span>
-                    </a>
-                </li>
-                
             </ul>
         </div>
 

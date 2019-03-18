@@ -1,5 +1,102 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2019-03-16T00:08:01+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
-</subtitle><entry><title type="html">Spotify login issues fixed in Tizonia 0.17.0</title><link href="http://www.tizonia.org/news/2019/01/17/release-0-17-0/" rel="alternate" type="text/html" title="Spotify login issues fixed in Tizonia 0.17.0" /><published>2019-01-17T22:01:00+00:00</published><updated>2019-01-17T22:01:00+00:00</updated><id>http://www.tizonia.org/news/2019/01/17/release-0-17-0</id><content type="html" xml:base="http://www.tizonia.org/news/2019/01/17/release-0-17-0/">&lt;p&gt;Tizonia version
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2019-03-18T16:44:38+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+</subtitle><entry><title type="html">Fixed ‘Google Play Music tracks cut short’ in Tizonia 0.18.0</title><link href="http://www.tizonia.org/news/2019/03/17/release-0-18-0/" rel="alternate" type="text/html" title="Fixed 'Google Play Music tracks cut short' in Tizonia 0.18.0" /><published>2019-03-17T21:11:00+00:00</published><updated>2019-03-17T21:11:00+00:00</updated><id>http://www.tizonia.org/news/2019/03/17/release-0-18-0</id><content type="html" xml:base="http://www.tizonia.org/news/2019/03/17/release-0-18-0/">&lt;p&gt;Tizonia version
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.18.0&quot;&gt;0.18.0&lt;/a&gt;
+codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Hu%C3%A9rcal-Overa&quot;&gt;Huercal-Overa&lt;/a&gt;” is out with 48
+commits, 224 files changed, 1825 insertions(+), 729 deletions(-).&lt;/p&gt;
+
+&lt;h3 id=&quot;fixed-google-play-music-tracks-cut-short&quot;&gt;Fixed ‘Google Play Music tracks cut short’&lt;/h3&gt;
+
+&lt;p&gt;This release primarily fixes an important issue in the Google Play Music
+service where many tracks were being cut short. Users reported this issue and
+helped out by collecting logs and providing very usuful insights.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/547&quot;&gt;Google Play music intermittently cutting songs short” #547&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Until v0.17.0, Tizonia was buffering about 20-40 seconds of track from Google
+Play Music, with further requests being put out periodically as the internal
+buffer utilization falled below a low watermark level. Apparently, the Google
+servers now expect the client to pull the all track data in a shorter period of
+time. This lead to some tracks being cut short, as the Google server would
+close the connection while Tizonia was still pulling data.&lt;/p&gt;
+
+&lt;p&gt;The internal buffering scheme in Tizonia has been updated to prevent this
+issue. In addition, the following configuration elements have been added to
+&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia.conf&lt;/code&gt; in version 0.18.0. These are optional elements that can be used
+to increase the resilence of Tizonia in the presence of track cuts of this kind.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;gmusic.buffer_seconds
+soundcloud.buffer_seconds
+dirble.buffer_seconds
+youtube.buffer_seconds
+plex.buffer_seconds
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Additionally, these values can be set or overriden from the command-line with
+the &lt;code class=&quot;highlighter-rouge&quot;&gt;--buffer-seconds&lt;/code&gt; command-line option, e.g:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ tizonia --gmusic-unlimited-artist 'queen' --buffer-seconds=520
+$ tizonia --soundcloud-genres 'piano' --buffer-seconds=720
+
+etc...
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I would like to thank the users that contributed to issue
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/547&quot;&gt;#547&lt;/a&gt; with their
+feedback:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/driador&quot;&gt;driador&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/timothynott&quot;&gt;timothynott&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/croxis&quot;&gt;croxis&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;filtering-of-spotify-explicit-tracks&quot;&gt;Filtering of Spotify ‘explicit’ tracks&lt;/h3&gt;
+
+&lt;p&gt;In v0.18.0 there is a new configuration option. This option switches on or off
+the filtering of ‘explicit’ tracks from Spotify. This is useful if you, for
+example, have children running around in the house while you are listening to
+music!.&lt;/p&gt;
+
+&lt;p&gt;So in &lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia.conf&lt;/code&gt;, you can do:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;spotify.allow_explicit_tracks = true|false (default: false, set to true to
+                                                     allow explicit tracks)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;or from the command-line:&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;--spotify-allow-explicit-tracks       Allow Tizonia to play explicit tracks
+                                      from Spotify (default: false).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;binaries-and-distribution&quot;&gt;Binaries and distribution&lt;/h3&gt;
+
+&lt;p&gt;As usual
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md&quot;&gt;CHANGELOG.md&lt;/a&gt;
+contains all the details.&lt;/p&gt;
+
+&lt;p&gt;Tizonia v0.18.0 will be soon in the following distribution channels:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bintray.com/tizonia&quot;&gt;Bintray&lt;/a&gt; (Debian packages)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/tizonia-all/&quot;&gt;AUR&lt;/a&gt; (Arch Linux)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://snapcraft.io/tizonia&quot;&gt;Snap Store&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tizonia/docker-tizonia&quot;&gt;docker-tizonia&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;coming-up&quot;&gt;Coming up&lt;/h3&gt;
+
+&lt;p&gt;Pandora support is still work-in-progress:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Pandora (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/340&quot;&gt;#340&lt;/a&gt;)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Chromecast issues need fixing (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/483&quot;&gt;#483&lt;/a&gt;).&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.18.0 codenamed “Huercal-Overa” is out with 48 commits, 224 files changed, 1825 insertions(+), 729 deletions(-).</summary></entry><entry><title type="html">Spotify login issues fixed in Tizonia 0.17.0</title><link href="http://www.tizonia.org/news/2019/01/17/release-0-17-0/" rel="alternate" type="text/html" title="Spotify login issues fixed in Tizonia 0.17.0" /><published>2019-01-17T22:01:00+00:00</published><updated>2019-01-17T22:01:00+00:00</updated><id>http://www.tizonia.org/news/2019/01/17/release-0-17-0</id><content type="html" xml:base="http://www.tizonia.org/news/2019/01/17/release-0-17-0/">&lt;p&gt;Tizonia version
 &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.17.0&quot;&gt;0.17.0&lt;/a&gt;
 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Nijar&quot;&gt;Nijar&lt;/a&gt;” is out with 23
 commits, 995 files changed, 1552 insertions(+), 1154 deletions(-).&lt;/p&gt;
@@ -662,24 +759,4 @@ for full details).&lt;/p&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;And also thanks to those who have provided feedback via the project’s &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;bug
-tracker&lt;/a&gt; on GitHub.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.10.0 codenamed “Cuevas del Almanzora” is out!.</summary></entry><entry><title type="html">New Website!</title><link href="http://www.tizonia.org/news/2017/10/02/tizonia-new-web/" rel="alternate" type="text/html" title="New Website!" /><published>2017-10-02T23:23:00+01:00</published><updated>2017-10-02T23:23:00+01:00</updated><id>http://www.tizonia.org/news/2017/10/02/tizonia-new-web</id><content type="html" xml:base="http://www.tizonia.org/news/2017/10/02/tizonia-new-web/">&lt;p&gt;The Tizonia Project has from today a new web site!.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://www.simplybuilt.com/&quot;&gt;SimplyBuilt&lt;/a&gt;, the web builder app and hosting
-shop that has been very kindly (and for free) hosting Tizonia’s website in the
-last few years is &lt;a href=&quot;http://www.simplybuilt.com/farewell-and-thanks&quot;&gt;closing
-down&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;So long SimplyBuilt, and thanks for all the fish!&lt;/p&gt;
-
-&lt;p&gt;So.. it was necessary to find a new place. Luckily, finding a replacement has
-not been difficult. &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; and
-&lt;a href=&quot;https://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; are these days the ‘de-facto’ standard in free
-hosting for open source projects.&lt;/p&gt;
-
-&lt;p&gt;So there your go, a new web site and blog for Tizonia.&lt;/p&gt;
-
-&lt;h3 id=&quot;credits&quot;&gt;Credits&lt;/h3&gt;
-
-&lt;p&gt;This site is based on the ‘Jekyll Documentation Theme’ developed by &lt;a href=&quot;https://aksakalli.github.io/&quot;&gt;Can Güney Aksakalli&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The GitHub repo for this theme is &lt;a href=&quot;https://github.com/aksakalli/jekyll-doc-theme&quot;&gt;https://github.com/aksakalli/jekyll-doc-theme&lt;/a&gt; and the demo is at &lt;a href=&quot;https://aksakalli.github.io/jekyll-doc-theme/&quot;&gt;https://aksakalli.github.io/jekyll-doc-theme/&lt;/a&gt;.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">The Tizonia Project has from today a new web site!.</summary></entry></feed>
+tracker&lt;/a&gt; on GitHub.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.10.0 codenamed “Cuevas del Almanzora” is out!.</summary></entry></feed>
