@@ -1,5 +1,160 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-12-18T11:29:39+00:00</updated><id>http://localhost:4000/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
-</subtitle><entry><title type="html">Fixed ‘Google Play Music tracks cut short’ in Tizonia 0.18.0</title><link href="http://localhost:4000/news/2019/03/17/release-0-18-0/" rel="alternate" type="text/html" title="Fixed 'Google Play Music tracks cut short' in Tizonia 0.18.0" /><published>2019-03-17T21:11:00+00:00</published><updated>2019-03-17T21:11:00+00:00</updated><id>http://localhost:4000/news/2019/03/17/release-0-18-0</id><content type="html" xml:base="http://localhost:4000/news/2019/03/17/release-0-18-0/">&lt;p&gt;Tizonia version
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2019-12-21T00:02:43+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+</subtitle><entry><title type="html">Global Spotify playlist search and other improvements in Tizonia 0.19.0</title><link href="http://www.tizonia.org/news/2019/03/19/release-0-19-0/" rel="alternate" type="text/html" title="Global Spotify playlist search and other improvements in Tizonia 0.19.0" /><published>2019-03-19T21:11:00+00:00</published><updated>2019-03-19T21:11:00+00:00</updated><id>http://www.tizonia.org/news/2019/03/19/release-0-19-0</id><content type="html" xml:base="http://www.tizonia.org/news/2019/03/19/release-0-19-0/">&lt;p&gt;Tizonia version
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.19.0&quot;&gt;0.19.0&lt;/a&gt;
+codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/V%C3%A9lez-Blanco&quot;&gt;Velez-Blanco&lt;/a&gt;” is
+out with 96 commits, 279 files changed, 3709 insertions(+), 5162 deletions(-).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;spotify-global-playlist-search&quot;&gt;Spotify: global playlist search&lt;/h3&gt;
+
+&lt;p&gt;Until v0.18.0, searching for a Spotify playlist using Tizonia involved knowing
+the owner of the playlist that had to be returned. This was obviously not the
+most useful way of searching for playlists.&lt;/p&gt;
+
+&lt;p&gt;With the implementation provided in
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/589&quot;&gt;spotify: global playlist search #589&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;the &lt;code class=&quot;highlighter-rouge&quot;&gt;--spotify-owner&lt;/code&gt; switch now allows the keyword &lt;code class=&quot;highlighter-rouge&quot;&gt;anyuser&lt;/code&gt;, which kicks off
+a global playlist.
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/tizonia-spotify-global-playlist-search.png&quot; alt=&quot;--spotify-playlist &amp;quot;Some playlist name&amp;quot; --spotify-owner &amp;quot;anyuser&quot; title=&quot;--spotify-playlist &amp;quot;Some playlist name&amp;quot; --spotify-owner &amp;quot;anyuser&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;spotify-proxy-configuration&quot;&gt;Spotify: proxy configuration&lt;/h3&gt;
+
+&lt;p&gt;Proxy server configuration is now available for Spotify.&lt;/p&gt;
+
+&lt;p&gt;With the implementation provided in
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/626&quot;&gt;Spotify: doesn’t seem to use proxy #626&lt;/a&gt;
+the proxy configuration is accessible via command-line switches and via &lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia.conf&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Note that the proxy configuration is not yet available via the environment
+variables &lt;code class=&quot;highlighter-rouge&quot;&gt;http_proxy&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;https_proxy&lt;/code&gt;. This might be added in the future.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;proxy-server-command-line-switches&quot;&gt;Proxy server command-line switches&lt;/h4&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/tizonia-spotify-proxy-config.png&quot; alt=&quot;tizonia --help proxy&quot; title=&quot;tizonia --help proxy&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;proxy-server-configuration-in-tizoniaconf&quot;&gt;Proxy server configuration in tizonia.conf&lt;/h4&gt;
+
+&lt;p&gt;See the default template installed in: /etc/xdg/tizonia/tizonia.conf (or
+/snap/tizonia/current/etc/xdg/tizonia/tizonia.conf).&lt;/p&gt;
+
+&lt;p&gt;Simply add this section to your existing $HOME/.config/tizonia/tizonia.conf (or
+$HOME/snap/tizonia/current/.config/tizonia/tizonia.conf) if you are interested
+in this feature.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# HTTP proxy server configuration
+# -------------------------------------------------------------------------
+# NOTE: Proxy configuration is currently only available with the Spotify
+# service. It will be ignored with other music services.
+#
+# proxy.server = Url to the proxy server that should be used.
+#                The format is protocol://&amp;lt;host&amp;gt;:port (where protocol
+#                is http/https/socks4/socks5). E.g.: http:some.proxy.net:1234
+# proxy.user_name = Username to authenticate with proxy server
+# proxy.user_password = Password to authenticate with proxy server
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;pulseaudio-configurable-default-volume&quot;&gt;PulseAudio: configurable default volume&lt;/h3&gt;
+
+&lt;p&gt;With the implementation provided in
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/620&quot;&gt;PulseAudio volume customized #620&lt;/a&gt;
+users can now configure the inital volume used by Tizonia’s PulseAudio renderer at start.&lt;/p&gt;
+
+&lt;p&gt;See the default template installed in: /etc/xdg/tizonia/tizonia.conf (or
+/snap/tizonia/current/etc/xdg/tizonia/tizonia.conf).&lt;/p&gt;
+
+&lt;p&gt;Simply add this section to your existing $HOME/.config/tizonia/tizonia.conf (or
+$HOME/snap/tizonia/current/.config/tizonia/tizonia.conf) if you are interested
+in this feature.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# PulseAudio Audio Renderer
+# -------------------------------------------------------------------------
+#
+# OMX.Aratelia.audio_renderer.pulseaudio.pcm.default_volume = Value from 0
+#                                                             to 100 (Default: 75)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;plex-allow-custom-music-section-names&quot;&gt;Plex: allow custom music section names&lt;/h3&gt;
+
+&lt;p&gt;With the implementation provided in &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/610&quot;&gt;Plex: allow music section name other than
+‘Music’ #610&lt;/a&gt; users
+can now configure the name of their music library in the Plex server. Until
+v0.18.0, the Plex music library name was assumed to be called ‘Music’.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ tizonia --help plex
+
+Plex options:
+
+...
+
+   --plex-music-section arg   Name of the Plex music section (needed if 
+                             different from 'Music'; may be provided via config
+                             file).
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;plex-music-section-configuration-in-tizoniaconf&quot;&gt;Plex music section configuration in tizonia.conf&lt;/h4&gt;
+
+&lt;p&gt;See the default template installed in: /etc/xdg/tizonia/tizonia.conf (or
+/snap/tizonia/current/etc/xdg/tizonia/tizonia.conf).&lt;/p&gt;
+
+&lt;p&gt;Simply add this element to your existing $HOME/.config/tizonia/tizonia.conf (or
+$HOME/snap/tizonia/current/.config/tizonia/tizonia.conf) if you are interested
+in this feature.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Plex configuration
+# -------------------------------------------------------------------------
+#
+# ...
+#
+# plex.music_section_name = name of the music section in your plex library
+#                           (default: Music)
+
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;binaries-and-distribution&quot;&gt;Binaries and distribution&lt;/h3&gt;
+
+&lt;p&gt;As usual
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md&quot;&gt;CHANGELOG.md&lt;/a&gt;
+contains all the details.&lt;/p&gt;
+
+&lt;p&gt;Tizonia v0.19.0 will be soon in the following distribution channels:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bintray.com/tizonia&quot;&gt;Bintray&lt;/a&gt; (Debian packages)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/tizonia-all/&quot;&gt;AUR&lt;/a&gt; (Arch Linux)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://snapcraft.io/tizonia&quot;&gt;Snap Store&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tizonia/docker-tizonia&quot;&gt;docker-tizonia&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;coming-up&quot;&gt;Coming up&lt;/h3&gt;
+
+&lt;p&gt;Please have a look at the ROADMAP section in the GitHub README file to see
+what’s in the pipeline:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il#roadmap&quot;&gt;ROADMAP&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.19.0 codenamed “Velez-Blanco” is out with 96 commits, 279 files changed, 3709 insertions(+), 5162 deletions(-).</summary></entry><entry><title type="html">Fixed ‘Google Play Music tracks cut short’ in Tizonia 0.18.0</title><link href="http://www.tizonia.org/news/2019/03/17/release-0-18-0/" rel="alternate" type="text/html" title="Fixed 'Google Play Music tracks cut short' in Tizonia 0.18.0" /><published>2019-03-17T21:11:00+00:00</published><updated>2019-03-17T21:11:00+00:00</updated><id>http://www.tizonia.org/news/2019/03/17/release-0-18-0</id><content type="html" xml:base="http://www.tizonia.org/news/2019/03/17/release-0-18-0/">&lt;p&gt;Tizonia version
 &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.18.0&quot;&gt;0.18.0&lt;/a&gt;
 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Hu%C3%A9rcal-Overa&quot;&gt;Huercal-Overa&lt;/a&gt;” is out with 48
 commits, 224 files changed, 1825 insertions(+), 729 deletions(-).&lt;/p&gt;
@@ -96,7 +251,7 @@ contains all the details.&lt;/p&gt;
   &lt;li&gt;
     &lt;p&gt;Chromecast issues need fixing (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/483&quot;&gt;#483&lt;/a&gt;).&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.18.0 codenamed “Huercal-Overa” is out with 48 commits, 224 files changed, 1825 insertions(+), 729 deletions(-).</summary></entry><entry><title type="html">Spotify login issues fixed in Tizonia 0.17.0</title><link href="http://localhost:4000/news/2019/01/17/release-0-17-0/" rel="alternate" type="text/html" title="Spotify login issues fixed in Tizonia 0.17.0" /><published>2019-01-17T22:01:00+00:00</published><updated>2019-01-17T22:01:00+00:00</updated><id>http://localhost:4000/news/2019/01/17/release-0-17-0</id><content type="html" xml:base="http://localhost:4000/news/2019/01/17/release-0-17-0/">&lt;p&gt;Tizonia version
+&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.18.0 codenamed “Huercal-Overa” is out with 48 commits, 224 files changed, 1825 insertions(+), 729 deletions(-).</summary></entry><entry><title type="html">Spotify login issues fixed in Tizonia 0.17.0</title><link href="http://www.tizonia.org/news/2019/01/17/release-0-17-0/" rel="alternate" type="text/html" title="Spotify login issues fixed in Tizonia 0.17.0" /><published>2019-01-17T22:01:00+00:00</published><updated>2019-01-17T22:01:00+00:00</updated><id>http://www.tizonia.org/news/2019/01/17/release-0-17-0</id><content type="html" xml:base="http://www.tizonia.org/news/2019/01/17/release-0-17-0/">&lt;p&gt;Tizonia version
 &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.17.0&quot;&gt;0.17.0&lt;/a&gt;
 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Nijar&quot;&gt;Nijar&lt;/a&gt;” is out with 23
 commits, 995 files changed, 1552 insertions(+), 1154 deletions(-).&lt;/p&gt;
@@ -149,7 +304,7 @@ cycle:&lt;/p&gt;
   &lt;li&gt;
     &lt;p&gt;Chromecast issues need fixing (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/483&quot;&gt;#483&lt;/a&gt;).&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.17.0 codenamed “Nijar” is out with 23 commits, 995 files changed, 1552 insertions(+), 1154 deletions(-).</summary></entry><entry><title type="html">More ways to discover music on Spotify with Tizonia 0.16.0</title><link href="http://localhost:4000/news/2018/12/03/release-0-16-0/" rel="alternate" type="text/html" title="More ways to discover music on Spotify with Tizonia 0.16.0" /><published>2018-12-03T22:10:00+00:00</published><updated>2018-12-03T22:10:00+00:00</updated><id>http://localhost:4000/news/2018/12/03/release-0-16-0</id><content type="html" xml:base="http://localhost:4000/news/2018/12/03/release-0-16-0/">&lt;p&gt;Tizonia version
+&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.17.0 codenamed “Nijar” is out with 23 commits, 995 files changed, 1552 insertions(+), 1154 deletions(-).</summary></entry><entry><title type="html">More ways to discover music on Spotify with Tizonia 0.16.0</title><link href="http://www.tizonia.org/news/2018/12/03/release-0-16-0/" rel="alternate" type="text/html" title="More ways to discover music on Spotify with Tizonia 0.16.0" /><published>2018-12-03T22:10:00+00:00</published><updated>2018-12-03T22:10:00+00:00</updated><id>http://www.tizonia.org/news/2018/12/03/release-0-16-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/12/03/release-0-16-0/">&lt;p&gt;Tizonia version
 &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.16.0&quot;&gt;0.16.0&lt;/a&gt;
 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Bacares&quot;&gt;Bacares&lt;/a&gt;” is out with 94
 commits, 161 files changed, 2695 insertions(+), 868 deletions(-).&lt;/p&gt;
@@ -333,7 +488,7 @@ tracker&lt;/a&gt; on GitHub.&lt;/p&gt;
 &lt;p&gt;Airsonic/Subsonic support has been requested:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Airsonic/Subsonic (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/496&quot;&gt;#496&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.16.0 codenamed “Bacares” is out with 94 commits, 161 files changed, 2695 insertions(+), 868 deletions(-).</summary></entry><entry><title type="html">Totally revamped Spotify support in Tizonia 0.15.0</title><link href="http://localhost:4000/news/2018/06/15/release-0-15-0/" rel="alternate" type="text/html" title="Totally revamped Spotify support in Tizonia 0.15.0" /><published>2018-06-15T23:10:00+01:00</published><updated>2018-06-15T23:10:00+01:00</updated><id>http://localhost:4000/news/2018/06/15/release-0-15-0</id><content type="html" xml:base="http://localhost:4000/news/2018/06/15/release-0-15-0/">&lt;p&gt;Tizonia version 0.15.0 codenamed
+&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.16.0 codenamed “Bacares” is out with 94 commits, 161 files changed, 2695 insertions(+), 868 deletions(-).</summary></entry><entry><title type="html">Totally revamped Spotify support in Tizonia 0.15.0</title><link href="http://www.tizonia.org/news/2018/06/15/release-0-15-0/" rel="alternate" type="text/html" title="Totally revamped Spotify support in Tizonia 0.15.0" /><published>2018-06-15T23:10:00+01:00</published><updated>2018-06-15T23:10:00+01:00</updated><id>http://www.tizonia.org/news/2018/06/15/release-0-15-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/06/15/release-0-15-0/">&lt;p&gt;Tizonia version 0.15.0 codenamed
 “&lt;a href=&quot;https://en.wikipedia.org/wiki/Pulp%C3%AD&quot;&gt;Pulpi&lt;/a&gt;” is out with 74 commits, 215
 files changed, 7645 insertions(+), and 785 deletions(-)&lt;/p&gt;
 
@@ -455,7 +610,7 @@ tracker&lt;/a&gt; on GitHub.&lt;/p&gt;
 &lt;p&gt;Airsonic/Subsonic support has been requested:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Airsonic/Subsonic (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/496&quot;&gt;#496&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.15.0 codenamed “Pulpi” is out with 74 commits, 215 files changed, 7645 insertions(+), and 785 deletions(-)</summary></entry><entry><title type="html">Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers</title><link href="http://localhost:4000/news/2018/04/21/release-0-14-0/" rel="alternate" type="text/html" title="Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers" /><published>2018-04-21T23:13:00+01:00</published><updated>2018-04-21T23:13:00+01:00</updated><id>http://localhost:4000/news/2018/04/21/release-0-14-0</id><content type="html" xml:base="http://localhost:4000/news/2018/04/21/release-0-14-0/">&lt;p&gt;Tizonia version 0.14.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Los_Gallardos&quot;&gt;Los Gallardos&lt;/a&gt;” is out!.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.15.0 codenamed “Pulpi” is out with 74 commits, 215 files changed, 7645 insertions(+), and 785 deletions(-)</summary></entry><entry><title type="html">Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers</title><link href="http://www.tizonia.org/news/2018/04/21/release-0-14-0/" rel="alternate" type="text/html" title="Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers" /><published>2018-04-21T23:13:00+01:00</published><updated>2018-04-21T23:13:00+01:00</updated><id>http://www.tizonia.org/news/2018/04/21/release-0-14-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/04/21/release-0-14-0/">&lt;p&gt;Tizonia version 0.14.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Los_Gallardos&quot;&gt;Los Gallardos&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;A relatively small, incremental release with 45 commits (159 files changed,
 1326 insertions(+), 461 deletions(-)). Nonetheless, this release includes a
@@ -559,7 +714,7 @@ tracker&lt;/a&gt; on GitHub.&lt;/p&gt;
 &lt;p&gt;Pandora support is currently in the making and shaping quite well to be in the next release!:&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Pandora (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/340&quot;&gt;#340&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.14.0 codenamed “Los Gallardos” is out!.</summary></entry><entry><title type="html">Tizonia v0.13.0 adds support for Plex media servers</title><link href="http://localhost:4000/news/2018/03/09/release-0-13-0/" rel="alternate" type="text/html" title="Tizonia v0.13.0 adds support for Plex media servers" /><published>2018-03-09T22:13:00+00:00</published><updated>2018-03-09T22:13:00+00:00</updated><id>http://localhost:4000/news/2018/03/09/release-0-13-0</id><content type="html" xml:base="http://localhost:4000/news/2018/03/09/release-0-13-0/">&lt;p&gt;Tizonia version 0.13.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Lubr%C3%ADn&quot;&gt;Lubrin&lt;/a&gt;” is out!.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.14.0 codenamed “Los Gallardos” is out!.</summary></entry><entry><title type="html">Tizonia v0.13.0 adds support for Plex media servers</title><link href="http://www.tizonia.org/news/2018/03/09/release-0-13-0/" rel="alternate" type="text/html" title="Tizonia v0.13.0 adds support for Plex media servers" /><published>2018-03-09T22:13:00+00:00</published><updated>2018-03-09T22:13:00+00:00</updated><id>http://www.tizonia.org/news/2018/03/09/release-0-13-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/03/09/release-0-13-0/">&lt;p&gt;Tizonia version 0.13.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Lubr%C3%ADn&quot;&gt;Lubrin&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;109 commits have gone into this release (267 files changed, 9477 insertions(+), 576 deletions(-)).&lt;/p&gt;
 
@@ -597,7 +752,7 @@ tracker&lt;/a&gt; on GitHub.&lt;/p&gt;
 &lt;ul&gt;
   &lt;li&gt;Pandora (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/340&quot;&gt;#340&lt;/a&gt;)&lt;/li&gt;
   &lt;li&gt;Tidal (&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/440&quot;&gt;#440&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.13.0 codenamed “Lubrin” is out!.</summary></entry><entry><title type="html">New release v0.12.0 - Chromecast support!</title><link href="http://localhost:4000/news/2018/02/11/release-0-12-0/" rel="alternate" type="text/html" title="New release v0.12.0 - Chromecast support!" /><published>2018-02-11T11:21:00+00:00</published><updated>2018-02-11T11:21:00+00:00</updated><id>http://localhost:4000/news/2018/02/11/release-0-12-0</id><content type="html" xml:base="http://localhost:4000/news/2018/02/11/release-0-12-0/">&lt;p&gt;Tizonia version 0.12.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Carboneras&quot;&gt;Carboneras&lt;/a&gt;” is out!.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.13.0 codenamed “Lubrin” is out!.</summary></entry><entry><title type="html">New release v0.12.0 - Chromecast support!</title><link href="http://www.tizonia.org/news/2018/02/11/release-0-12-0/" rel="alternate" type="text/html" title="New release v0.12.0 - Chromecast support!" /><published>2018-02-11T11:21:00+00:00</published><updated>2018-02-11T11:21:00+00:00</updated><id>http://www.tizonia.org/news/2018/02/11/release-0-12-0</id><content type="html" xml:base="http://www.tizonia.org/news/2018/02/11/release-0-12-0/">&lt;p&gt;Tizonia version 0.12.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Carboneras&quot;&gt;Carboneras&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;173 commits have gone into this release (995 files changed, 12874 insertions(+), 6130 deletions(-)).&lt;/p&gt;
 
@@ -634,7 +789,7 @@ tracker&lt;/a&gt; on GitHub.&lt;/p&gt;
 
 &lt;p&gt;One of these are more likely to happen in the next release. Which one?. If you
 want to contribute or simply would like to put your vote for one of them, just
-leave a message in the corresponding GitHub issue.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.12.0 codenamed “Carboneras” is out!.</summary></entry><entry><title type="html">Snap package and Docker image available now!</title><link href="http://localhost:4000/news/2017/12/30/snap-package-and-docker-image/" rel="alternate" type="text/html" title="Snap package and Docker image available now!" /><published>2017-12-30T09:15:00+00:00</published><updated>2017-12-30T09:15:00+00:00</updated><id>http://localhost:4000/news/2017/12/30/snap-package-and-docker-image</id><content type="html" xml:base="http://localhost:4000/news/2017/12/30/snap-package-and-docker-image/">&lt;p&gt;A lot of people have recently come to &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;Tizonia’s issue
+leave a message in the corresponding GitHub issue.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.12.0 codenamed “Carboneras” is out!.</summary></entry><entry><title type="html">Snap package and Docker image available now!</title><link href="http://www.tizonia.org/news/2017/12/30/snap-package-and-docker-image/" rel="alternate" type="text/html" title="Snap package and Docker image available now!" /><published>2017-12-30T09:15:00+00:00</published><updated>2017-12-30T09:15:00+00:00</updated><id>http://www.tizonia.org/news/2017/12/30/snap-package-and-docker-image</id><content type="html" xml:base="http://www.tizonia.org/news/2017/12/30/snap-package-and-docker-image/">&lt;p&gt;A lot of people have recently come to &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;Tizonia’s issue
 tracker&lt;/a&gt; on GitHub to
 request binaries for their specific Linux distro, version, and/or platform.&lt;/p&gt;
 
@@ -682,7 +837,7 @@ packaging system space. They are &lt;a href=&quot;https://flatpak.org/&quot;&gt;
 &lt;a href=&quot;https://appimage.org/&quot;&gt;AppImage&lt;/a&gt;. So far AppImage looks very insteresting,
 since it is the only one that does not require prior downloading of a
 ‘run-time’ of some kind, which all the other systems need (Docker, Snap and
-Flatpak). Perhaps Tizonia will be available as an AppImage soon!&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">A lot of people have recently come to Tizonia’s issue tracker on GitHub to request binaries for their specific Linux distro, version, and/or platform.</summary></entry><entry><title type="html">New Tizonia release v0.11.0</title><link href="http://localhost:4000/news/2017/12/17/release-0-11-0/" rel="alternate" type="text/html" title="New Tizonia release v0.11.0" /><published>2017-12-17T10:15:00+00:00</published><updated>2017-12-17T10:15:00+00:00</updated><id>http://localhost:4000/news/2017/12/17/release-0-11-0</id><content type="html" xml:base="http://localhost:4000/news/2017/12/17/release-0-11-0/">&lt;p&gt;Tizonia version 0.11.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Roquetas_de_Mar&quot;&gt;Roquetas de Mar&lt;/a&gt;” is out!.&lt;/p&gt;
+Flatpak). Perhaps Tizonia will be available as an AppImage soon!&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">A lot of people have recently come to Tizonia’s issue tracker on GitHub to request binaries for their specific Linux distro, version, and/or platform.</summary></entry><entry><title type="html">New Tizonia release v0.11.0</title><link href="http://www.tizonia.org/news/2017/12/17/release-0-11-0/" rel="alternate" type="text/html" title="New Tizonia release v0.11.0" /><published>2017-12-17T10:15:00+00:00</published><updated>2017-12-17T10:15:00+00:00</updated><id>http://www.tizonia.org/news/2017/12/17/release-0-11-0</id><content type="html" xml:base="http://www.tizonia.org/news/2017/12/17/release-0-11-0/">&lt;p&gt;Tizonia version 0.11.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Roquetas_de_Mar&quot;&gt;Roquetas de Mar&lt;/a&gt;” is out!.&lt;/p&gt;
 
 &lt;p&gt;129 commits have gone into this release (300 files changed, 14109 insertions(+), 2478 deletions(-)).&lt;/p&gt;
 
@@ -705,58 +860,4 @@ Flatpak). Perhaps Tizonia will be available as an AppImage soon!&lt;/p&gt;</cont
 &lt;/ul&gt;
 
 &lt;p&gt;And thanks as well to those who have provided feedback via the project’s &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;bug
-tracker&lt;/a&gt; on GitHub.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.11.0 codenamed “Roquetas de Mar” is out!.</summary></entry><entry><title type="html">New Tizonia release v0.10.0</title><link href="http://localhost:4000/news/2017/10/22/release-0-10-0/" rel="alternate" type="text/html" title="New Tizonia release v0.10.0" /><published>2017-10-22T23:10:00+01:00</published><updated>2017-10-22T23:10:00+01:00</updated><id>http://localhost:4000/news/2017/10/22/release-0-10-0</id><content type="html" xml:base="http://localhost:4000/news/2017/10/22/release-0-10-0/">&lt;p&gt;Tizonia version 0.10.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Cuevas_del_Almanzora&quot;&gt;Cuevas del
-Almanzora&lt;/a&gt;” is out!.&lt;/p&gt;
-
-&lt;p&gt;A total of 188 commits have gone into this release (354 files changed, 11755 insertions(+), 1664 deletions(-)).&lt;/p&gt;
-
-&lt;p&gt;The focus was:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;general bug-fixing, including some Coverity Scan issues,&lt;/li&gt;
-  &lt;li&gt;better support for Raspberry Pi and Arch Linux,&lt;/li&gt;
-  &lt;li&gt;and preparation work for the upcoming Chromecast support.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;What follows is a summary of the most revelant fixes and improvements in this release (see
-&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md&quot;&gt;CHANGELOG.md&lt;/a&gt;
-for full details).&lt;/p&gt;
-
-&lt;h3 id=&quot;fixes-related-to-the-use-of-tizonia-on-raspberry-pis&quot;&gt;Fixes related to the use of Tizonia on Raspberry Pis&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;distribution: raspbian stretch &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/370&quot;&gt;#370&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;pcm_renderer_alsa: OMX_ErrorInsufficientResources on Raspberry Pi (one-channel playback through FiiO USB DAC) &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/378&quot;&gt;#378&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;player: OMX_ErrorInsufficientResources while pausing on Raspberry PI (using alsa renderer) &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/374&quot;&gt;#374&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;“Illegal instrunction” on “2017-07-05-raspbian-jessie-lite.img” &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/372&quot;&gt;#372&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;player: the terminal is occasionally left in an inconsistent state when the application fails &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/369&quot;&gt;#369&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;tizonia: pulsearprc.c:592: init_pulseaudio_stream: Assertion `ap_prc-&amp;gt;p_pa_context_’ failed. Aborted (core dumped) &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/301&quot;&gt;#301&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;fixes-related-to-the-use-of-tizonia-on-arch-linux&quot;&gt;Fixes related to the use of Tizonia on Arch Linux&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;arch pl0x &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/335&quot;&gt;#335&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Build failure on Arch Linux &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/376&quot;&gt;#376&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Current AUR build is broken on at least two levels &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/375&quot;&gt;#375&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Various warnings while building with gcc 7.1.1 (Manjaro Linux) &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/367&quot;&gt;#367&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;The PKGBUILD installs config files to /usr/etc instead of /etc &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/366&quot;&gt;#366&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;PKGBUILD: Fix style inconsistencies &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/365&quot;&gt;#365&lt;/a&gt; (&lt;a href=&quot;https://github.com/sylveon&quot;&gt;sylveon&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;fixes-in-google-play-music-dirble-and-youtube-streaming&quot;&gt;Fixes in Google Play Music, Dirble, and YouTube streaming.&lt;/h3&gt;
-&lt;ul&gt;
-  &lt;li&gt;player: dirble graph’s default sampling rate should be 44100 instead of 48000 &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/382&quot;&gt;#382&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;dirble: update country search to accept country names in addition to country ISO 3166 codes &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/381&quot;&gt;#381&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;youtube: add APIs to query the playback queue progress (e.g. currently playing stream 5 or 17) &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/380&quot;&gt;#380&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;youtube: URLs are permanently deleted from the playback queue in the presence of temporary communication errors &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/379&quot;&gt;#379&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;‘tizonia –youtube-audio-mix-search’ fails with ‘TypeError: sequence item 9: expected string or Unicode, dict found’ &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/377&quot;&gt;#377&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;credits&quot;&gt;Credits&lt;/h3&gt;
-
-&lt;p&gt;Many thanks to the following contributors for their pull requests in this release:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/CapOM&quot;&gt;CapOM&lt;/a&gt;, pull request &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/363&quot;&gt;#363&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/sylveon&quot;&gt;Sylveon&lt;/a&gt;, pull request &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/365&quot;&gt;#365&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And also thanks to those who have provided feedback via the project’s &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;bug
-tracker&lt;/a&gt; on GitHub.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.10.0 codenamed “Cuevas del Almanzora” is out!.</summary></entry></feed>
+tracker&lt;/a&gt; on GitHub.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.11.0 codenamed “Roquetas de Mar” is out!.</summary></entry></feed>
