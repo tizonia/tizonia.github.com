@@ -1,5 +1,98 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2020-02-20T17:56:54+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
-</subtitle><entry><title type="html">Global Spotify playlist search and other improvements in Tizonia 0.19.0</title><link href="http://www.tizonia.org/news/2019/03/19/release-0-19-0/" rel="alternate" type="text/html" title="Global Spotify playlist search and other improvements in Tizonia 0.19.0" /><published>2019-03-19T21:11:00+00:00</published><updated>2019-03-19T21:11:00+00:00</updated><id>http://www.tizonia.org/news/2019/03/19/release-0-19-0</id><content type="html" xml:base="http://www.tizonia.org/news/2019/03/19/release-0-19-0/">&lt;p&gt;Tizonia version
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2020-02-20T23:30:07+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+</subtitle><entry><title type="html">TuneIn Internet radio and podcasts, and color-themes in Tizonia 0.20.0</title><link href="http://www.tizonia.org/news/2020/02/20/release-0-20-0/" rel="alternate" type="text/html" title="TuneIn Internet radio and podcasts, and color-themes in Tizonia 0.20.0" /><published>2020-02-20T20:20:00+00:00</published><updated>2020-02-20T20:20:00+00:00</updated><id>http://www.tizonia.org/news/2020/02/20/release-0-20-0</id><content type="html" xml:base="http://www.tizonia.org/news/2020/02/20/release-0-20-0/">&lt;p&gt;Tizonia version
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.20.0&quot;&gt;0.20.0&lt;/a&gt;
+codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Alic%C3%BAn&quot;&gt;Alicun&lt;/a&gt;” is
+out with 227 commits, 1260 files changed, 17729 insertions(+), 4953 deletions(-).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tunein-internet-radios-and-podcasts&quot;&gt;TuneIn Internet radios and podcasts&lt;/h3&gt;
+
+&lt;p&gt;When the Dirble Internet radio directory was shutdown, I sorely missed the
+ability to search and listen to Internet radios with Tizonia. Dirble was
+removed in Tizonia 0.19.0. To replace it, TuneIn is now available in
+0.20.0. You can create instant playlists of stations and podcast, searching
+TuneIn by genre (music, news, talk, sports, etc), location, trending etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/tizonia-tunein-help.png&quot; alt=&quot;tizonia help tunein&quot; title=&quot;tizonia help tunein&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/docs/tunein/&quot;&gt;tunein&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;fun-with-color-themes&quot;&gt;Fun with color-themes!&lt;/h3&gt;
+
+&lt;p&gt;This was a feature request, and one that I had never thought about (thanks
+&lt;a href=&quot;https://github.com/driador&quot;&gt;driador!&lt;/a&gt;). A very fun idea actually. Well, now its
+available in 0.20.0. There are 4 themes shipped out of the box. Also
+customizing these themes or creating completely new ones is actually really
+easy.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/tizonia-color-themes.gif&quot; alt=&quot;tizonia color themes&quot; title=&quot;tizonia color themes&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;a-new-build-system-based-on-meson&quot;&gt;A new build system based on Meson&lt;/h3&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/lgbaldoni&quot;&gt;lgbaldoni&lt;/a&gt; Tizonia has gained a shiny
+new build system based on &lt;a href=&quot;https://mesonbuild.com/&quot;&gt;Meson&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;With the old build system, Tizonia builds were reeeaaally slow, around 20-25
+minutes. Now with Meson, the build times are down to a couple of minutes!&lt;/p&gt;
+
+&lt;h3 id=&quot;a-man-page-added-and-the-refresh-of-the-documentation-site&quot;&gt;A man page added and the refresh of the documentation site&lt;/h3&gt;
+
+&lt;p&gt;Something that was long due was the man page for Tizonia. This issue has been
+fixed in this release. Also the &lt;a href=&quot;https://docs.tizonia.org&quot;&gt;documentation web
+site&lt;/a&gt;, that has been in ‘draft’ state for far too
+long, has been refreshed and finalised.&lt;/p&gt;
+
+&lt;h3 id=&quot;tizonia-remote&quot;&gt;tizonia-remote&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tizonia-remote&lt;/code&gt; is small utility that may be used to control a Tizonia
+instance running in the background from another terminal or program. This has
+been available for a long time but has never been distributed in the Debian
+packages until now.&lt;/p&gt;
+
+&lt;p&gt;See &lt;a href=&quot;/docs/remotecontrol/&quot;&gt;tizonia-remote&lt;/a&gt; for more details.&lt;/p&gt;
+
+&lt;h3 id=&quot;binaries-and-distribution&quot;&gt;Binaries and distribution&lt;/h3&gt;
+
+&lt;p&gt;As usual
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md&quot;&gt;CHANGELOG.md&lt;/a&gt;
+contains all the details.&lt;/p&gt;
+
+&lt;p&gt;Tizonia v0.20.0 will be soon in the following channels:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bintray.com/tizonia&quot;&gt;Bintray&lt;/a&gt; (Debian packages)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/tizonia-all/&quot;&gt;AUR&lt;/a&gt; (Arch Linux)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://snapcraft.io/tizonia&quot;&gt;Snap Store&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tizonia/docker-tizonia&quot;&gt;docker-tizonia&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;thanks&quot;&gt;Thanks!&lt;/h3&gt;
+
+&lt;p&gt;Many thanks to all the people that has contributed to this release, with code,
+bugs or feedback. Special mention to &lt;a href=&quot;https://github.com/lgbaldoni&quot;&gt;lgbaldoni&lt;/a&gt;
+for contributing the Meson build system. Also thanks to
+&lt;a href=&quot;https://github.com/SolarAquarion&quot;&gt;SolarAquarion&lt;/a&gt; for taking over the
+maintainership of the
+&lt;a href=&quot;https://aur.archlinux.org/packages/tizonia-all-git/&quot;&gt;tizonia-all-git&lt;/a&gt; AUR
+package.&lt;/p&gt;
+
+&lt;h3 id=&quot;contributing&quot;&gt;Contributing&lt;/h3&gt;
+
+&lt;p&gt;Please have a look at our &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/contribute&quot;&gt;contribution
+guidelines&lt;/a&gt; if you
+are interested in participating. We are always looking for help, be it with
+feature requests, bug reporting, code contributions or general feedback.&lt;/p&gt;
+
+&lt;p&gt;We need maintainers for our various packaging systems, like Snap, or Docker. If
+you have an interest on these things, please reach out!&lt;/p&gt;
+
+&lt;h3 id=&quot;give-us-your-star&quot;&gt;Give us your star!&lt;/h3&gt;
+
+&lt;p&gt;Finally, if you enjoy using Tizonia and have a GitHub account, consider giving
+us your &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/stargazers&quot;&gt;star&lt;/a&gt;!. That
+really means a lot! :-)&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.20.0 codenamed “Alicun” is out with 227 commits, 1260 files changed, 17729 insertions(+), 4953 deletions(-).</summary></entry><entry><title type="html">Global Spotify playlist search and other improvements in Tizonia 0.19.0</title><link href="http://www.tizonia.org/news/2019/03/19/release-0-19-0/" rel="alternate" type="text/html" title="Global Spotify playlist search and other improvements in Tizonia 0.19.0" /><published>2019-03-19T21:11:00+00:00</published><updated>2019-03-19T21:11:00+00:00</updated><id>http://www.tizonia.org/news/2019/03/19/release-0-19-0</id><content type="html" xml:base="http://www.tizonia.org/news/2019/03/19/release-0-19-0/">&lt;p&gt;Tizonia version
 &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.19.0&quot;&gt;0.19.0&lt;/a&gt;
 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/V%C3%A9lez-Blanco&quot;&gt;Velez-Blanco&lt;/a&gt;” is
 out with 96 commits, 279 files changed, 3709 insertions(+), 5162 deletions(-).&lt;/p&gt;
@@ -837,27 +930,4 @@ packaging system space. They are &lt;a href=&quot;https://flatpak.org/&quot;&gt;
 &lt;a href=&quot;https://appimage.org/&quot;&gt;AppImage&lt;/a&gt;. So far AppImage looks very insteresting,
 since it is the only one that does not require prior downloading of a
 ‘run-time’ of some kind, which all the other systems need (Docker, Snap and
-Flatpak). Perhaps Tizonia will be available as an AppImage soon!&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">A lot of people have recently come to Tizonia’s issue tracker on GitHub to request binaries for their specific Linux distro, version, and/or platform.</summary></entry><entry><title type="html">New Tizonia release v0.11.0</title><link href="http://www.tizonia.org/news/2017/12/17/release-0-11-0/" rel="alternate" type="text/html" title="New Tizonia release v0.11.0" /><published>2017-12-17T10:15:00+00:00</published><updated>2017-12-17T10:15:00+00:00</updated><id>http://www.tizonia.org/news/2017/12/17/release-0-11-0</id><content type="html" xml:base="http://www.tizonia.org/news/2017/12/17/release-0-11-0/">&lt;p&gt;Tizonia version 0.11.0 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Roquetas_de_Mar&quot;&gt;Roquetas de Mar&lt;/a&gt;” is out!.&lt;/p&gt;
-
-&lt;p&gt;129 commits have gone into this release (300 files changed, 14109 insertions(+), 2478 deletions(-)).&lt;/p&gt;
-
-&lt;p&gt;The focus has been:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;various improvements and fixes in YouTube playback,&lt;/li&gt;
-  &lt;li&gt;fixed regression introduced in v0.10.0 that broke playback from local files for most audio formats,&lt;/li&gt;
-  &lt;li&gt;Bash and Zsh completion files,&lt;/li&gt;
-  &lt;li&gt;fixes to support building on Ubuntu 17.10 and 18.04,&lt;/li&gt;
-  &lt;li&gt;more preparation work for Chromecast support.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As usual &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md&quot;&gt;CHANGELOG.md&lt;/a&gt; contains the full details.&lt;/p&gt;
-
-&lt;h3 id=&quot;credits&quot;&gt;Credits&lt;/h3&gt;
-
-&lt;p&gt;Many thanks to the following contributors for their pull requests in this release:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/djsiddz2&quot;&gt;djsiddz2&lt;/a&gt;, pull request &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/pull/415&quot;&gt;#415&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;And thanks as well to those who have provided feedback via the project’s &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;bug
-tracker&lt;/a&gt; on GitHub.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.11.0 codenamed “Roquetas de Mar” is out!.</summary></entry></feed>
+Flatpak). Perhaps Tizonia will be available as an AppImage soon!&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">A lot of people have recently come to Tizonia’s issue tracker on GitHub to request binaries for their specific Linux distro, version, and/or platform.</summary></entry></feed>
