@@ -59,6 +59,38 @@
 
     },
   
+    
+    
+    {
+      "title": "Shoutcast",
+      "url": "/docs/shoutcast/"
+
+    },
+  
+    
+    
+    {
+      "title": "Local media",
+      "url": "/docs/localmedia/"
+
+    },
+  
+    
+    
+    {
+      "title": "Remote control",
+      "url": "/docs/remotecontrol/"
+
+    },
+  
+    
+    
+    {
+      "title": "Color themes",
+      "url": "/docs/themes/"
+
+    },
+  
 
   
     
@@ -116,6 +148,14 @@
     {
       "title": "Official Documentation",
       "url": "/docs/documentation/"
+
+    },
+  
+    
+    
+    {
+      "title": "Chat",
+      "url": "/docs/chat/"
 
     },
   
