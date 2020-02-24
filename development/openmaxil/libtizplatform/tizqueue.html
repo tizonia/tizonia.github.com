@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>tizqueue &#8212; Tizonia 0.20.0 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="tizrcfile" href="tizrcfile.html" />
+    <link rel="prev" title="tizpqueue" href="tizpqueue.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../../index.html">
+    <img class="logo" src="../../../_static/tizonia_logo_200.gif" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=tizonia&repo=tizonia-openmax-il&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+    
+
+<p>
+<a class="badge" href="https://travis-ci.org/tizonia/tizonia-openmax-il">
+    <img
+        alt="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+        src="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html">The Tizonia Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#news">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#upgrade">Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#hall-of-fame">Hall of Fame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/CHANGELOG.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/COPYING.LESSER.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual/manual.html">User Guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../development.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../development.html#components">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development.html#building-from-source">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development.html#coding-guidelines">Coding Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development.html#writting-documentation">Writting Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../development.html#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://tizonia.org">Tizonia Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il">Source (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il/issues">Issues (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://bintray.com/tizonia">Binaries (Bintray)</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../development.html">Developer Guide</a><ul>
+  <li><a href="../openmaxil.html">OpenMAX IL Framework</a><ul>
+  <li><a href="libtizplatform.html">libtizplatform</a><ul>
+      <li>Previous: <a href="tizpqueue.html" title="previous chapter">tizpqueue</a></li>
+      <li>Next: <a href="tizrcfile.html" title="next chapter">tizrcfile</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="tizqueue">
+<h1>tizqueue<a class="headerlink" href="#tizqueue" title="Permalink to this headline">¶</a></h1>
+<dl class="group">
+<dt>
+<span class="target" id="group__tizqueue"></span><em>group</em> <code class="sig-name descname">tizqueue</code></dt>
+<dd><p>Thread-safe FIFO queue. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="typedef">
+<dt id="c.tiz_queue_t">
+<span class="target" id="group__tizqueue_1ga8fcde9f139b906fb0a7ec18038b076cf"></span><em class="property">typedef </em>struct tiz_queue <code class="sig-name descname">tiz_queue_t</code><a class="headerlink" href="#c.tiz_queue_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queue opaque structure. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="c.tiz_queue_init">
+<span class="target" id="group__tizqueue_1ga8e40404bdc36b0830bd2edce1b45008d"></span>OMX_ERRORTYPE <code class="sig-name descname">tiz_queue_init</code><span class="sig-paren">(</span>tiz_queue_ptr_t  *<em> app_q</em>, OMX_S32<em> a_capacity</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_queue_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize a new empty queue.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>OMX_ErrorNone if success, OMX_ErrorInsufficientResources otherwise. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">a_capacity</span></code>: Maximum number of items that can be send into the queue.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_queue_destroy">
+<span class="target" id="group__tizqueue_1gab201db1f335acdff53416b5fa05c6b03"></span>void <code class="sig-name descname">tiz_queue_destroy</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_queue_t" title="tiz_queue_t">tiz_queue_t</a>  *<em> ap_q</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_queue_destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroy a queue. If ap_q is NULL, or the queue has already been detroyed before, no operation is performed. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_queue_send">
+<span class="target" id="group__tizqueue_1ga237d4aedc1750a1491b74cd146a5e645"></span>OMX_ERRORTYPE <code class="sig-name descname">tiz_queue_send</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_queue_t" title="tiz_queue_t">tiz_queue_t</a>  *<em> ap_q</em>, OMX_PTR<em> ap_data</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_queue_send" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add an item onto the end of the queue. If the queue is full, it blocks until a space becomes available. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_queue_receive">
+<span class="target" id="group__tizqueue_1ga0b305c5106b35aeacda3a0ab6f1599bc"></span>OMX_ERRORTYPE <code class="sig-name descname">tiz_queue_receive</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_queue_t" title="tiz_queue_t">tiz_queue_t</a>  *<em> ap_q</em>, OMX_PTR *<em> app_data</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_queue_receive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve an item from the head of the queue. If the queue is empty, it blocks until an item becomes available. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_queue_timed_receive">
+<span class="target" id="group__tizqueue_1ga7377cfc66819eb3dfb17c638463c105d"></span>OMX_ERRORTYPE <code class="sig-name descname">tiz_queue_timed_receive</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_queue_t" title="tiz_queue_t">tiz_queue_t</a>  *<em> ap_q</em>, OMX_PTR *<em> app_data</em>, OMX_U32<em> a_millis</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_queue_timed_receive" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve an item from the head of the queue. If the queue is empty, it waits for up to a_millis milliseconds or until an item becomes available. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_queue_capacity">
+<span class="target" id="group__tizqueue_1gaa65c0819914a864d176c43d85a3c6d2f"></span>OMX_S32 <code class="sig-name descname">tiz_queue_capacity</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_queue_t" title="tiz_queue_t">tiz_queue_t</a>  *<em> ap_q</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_queue_capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the maximum number of items that can be stored in the queue. </p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_queue_length">
+<span class="target" id="group__tizqueue_1gac815751e4495fce684c1cc4471fddcee"></span>OMX_S32 <code class="sig-name descname">tiz_queue_length</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_queue_t" title="tiz_queue_t">tiz_queue_t</a>  *<em> ap_q</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_queue_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the number of items currently stored in the queue. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Juan A. Rubio and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/development/openmaxil/libtizplatform/tizqueue.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/tizonia/tizonia-openmax-il" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21817639-6']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

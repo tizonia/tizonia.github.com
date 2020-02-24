@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Plex &#8212; Tizonia 0.20.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Shoutcast Server" href="server.html" />
+    <link rel="prev" title="TuneIn" href="tunein.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/tizonia_logo_200.gif" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=tizonia&repo=tizonia-openmax-il&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+    
+
+<p>
+<a class="badge" href="https://travis-ci.org/tizonia/tizonia-openmax-il">
+    <img
+        alt="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+        src="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html">The Tizonia Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#news">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#upgrade">Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#hall-of-fame">Hall of Fame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/CHANGELOG.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/COPYING.LESSER.html">License</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="manual.html">User Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="helptopics.html">Help Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard.html">Keyboard Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html">Global Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spotify.html">Spotify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="googlemusic.html">Google Play Music</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundcloud.html">SoundCloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="youtube.html">YouTube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tunein.html">TuneIn</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Plex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server.html">Shoutcast Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client.html">Shoutcast Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chromecast.html">Chromecast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="themes.html">Color Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openmax.html">OpenMAX IL Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="localmedia.html">Local Media Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mprisv2.html">Remote Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberrypi.html">Raspberry Pi</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development/development.html">Developer Guide</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://tizonia.org">Tizonia Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il">Source (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il/issues">Issues (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://bintray.com/tizonia">Binaries (Bintray)</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="manual.html">User Guide</a><ul>
+      <li>Previous: <a href="tunein.html" title="previous chapter">TuneIn</a></li>
+      <li>Next: <a href="server.html" title="next chapter">Shoutcast Server</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="plex">
+<h1>Plex<a class="headerlink" href="#plex" title="Permalink to this headline">¶</a></h1>
+<p>Tizonia can stream audio from a Plex server. To stream from a Plex server, it
+is necessary to provide the base URL where the server can be contacted and the
+authentication token. These two elements must be provided on the command-line
+or via configuration file.</p>
+<div class="section" id="configuration">
+<h2>CONFIGURATION<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h2>
+<p>The Tizonia configuration file contains a block under the <code class="docutils literal notranslate"><span class="pre">[tizonia]</span></code> section
+like the one pictured below (see also <a class="reference internal" href="config.html#tizonia-config-label"><span class="std std-ref">Configuration File</span></a>).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>When credentials are stored in your local
+<code class="docutils literal notranslate"><span class="pre">tizonia.conf</span></code>, please ensure that this file has the correct
+file system permissions to prevent other users from accessing your
+credentials.</p>
+<p>E.g.: <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">chmod</span> <span class="pre">og-rwx</span> <span class="pre">$HOME/.config/tizonia/tizonia.conf</span></code></p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Plex configuration</span>
+<span class="c1"># -------------------------------------------------------------------------</span>
+<span class="c1"># To avoid passing this information on the command line, uncomment and</span>
+<span class="c1"># configure your Plex server and account auth token here.</span>
+<span class="c1">#</span>
+<span class="c1"># To find how to obtain a Plex user authentication token, see:</span>
+<span class="c1"># https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/</span>
+<span class="c1">#</span>
+<span class="c1"># plex.base_url = xxxxxxxxxxxxxx (e.g. http://plexserver:32400)</span>
+<span class="c1"># plex.auth_token = xxxxxxxxxxxxxx (e.g. SrPEojhap3H5Qj2DmjhX)</span>
+<span class="c1"># plex.buffer_seconds = size of the audio buffer (in seconds) to use</span>
+<span class="c1">#                       while downloading streams. Default: 600.</span>
+<span class="c1">#                       Increase in case of cuts.</span>
+<span class="c1"># plex.music_section_name = name of the music section in your plex library</span>
+<span class="c1">#                           (default: Music)</span>
+</pre></div>
+</div>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">plex.base_url</span></code></dt><dd><p>The base URL of the Plex server, e.g. <a class="reference external" href="http://plexserver:32400">http://plexserver:32400</a>.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">plex.auth_token</span></code></dt><dd><p>The user authentication token to be used during communication with the Plex server. To find the token:</p>
+<ul>
+<li><p>Sign in to your Plex account in the Plex Web App.</p></li>
+<li><p>Browse to a library item and click on the Get Info menu item.</p>
+<img alt="../_images/tizonia-plex-token-get-info.png" src="../_images/tizonia-plex-token-get-info.png" />
+</li>
+<li><p>From the Media Info screen, click on View XML.</p>
+<img alt="../_images/tizonia-plex-token-view-xml.png" src="../_images/tizonia-plex-token-view-xml.png" />
+</li>
+<li><p>Look in the URL and find the token as the X-Plex-Token value</p>
+<img alt="../_images/tizonia-plex-token-url.png" src="../_images/tizonia-plex-token-url.png" />
+</li>
+</ul>
+<p>For more details see <a class="reference external" href="https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/">https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/</a></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">plex.buffer_seconds</span></code></dt><dd><p>This is the minimum size of the audio buffer (in seconds) that Tizonia will
+use while downloading the audio streams. It may be increased in case of
+cuts, but usually not required. Default: 60.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">plex.music_section_name</span></code></dt><dd><p>The name of the ‘music’ section in the Plex library that will be used by
+Tizonia for searching and streaming. Defaults: Music. Useful for users that
+have renamed their music library to something different from the default or
+users that have more than one music library.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="options">
+<h2>OPTIONS<a class="headerlink" href="#options" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">--plex-server-base-url</span> <span class="pre">arg</span></code></dt><dd><p>Plex server base URL (e.g. ‘<a class="reference external" href="http://plexserver:32400">http://plexserver:32400</a>’. Not required if provided via config file).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--plex-auth-token</span> <span class="pre">arg</span></code></dt><dd><p>Plex account authentication token (not required if provided via config file).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--plex-music-section</span> <span class="pre">arg</span></code></dt><dd><p>Name of the Plex music section (needed if different from ‘Music’; may be provided via config file).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--plex-audio-tracks</span> <span class="pre">arg</span></code></dt><dd><p>Search and play audio tracks from a Plex server.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--plex-audio-artist</span> <span class="pre">arg</span></code></dt><dd><p>Search and play an artist’s audio tracks from a Plex server.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--plex-audio-album</span> <span class="pre">arg</span></code></dt><dd><p>Search and play a music album from a Plex server.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--plex-audio-playlist</span> <span class="pre">arg</span></code></dt><dd><p>Search and play playlists from a Plex server.</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="examples">
+<h2>EXAMPLES<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ tizonia --plex-audio-artist <span class="s1">&#39;Santana&#39;</span>
+
+$ tizonia --plex-audio-track <span class="s1">&#39;five miles out&#39;</span>
+
+$ tizonia --plex-audio-album <span class="s2">&quot;Draconian Times&quot;</span>
+
+$ tizonia --plex-audio-playlist <span class="s2">&quot;Mike oldfield popular tracks&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Juan A. Rubio and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/manual/plex.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/tizonia/tizonia-openmax-il" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21817639-6']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

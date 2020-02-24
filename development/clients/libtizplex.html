@@ -1,0 +1,558 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>libtizplex &#8212; Tizonia 0.20.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="libtizsoundcloud" href="libtizsoundcloud.html" />
+    <link rel="prev" title="libtizgmusic" href="libtizgmusic.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/tizonia_logo_200.gif" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=tizonia&repo=tizonia-openmax-il&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+    
+
+<p>
+<a class="badge" href="https://travis-ci.org/tizonia/tizonia-openmax-il">
+    <img
+        alt="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+        src="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/README.html">The Tizonia Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/README.html#news">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/README.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/README.html#upgrade">Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/README.html#hall-of-fame">Hall of Fame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/CHANGELOG.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/COPYING.LESSER.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/manual.html">User Guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../development.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../development.html#components">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../development.html#building-from-source">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../development.html#coding-guidelines">Coding Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../development.html#writting-documentation">Writting Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../development.html#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://tizonia.org">Tizonia Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il">Source (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il/issues">Issues (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://bintray.com/tizonia">Binaries (Bintray)</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../development.html">Developer Guide</a><ul>
+  <li><a href="clients.html">Streaming Client Libraries</a><ul>
+      <li>Previous: <a href="libtizgmusic.html" title="previous chapter">libtizgmusic</a></li>
+      <li>Next: <a href="libtizsoundcloud.html" title="next chapter">libtizsoundcloud</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="libtizplex">
+<h1>libtizplex<a class="headerlink" href="#libtizplex" title="Permalink to this headline">¶</a></h1>
+<dl class="group">
+<dt>
+<span class="target" id="group__libtizplex"></span><em>group</em> <code class="sig-name descname">libtizplex</code></dt>
+<dd><p>library</p>
+<p>A C library to access audio from a Plex server. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="typedef">
+<dt id="c.tiz_plex_t">
+<span class="target" id="group__libtizplex_1gae174a9a854549d9efbcbf82d5570e0f7"></span><em class="property">typedef </em>struct tiz_plex <code class="sig-name descname">tiz_plex_t</code><a class="headerlink" href="#c.tiz_plex_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>The plex opaque structure </p>
+</dd></dl>
+
+<dl class="typedef">
+<dt id="c.tiz_plex_playback_mode_t">
+<span class="target" id="group__libtizplex_1gaa46d17062ecc0edbbc3a1b6508e2c520"></span><em class="property">typedef </em>enum tiz_plex_playback_mode  <code class="sig-name descname">tiz_plex_playback_mode_t</code><a class="headerlink" href="#c.tiz_plex_playback_mode_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>Various playback modes that control the playback queue. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Enums</p>
+<dl class="enum">
+<dt id="c.libtizplex::tiz_plex_playback_mode">
+<span class="target" id="group__libtizplex_1ga77d93e144ad1a1daf8b973d95b840cf1"></span><code class="sig-name descname">tiz_plex_playback_mode</code><a class="headerlink" href="#c.libtizplex::tiz_plex_playback_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Various playback modes that control the playback queue. </p>
+<p><em>Values:</em></p>
+<dl class="enumvalue">
+<dt id="c.libtizplex::ETIZPlexPlaybackModeNormal">
+<span class="target" id="group__libtizplex_1gga77d93e144ad1a1daf8b973d95b840cf1a38111dc90862e4a8610aac567bb3e754"></span><code class="sig-name descname">ETIZPlexPlaybackModeNormal</code><a class="headerlink" href="#c.libtizplex::ETIZPlexPlaybackModeNormal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="enumvalue">
+<dt id="c.libtizplex::ETIZPlexPlaybackModeShuffle">
+<span class="target" id="group__libtizplex_1gga77d93e144ad1a1daf8b973d95b840cf1a22a8eb507054dc5bdfd1e86bc5160580"></span><code class="sig-name descname">ETIZPlexPlaybackModeShuffle</code><a class="headerlink" href="#c.libtizplex::ETIZPlexPlaybackModeShuffle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="enumvalue">
+<dt id="c.libtizplex::ETIZPlexPlaybackModeMax">
+<span class="target" id="group__libtizplex_1gga77d93e144ad1a1daf8b973d95b840cf1a00132ef7395a30390788a7ce33f612eb"></span><code class="sig-name descname">ETIZPlexPlaybackModeMax</code><a class="headerlink" href="#c.libtizplex::ETIZPlexPlaybackModeMax" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="c.tiz_plex_init">
+<span class="target" id="group__libtizplex_1ga77c2187fb4a075078f9b15f6ee9dda84"></span>int <code class="sig-name descname">tiz_plex_init</code><span class="sig-paren">(</span>tiz_plex_ptr_t  *<em> app_plex</em>, const char *<em> ap_base_url</em>, const char *<em> ap_auth_token</em>, const char *<em> ap_music_section</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the tiz_plex handle.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>0 on success. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">app_plex</span></code>: A pointer to the tiz_plex handle which will be initialised. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_base_url</span></code>: The Plex server base url. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_auth_token</span></code>: The Plex account auth token. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_music_section</span></code>: The name of the music section in the Plex library.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_clear_queue">
+<span class="target" id="group__libtizplex_1ga46b2c15fa3f66b68e96487771cc113f9"></span>void <code class="sig-name descname">tiz_plex_clear_queue</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_clear_queue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Clear the playback queue.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_audio_track_index">
+<span class="target" id="group__libtizplex_1ga6160f8f8489ac035a19a3e6f2a9bef9b"></span>const char* <code class="sig-name descname">tiz_plex_get_current_audio_track_index</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_audio_track_index" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the index in the playback queue of the stream currently selected.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_queue_length">
+<span class="target" id="group__libtizplex_1ga120c5b3e0cffa31775a9684892fe2def"></span>const char* <code class="sig-name descname">tiz_plex_get_current_queue_length</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_queue_length" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current length of playback queue.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_queue_progress">
+<span class="target" id="group__libtizplex_1ga7ce94758d1bc3cf12f2f9f14b9368600"></span>const char* <code class="sig-name descname">tiz_plex_get_current_queue_progress</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_queue_progress" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current queue progress (e.g. ‘5 of 17’, where 5 is the current stream index, and 17 is the total streams in the queue).</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_set_playback_mode">
+<span class="target" id="group__libtizplex_1gab7e3c94860a7e21ea4f8e9e1ff9099b5"></span>void <code class="sig-name descname">tiz_plex_set_playback_mode</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em>, const  <a class="reference internal" href="#c.tiz_plex_playback_mode_t" title="tiz_plex_playback_mode_t">tiz_plex_playback_mode_t</a><em> mode</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_set_playback_mode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the playback mode (normal, shuffle).</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_play_audio_tracks">
+<span class="target" id="group__libtizplex_1gab1e7617ad2a44096caa965b829f59dde"></span>int <code class="sig-name descname">tiz_plex_play_audio_tracks</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em>, const char *<em> ap_track_name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_play_audio_tracks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a Plex audio stream to the playback queue.</p>
+<p>After calling this method, the various tiz_plex_get* methods can be used to interact with the playback queue.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>0 on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_track_name</span></code>: An search term.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_play_audio_artist">
+<span class="target" id="group__libtizplex_1ga8f4aa36406a70a57a3519aea992fc637"></span>int <code class="sig-name descname">tiz_plex_play_audio_artist</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em>, const char *<em> ap_artist_name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_play_audio_artist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add a Plex audio stream to the playback queue.</p>
+<p>After calling this method, the various tiz_plex_get* methods can be used to interact with the playback queue.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>0 on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_artist_name</span></code>: An search term.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_play_audio_album">
+<span class="target" id="group__libtizplex_1ga99b443b303ec562036cc5cb4c7b67fd3"></span>int <code class="sig-name descname">tiz_plex_play_audio_album</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em>, const char *<em> ap_album</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_play_audio_album" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add all the audio streams of a Plex playlist to the playback queue.</p>
+<p>After calling this method, the various tiz_plex_get* methods can be used to interact with the playback queue.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>0 on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_album</span></code>: A playlist full url or playlist id.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_play_audio_playlist">
+<span class="target" id="group__libtizplex_1ga8a87ed5a2418f3c8cbfedaadbd1b9d08"></span>int <code class="sig-name descname">tiz_plex_play_audio_playlist</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em>, const char *<em> ap_playlist</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_play_audio_playlist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Add all the audio streams of a Plex playlist to the playback queue.</p>
+<p>After calling this method, the various tiz_plex_get* methods can be used to interact with the playback queue.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>0 on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_playlist</span></code>: A playlist full url or playlist id.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_next_url">
+<span class="target" id="group__libtizplex_1ga2dcdd81afa4d26347a9f925eba0fa778"></span>const char* <code class="sig-name descname">tiz_plex_get_next_url</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em>, const bool<em> a_remove_current_url</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_next_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the next stream url</p>
+<p>The playback queue pointer moves one position forwards.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The next url in the playback queue or NULL if the playback queue is empty. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_remove_current_url</span></code>: If true, delete the current url from the playback queue before moving to the next url.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_prev_url">
+<span class="target" id="group__libtizplex_1ga10f146cf683490916dbb626190faa0b2"></span>const char* <code class="sig-name descname">tiz_plex_get_prev_url</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em>, const bool<em> a_remove_current_url</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_prev_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the previous stream url.</p>
+<p>The playback queue pointer moves one position backwards.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The previous url in the playback queue or NULL if the playback queue is empty. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_remove_current_url</span></code>: If true, delete the current url from the playback queue before moving to the previous url.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_audio_track_title">
+<span class="target" id="group__libtizplex_1ga0ff7c68e611db820ae57b153175e734b"></span>const char* <code class="sig-name descname">tiz_plex_get_current_audio_track_title</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_audio_track_title" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current audio track’s title.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_audio_track_artist">
+<span class="target" id="group__libtizplex_1gafe32fbba01521cdafb83748b671b7e7c"></span>const char* <code class="sig-name descname">tiz_plex_get_current_audio_track_artist</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_audio_track_artist" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current audio track’s artist.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_audio_track_album">
+<span class="target" id="group__libtizplex_1ga35e26a153403e90e406ff9950729a651"></span>const char* <code class="sig-name descname">tiz_plex_get_current_audio_track_album</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_audio_track_album" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current audio track’s album.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_audio_track_year">
+<span class="target" id="group__libtizplex_1gaf4a431b7e13639548de15855f6862dcd"></span>const char* <code class="sig-name descname">tiz_plex_get_current_audio_track_year</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_audio_track_year" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current audio track’s publication year.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_audio_track_file_size">
+<span class="target" id="group__libtizplex_1ga6ddbd07e9503879fd0bd8c506f748fb6"></span>const char* <code class="sig-name descname">tiz_plex_get_current_audio_track_file_size</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_audio_track_file_size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current audio track’s file size.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_audio_track_file_size_as_int">
+<span class="target" id="group__libtizplex_1gaf7776364709691b2e9fa9396d113e98c"></span>int <code class="sig-name descname">tiz_plex_get_current_audio_track_file_size_as_int</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_audio_track_file_size_as_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current audio track’s file size (as int).</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_audio_track_duration">
+<span class="target" id="group__libtizplex_1gaca6daca330e304a21daf670c9f525cfe"></span>const char* <code class="sig-name descname">tiz_plex_get_current_audio_track_duration</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_audio_track_duration" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current audio track’s duration.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_audio_track_bitrate">
+<span class="target" id="group__libtizplex_1ga268faa7ab9d82f7a8166cd9e6798fff3"></span>const char* <code class="sig-name descname">tiz_plex_get_current_audio_track_bitrate</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_audio_track_bitrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current audio track’s bitrate.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_audio_track_codec">
+<span class="target" id="group__libtizplex_1ga0ebfdbf818d415398c6948c51fdf792b"></span>const char* <code class="sig-name descname">tiz_plex_get_current_audio_track_codec</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_audio_track_codec" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current audio track’s codec id.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_get_current_audio_track_album_art">
+<span class="target" id="group__libtizplex_1ga4a4e9900053916080ad5675f0f6bf7f1"></span>const char* <code class="sig-name descname">tiz_plex_get_current_audio_track_album_art</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_get_current_audio_track_album_art" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current track’s album art.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_plex_destroy">
+<span class="target" id="group__libtizplex_1ga8e978b2372e33c4eef0dacbcea57df9a"></span>void <code class="sig-name descname">tiz_plex_destroy</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_plex_t" title="tiz_plex_t">tiz_plex_t</a>  *<em> ap_plex</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_plex_destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroy the tiz_plex handle.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_plex</span></code>: The tiz_plex handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Juan A. Rubio and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/development/clients/libtizplex.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/tizonia/tizonia-openmax-il" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21817639-6']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

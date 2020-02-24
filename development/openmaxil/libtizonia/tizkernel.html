@@ -1,0 +1,241 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>tizkernel &#8212; Tizonia 0.20.0 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="libtizrmproxy" href="../libtizrmproxy.html" />
+    <link rel="prev" title="tizfsm" href="tizfsm.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../../index.html">
+    <img class="logo" src="../../../_static/tizonia_logo_200.gif" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=tizonia&repo=tizonia-openmax-il&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+    
+
+<p>
+<a class="badge" href="https://travis-ci.org/tizonia/tizonia-openmax-il">
+    <img
+        alt="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+        src="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html">The Tizonia Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#news">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#upgrade">Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#hall-of-fame">Hall of Fame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/CHANGELOG.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/COPYING.LESSER.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual/manual.html">User Guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../development.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../development.html#components">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development.html#building-from-source">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development.html#coding-guidelines">Coding Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development.html#writting-documentation">Writting Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../development.html#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://tizonia.org">Tizonia Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il">Source (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il/issues">Issues (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://bintray.com/tizonia">Binaries (Bintray)</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../development.html">Developer Guide</a><ul>
+  <li><a href="../openmaxil.html">OpenMAX IL Framework</a><ul>
+  <li><a href="libtizonia.html">libtizonia</a><ul>
+      <li>Previous: <a href="tizfsm.html" title="previous chapter">tizfsm</a></li>
+      <li>Next: <a href="../libtizrmproxy.html" title="next chapter">libtizrmproxy</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="tizkernel">
+<h1>tizkernel<a class="headerlink" href="#tizkernel" title="Permalink to this headline">¶</a></h1>
+<dl class="group">
+<dt>
+<span class="target" id="group__tizkernel"></span><em>group</em> <code class="sig-name descname">tizkernel</code></dt>
+<dd><p>The ‘kernel’ servant is responsible for all the OpenMAX IL port management functionality. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="c.tiz_krn_class_init">
+<span class="target" id="group__tizkernel_1gaea6f0101e86f6ec09f34e5397944fa7b"></span>void* <code class="sig-name descname">tiz_krn_class_init</code><span class="sig-paren">(</span>void *<em> ap_tos</em>, void *<em> ap_hdl</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_krn_class_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘kernel’ metaclass initialisation.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The scheduler object. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_tos</span></code>: Tizonia’s object system handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_krn_init">
+<span class="target" id="group__tizkernel_1ga082c7465e10b45ac33bfe67bad382f09"></span>void* <code class="sig-name descname">tiz_krn_init</code><span class="sig-paren">(</span>void *<em> ap_tos</em>, void *<em> ap_hdl</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_krn_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘kernel’ class initialisation.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The scheduler object. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_tos</span></code>: Tizonia’s object system handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_krn_claim_eglimage">
+<span class="target" id="group__tizkernel_1gaa526d4bed6b5cf2b8b1b57f357ee6cbe"></span>OMX_ERRORTYPE <code class="sig-name descname">tiz_krn_claim_eglimage</code><span class="sig-paren">(</span>const void *<em> ap_obj</em>, const OMX_U32<em> a_pid</em>, const OMX_BUFFERHEADERTYPE *<em> p_hdr</em>, OMX_PTR *<em> app_eglimage</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_krn_claim_eglimage" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the EGL image associated to a particular OpenMAX IL header.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>OMX_ErrorNone on success, other OMX_ERRORTYPE on error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_obj</span></code>: The ‘kernel’ servant object. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_pid</span></code>: The index of the port that the EGL image is associated with. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdr</span></code>: The OpenMAX IL header that the EGL image is associated with. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[out]</span> <span class="pre">app_eglimage</span></code>: The EGL image. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Juan A. Rubio and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/development/openmaxil/libtizonia/tizkernel.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/tizonia/tizonia-openmax-il" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21817639-6']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

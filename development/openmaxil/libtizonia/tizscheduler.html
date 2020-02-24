@@ -1,0 +1,610 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>tizscheduler &#8212; Tizonia 0.20.0 documentation</title>
+    <link rel="stylesheet" href="../../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="next" title="tizfsm" href="tizfsm.html" />
+    <link rel="prev" title="libtizonia" href="libtizonia.html" />
+   
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../../index.html">
+    <img class="logo" src="../../../_static/tizonia_logo_200.gif" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=tizonia&repo=tizonia-openmax-il&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+    
+
+<p>
+<a class="badge" href="https://travis-ci.org/tizonia/tizonia-openmax-il">
+    <img
+        alt="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+        src="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html">The Tizonia Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#news">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#upgrade">Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/README.html#hall-of-fame">Hall of Fame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/CHANGELOG.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../overview/COPYING.LESSER.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../manual/manual.html">User Guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../development.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../development.html#components">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development.html#building-from-source">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development.html#coding-guidelines">Coding Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../development.html#writting-documentation">Writting Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../development.html#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://tizonia.org">Tizonia Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il">Source (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il/issues">Issues (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://bintray.com/tizonia">Binaries (Bintray)</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../../index.html">Documentation overview</a><ul>
+  <li><a href="../../development.html">Developer Guide</a><ul>
+  <li><a href="../openmaxil.html">OpenMAX IL Framework</a><ul>
+  <li><a href="libtizonia.html">libtizonia</a><ul>
+      <li>Previous: <a href="libtizonia.html" title="previous chapter">libtizonia</a></li>
+      <li>Next: <a href="tizfsm.html" title="next chapter">tizfsm</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="tizscheduler">
+<h1>tizscheduler<a class="headerlink" href="#tizscheduler" title="Permalink to this headline">¶</a></h1>
+<dl class="group">
+<dt>
+<span class="target" id="group__tizscheduler"></span><em>group</em> <code class="sig-name descname">tizscheduler</code></dt>
+<dd><p>Component event loop, OpenMAX IL handler initialisation and servant scheduling. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Defines</p>
+<dl class="define">
+<dt id="c.TIZ_COMP_MAX_PORTS">
+<span class="target" id="group__tizscheduler_1ga460363153b0fa22c65d5bd266c658a5e"></span><code class="sig-name descname">TIZ_COMP_MAX_PORTS</code><a class="headerlink" href="#c.TIZ_COMP_MAX_PORTS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of OpenMAX IL ports that may be registered with a Tizonia component. </p>
+</dd></dl>
+
+<dl class="define">
+<dt id="c.TIZ_COMP_MAX_ROLES">
+<span class="target" id="group__tizscheduler_1ga1dc9a50936bd8dbd424eef2671d7ea94"></span><code class="sig-name descname">TIZ_COMP_MAX_ROLES</code><a class="headerlink" href="#c.TIZ_COMP_MAX_ROLES" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maximum number of roles that may be registered with a Tizonia component. </p>
+</dd></dl>
+
+<dl class="define">
+<dt id="c.TIZ_COMP_MAX_TYPES">
+<span class="target" id="group__tizscheduler_1ga2cb2722a68881ec306bf10f5c28331c7"></span><code class="sig-name descname">TIZ_COMP_MAX_TYPES</code><a class="headerlink" href="#c.TIZ_COMP_MAX_TYPES" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum number of types that may be registered with a Tizonia component. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="typedef">
+<dt id="c.tiz_role_config_port_init_f">
+<span class="target" id="group__tizscheduler_1gac0a59cecb8220b1c26cb66d8a8e36880"></span><em class="property">typedef </em>OMX_PTR<code class="sig-name descname">(* tiz_role_config_port_init_f)</code><span class="sig-paren">(</span>OMX_HANDLETYPE<em> ap_hdl</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_role_config_port_init_f" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘Configuration port’ factory function prototype. </p>
+<p>This function instantiates a ‘configuration port’ object for a specific component role. The ‘configuration’ port is a pseudo-port, it does not have an associated OpenMAX IL port index. It is used in libtizonia to encapsulate the logic for the component’s OpenMAX IL structures that are not associated to an actual OpenMAX IL port, i.e. OpenMAX IL parameter structures without an ‘nIndex’ member (e.g. OMX_PARAM_CONTENTURITYPE).</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>Tizonia components require exactly one ‘configuration port’ to be functional.</p>
+</dd>
+<dt><strong>Return</strong></dt><dd><p>A pointer to a newly instantiated ‘configuration port’ object. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The component’s OpenMAX IL handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="typedef">
+<dt id="c.tiz_role_port_init_f">
+<span class="target" id="group__tizscheduler_1ga1ceaceb8c8767980ff35305aaee82e36"></span><em class="property">typedef </em>OMX_PTR<code class="sig-name descname">(* tiz_role_port_init_f)</code><span class="sig-paren">(</span>OMX_HANDLETYPE<em> ap_hdl</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_role_port_init_f" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘port’ factory function prototype. </p>
+<p>This function instantiates an OpenMAX IL ‘port’ object for a specific component role. Tizonia components require one or more ‘port’ objects to be functional.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A pointer to a newly instantiated ‘port’ object. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The component’s OpenMAX IL handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="typedef">
+<dt id="c.tiz_role_proc_init_f">
+<span class="target" id="group__tizscheduler_1ga1a129d05ee5520454b230d8ece4743b2"></span><em class="property">typedef </em>OMX_PTR<code class="sig-name descname">(* tiz_role_proc_init_f)</code><span class="sig-paren">(</span>OMX_HANDLETYPE<em> ap_hdl</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_role_proc_init_f" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘processor’ factory function prototype. </p>
+<p>This function instantiates an OpenMAX IL ‘processor’ object for a specific component role. Tizonia components require exactly one ‘processor’ object to be functional.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A pointer to a newly instantiated ‘processor’ object. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The component’s OpenMAX IL handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="typedef">
+<dt id="c.tiz_role_factory_t">
+<span class="target" id="group__tizscheduler_1ga04f5399d42c5924c4bc4c15e18a59e34"></span><em class="property">typedef </em>struct <a class="reference internal" href="#c.tiz_role_factory" title="tiz_role_factory">tiz_role_factory</a> <code class="sig-name descname">tiz_role_factory_t</code><a class="headerlink" href="#c.tiz_role_factory_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>OpenMAX IL role registration factory structure (typedef). </p>
+</dd></dl>
+
+<dl class="typedef">
+<dt id="c.tiz_event_pluggable_t">
+<span class="target" id="group__tizscheduler_1gac29f5b4b6b6d09ee0b77b87c126709f3"></span><em class="property">typedef </em>struct <a class="reference internal" href="#c.tiz_event_pluggable" title="tiz_event_pluggable">tiz_event_pluggable</a> <code class="sig-name descname">tiz_event_pluggable_t</code><a class="headerlink" href="#c.tiz_event_pluggable_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘Pluggable’ event structure (typedef). </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="c.tiz_comp_init">
+<span class="target" id="group__tizscheduler_1ga7a084c6cce9e87812c8603d8f1b0034c"></span>OMX_ERRORTYPE <code class="sig-name descname">tiz_comp_init</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em>, const char *<em> ap_cname</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_comp_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Instantiate the OpenMAX IL component infrastructure. </p>
+<p>When this function returns, the OpenMAX IL component handle is fully initialised. However, the component is still not functional until at least one role is registered (see tiz_comp_register_roles, and tiz_comp_register_types).</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This function must be called during the execution of the component’s entry point, usually OMX_ComponentInit.</p>
+</dd>
+<dt><strong>Return</strong></dt><dd><p>OMX_ErrorNone on success, other OMX_ERRORTYPE on error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_cname</span></code>: The component name. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_comp_register_roles">
+<span class="target" id="group__tizscheduler_1ga83062f4d658686052982731e533629ec"></span>OMX_ERRORTYPE <code class="sig-name descname">tiz_comp_register_roles</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em>, const  <a class="reference internal" href="#c.tiz_role_factory_t" title="tiz_role_factory_t">tiz_role_factory_t</a>  *<em> ap_role_list[]</em>, const OMX_U32<em> a_nroles</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_comp_register_roles" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registration of component roles. </p>
+<p>At least one factory must be registered for the component to be fully functional. At a minimum, this requires the specialisation of the ‘processor’ class (see tiz_comp_register_types).</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This function must be called during the execution of the component’s entry point, usually OMX_ComponentInit.</p>
+</dd>
+<dt><strong>Return</strong></dt><dd><p>OMX_ErrorNone on success, other OMX_ERRORTYPE on error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_role_list</span></code>: A list of role factories. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_nroles</span></code>: The number of factories in the list. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_comp_register_types">
+<span class="target" id="group__tizscheduler_1gacae2d0e2713a8bfd61cc97063d914499"></span>OMX_ERRORTYPE <code class="sig-name descname">tiz_comp_register_types</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em>, const  tiz_type_factory_t  *<em> ap_type_list[]</em>, const OMX_U32<em> a_ntypes</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_comp_register_types" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registration of component types (a.k.a. classes). </p>
+<p>Components need to register at least one additional class, a specialised ‘processor’ class. Ports may also need to be specialised.</p>
+<p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>This function must be called during the execution of the component’s entry point, usually OMX_ComponentInit.</p>
+</dd>
+<dt><strong>Return</strong></dt><dd><p>OMX_ErrorNone on success, other OMX_ERRORTYPE on error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_type_list</span></code>: A list of type/class factories. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_ntypes</span></code>: The number of factories in the list. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_comp_register_alloc_hooks">
+<span class="target" id="group__tizscheduler_1ga15f2a4c47e91954ed0f2b18bfce23d5a"></span>OMX_ERRORTYPE <code class="sig-name descname">tiz_comp_register_alloc_hooks</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em>, const  tiz_alloc_hooks_t  *<em> ap_new_hooks</em>, tiz_alloc_hooks_t  *<em> ap_old_hooks</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_comp_register_alloc_hooks" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registration of port buffer allocation hooks.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>OMX_ErrorNone on success, other OMX_ERRORTYPE on error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_new_hooks</span></code>: The new port buffer allocation hooks. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_old_hooks</span></code>: The old allocation hooks (the ones replaced). </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_comp_register_eglimage_hook">
+<span class="target" id="group__tizscheduler_1gafdc779afcc3eb5c37dcbf33306bbba22"></span>OMX_ERRORTYPE <code class="sig-name descname">tiz_comp_register_eglimage_hook</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em>, const  tiz_eglimage_hook_t  *<em> ap_hook</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_comp_register_eglimage_hook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registration of the EGL image validation hook.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>OMX_ErrorNone on success, other OMX_ERRORTYPE on error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hook</span></code>: EGL image validation hook info. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_comp_register_role_eglimage_hook">
+<span class="target" id="group__tizscheduler_1ga8372d40f6ee708efa809b9405c4ceb70"></span>OMX_ERRORTYPE <code class="sig-name descname">tiz_comp_register_role_eglimage_hook</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em>, const OMX_U8 *<em> ap_role</em>, const  tiz_eglimage_hook_t  *<em> ap_hook</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_comp_register_role_eglimage_hook" title="Permalink to this definition">¶</a></dt>
+<dd><p>Registration of ‘per-role’ EGL image validation hooks.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>OMX_ErrorNone on success, other OMX_ERRORTYPE on error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_role</span></code>: A role name (a string of up to OMX_MAX_STRINGNAME_SIZE). </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hook</span></code>: EGL image validation hook info. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_comp_event_pluggable">
+<span class="target" id="group__tizscheduler_1gae4aa44e92d078457ffba1960db5eae58"></span>OMX_ERRORTYPE <code class="sig-name descname">tiz_comp_event_pluggable</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em>, <a class="reference internal" href="#c.tiz_event_pluggable_t" title="tiz_event_pluggable_t">tiz_event_pluggable_t</a>  *<em> ap_event</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_comp_event_pluggable" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queueing of ‘pluggable’ events.</p>
+<p>A ‘pluggable’ event is submitted to the component’s event queue using this function. The component’s event loop will deliver the event to its handler for processing within the component’s thread context.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>OMX_ErrorNone on success, other OMX_ERRORTYPE on error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_event</span></code>: The pluggable event. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_comp_event_io">
+<span class="target" id="group__tizscheduler_1ga3fe3a4067ba47722d5336b4a5cd8c2ec"></span>void <code class="sig-name descname">tiz_comp_event_io</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em>, <a class="reference internal" href="../libtizplatform/tizevent.html#c.tiz_event_io_t" title="tiz_event_io_t">tiz_event_io_t</a>  *<em> ap_ev_io</em>, void *<em> ap_arg</em>, const uint32_t<em> a_id</em>, const int<em> a_fd</em>, const int<em> a_events</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_comp_event_io" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queueing of ‘io’ events.</p>
+<p>An ‘io’ event is submitted to the component’s event queue using this function. The component’s event loop will deliver the ‘io’ event to the ‘processor’ object for processing within the component’s thread context.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>OMX_ErrorNone on success, other OMX_ERRORTYPE on error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_ev_io</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_arg</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_id</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_fd</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_events</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_comp_event_timer">
+<span class="target" id="group__tizscheduler_1ga3a04ebf5985b4a25e64afca1c73347b7"></span>void <code class="sig-name descname">tiz_comp_event_timer</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em>, <a class="reference internal" href="../libtizplatform/tizevent.html#c.tiz_event_timer_t" title="tiz_event_timer_t">tiz_event_timer_t</a>  *<em> ap_ev_timer</em>, void *<em> ap_arg</em>, const uint32_t<em> a_id</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_comp_event_timer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queueing of ‘timer’ events.</p>
+<p>An ‘timer’ event is submitted to the component’s event queue using this function. The component’s event loop will deliver the ‘timer’ event to the ‘processor’ object for processing within the component’s thread context.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>OMX_ErrorNone on success, other OMX_ERRORTYPE on error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_ev_timer</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_arg</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_id</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_comp_event_stat">
+<span class="target" id="group__tizscheduler_1ga2b3c7c75cca0700bbf1301398209d426"></span>void <code class="sig-name descname">tiz_comp_event_stat</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em>, <a class="reference internal" href="../libtizplatform/tizevent.html#c.tiz_event_stat_t" title="tiz_event_stat_t">tiz_event_stat_t</a>  *<em> ap_ev_stat</em>, void *<em> ap_arg</em>, const uint32_t<em> a_id</em>, const int<em> a_events</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_comp_event_stat" title="Permalink to this definition">¶</a></dt>
+<dd><p>Queueing of ‘stat’ events.</p>
+<p>An ‘stat’ event is submitted to the component’s event queue using this function. The component’s event loop will deliver the ‘stat’ event to the ‘processor’ object for processing within the component’s thread context.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>OMX_ErrorNone on success, other OMX_ERRORTYPE on error. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_ev_stat</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_arg</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_id</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_events</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_comp_event_queue_unused_spaces">
+<span class="target" id="group__tizscheduler_1gafdb305b4441fe0794c9d8d7d50d440aa"></span>size_t <code class="sig-name descname">tiz_comp_event_queue_unused_spaces</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_comp_event_queue_unused_spaces" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the current maximum number of items that could be insterted into the queue.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A registered type. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_get_fsm">
+<span class="target" id="group__tizscheduler_1ga8222359bb3bc764942ed48e077d6c9ee"></span>void* <code class="sig-name descname">tiz_get_fsm</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_get_fsm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the component’s ‘fsm’ servant object.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The fsm servant. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_get_krn">
+<span class="target" id="group__tizscheduler_1ga4c482ecc3baba5d46684bdbf9c48c86c"></span>void* <code class="sig-name descname">tiz_get_krn</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_get_krn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the component’s ‘kernel’ servant object.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The kernel servant. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_get_prc">
+<span class="target" id="group__tizscheduler_1ga219572c6ac500d1f390a7d994a67be62"></span>void* <code class="sig-name descname">tiz_get_prc</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_get_prc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the component’s ‘processor’ servant object.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The processor servant. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_get_sched">
+<span class="target" id="group__tizscheduler_1ga3de315444b3c86ed1ba46d03f84a2f13"></span>void* <code class="sig-name descname">tiz_get_sched</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_get_sched" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve the component’s servant ‘scheduler’ object.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>The scheduler object. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_get_type">
+<span class="target" id="group__tizscheduler_1gacf2f63dcdf377b97875517fb7fca9425"></span>void* <code class="sig-name descname">tiz_get_type</code><span class="sig-paren">(</span>const OMX_HANDLETYPE<em> ap_hdl</em>, const char *<em> ap_type_name</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_get_type" title="Permalink to this definition">¶</a></dt>
+<dd><p>Retrieve a component’s registered type / class.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>A registered type. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_hdl</span></code>: The OpenMAX IL handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+<dl class="struct">
+<dt id="c.tiz_role_factory">
+<span class="target" id="structtiz__role__factory"></span><em class="property">struct </em><code class="sig-name descname">tiz_role_factory</code><a class="headerlink" href="#c.tiz_role_factory" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;tizscheduler.h&gt;</em><p>OpenMAX IL role registration factory structure. </p>
+<p>This structure is used to hold the various factory functions and elements necessary to register a new role within the libtizonia component infrastrucure. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="variable">
+<dt id="c.tiz_role_factory::pf_cport">
+<span class="target" id="structtiz__role__factory_1adb53f8c2751f1957d6885b8d7fa4736b"></span><a class="reference internal" href="#c.tiz_role_config_port_init_f" title="tiz_role_config_port_init_f">tiz_role_config_port_init_f</a> <code class="sig-name descname">pf_cport</code><a class="headerlink" href="#c.tiz_role_factory::pf_cport" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘configuration port’ factory function </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c.tiz_role_factory::pf_proc">
+<span class="target" id="structtiz__role__factory_1ae10ff63ee26a57d3fa41ac89fd599caf"></span><a class="reference internal" href="#c.tiz_role_proc_init_f" title="tiz_role_proc_init_f">tiz_role_proc_init_f</a> <code class="sig-name descname">pf_proc</code><a class="headerlink" href="#c.tiz_role_factory::pf_proc" title="Permalink to this definition">¶</a></dt>
+<dd><p>‘processor’ factory function </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c.tiz_role_factory::nports">
+<span class="target" id="structtiz__role__factory_1af2f13c0991bca11b492d5814174e495b"></span>OMX_U32 <code class="sig-name descname">nports</code><a class="headerlink" href="#c.tiz_role_factory::nports" title="Permalink to this definition">¶</a></dt>
+<dd><p>number of ports in this role </p>
+</dd></dl>
+
+<dl class="variable">
+<dt>
+<span class="target" id="structtiz__role__factory_1a1b524bf51117c23a4533b9eef7d9bea2"></span><code class="sig-name descname">OMX_U8 tiz_role_factory::role[OMX_MAX_STRINGNAME_SIZE]</code></dt>
+<dd><p>the role name </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="struct">
+<dt id="c.tiz_event_pluggable">
+<span class="target" id="structtiz__event__pluggable"></span><em class="property">struct </em><code class="sig-name descname">tiz_event_pluggable</code><a class="headerlink" href="#c.tiz_event_pluggable" title="Permalink to this definition">¶</a></dt>
+<dd><em>#include &lt;tizscheduler.h&gt;</em><p>‘Pluggable’ event structure. </p>
+<p>A ‘pluggable’ event is a user-defined event that gets queued up in the component’s event queue. Once in the component’s event loop, the event is then delivered (in the context of the component’s thread) to the corresponding servant object (‘fsm’, ‘kernel’, or ‘processor’) for processing.</p>
+<p>The main use for this type of event is to allow the component’s ‘processor’ the processing of events coming from an external thread from within the component’s event loop and thread. Any data received in the external event tipically needs to be dup’ed before enqueueing the pluggable event (to avoid data races). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Members</p>
+<dl class="variable">
+<dt id="c.tiz_event_pluggable::p_servant">
+<span class="target" id="structtiz__event__pluggable_1a80059e13d95c4d79698de533b717bc44"></span>OMX_PTR <code class="sig-name descname">p_servant</code><a class="headerlink" href="#c.tiz_event_pluggable::p_servant" title="Permalink to this definition">¶</a></dt>
+<dd><p>The servant object that will be processing the external event. </p>
+</dd></dl>
+
+<dl class="variable">
+<dt id="c.tiz_event_pluggable::pf_hdlr">
+<span class="target" id="structtiz__event__pluggable_1aa2700170ddc9289dd7d06098aa30715e"></span>tiz_event_pluggable_hdlr_f <code class="sig-name descname">pf_hdlr</code><a class="headerlink" href="#c.tiz_event_pluggable::pf_hdlr" title="Permalink to this definition">¶</a></dt>
+<dd><p>The event handler </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Juan A. Rubio and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../../_sources/development/openmaxil/libtizonia/tizscheduler.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/tizonia/tizonia-openmax-il" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21817639-6']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

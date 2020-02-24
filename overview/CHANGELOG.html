@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Changelog &#8212; Tizonia 0.20.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="License" href="COPYING.LESSER.html" />
+    <link rel="prev" title="Contributing" href="CONTRIBUTING.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/tizonia_logo_200.gif" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=tizonia&repo=tizonia-openmax-il&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+    
+
+<p>
+<a class="badge" href="https://travis-ci.org/tizonia/tizonia-openmax-il">
+    <img
+        alt="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+        src="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">The Tizonia Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#news">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#upgrade">Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#hall-of-fame">Hall of Fame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#v0-20-0-2020-02-18">v0.20.0 (2020-02-18)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-19-0-2019-12-13">v0.19.0 (2019-12-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-18-0-2019-03-13">v0.18.0 (2019-03-13)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-17-0-2019-01-17">v0.17.0 (2019-01-17)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-16-0-2018-12-03">v0.16.0 (2018-12-03)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-15-0-2018-06-15">v0.15.0 (2018-06-15)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-14-0-2018-04-20">v0.14.0 (2018-04-20)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-13-0-2018-03-11">v0.13.0 (2018-03-11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-12-0-2018-02-11">v0.12.0 (2018-02-11)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-11-0-2017-12-17">v0.11.0 (2017-12-17)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-10-0-2017-10-22">v0.10.0 (2017-10-22)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-9-0-2017-08-04">v0.9.0 (2017-08-04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-8-0-2017-06-25">v0.8.0 (2017-06-25)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-7-0-2017-03-02">v0.7.0 (2017-03-02)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-6-0-2017-01-16">v0.6.0 (2017-01-16)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-5-0-2016-06-17">v0.5.0 (2016-06-17)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-4-0-2016-05-04">v0.4.0 (2016-05-04)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-3-0-2015-12-24">v0.3.0 (2015-12-24)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#v0-2-0-2015-12-14">v0.2.0 (2015-12-14)</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="COPYING.LESSER.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manual/manual.html">User Guide</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development/development.html">Developer Guide</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://tizonia.org">Tizonia Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il">Source (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il/issues">Issues (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://bintray.com/tizonia">Binaries (Bintray)</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="CONTRIBUTING.html" title="previous chapter">Contributing</a></li>
+      <li>Next: <a href="COPYING.LESSER.html" title="next chapter">License</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="changelog">
+<h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="v0-20-0-2020-02-18">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.20.0">v0.20.0</a> (2020-02-18)<a class="headerlink" href="#v0-20-0-2020-02-18" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.19.0...v0.20.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>New build system based on Meson (phase I) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/685">#685</a></p></li>
+<li><p>Add support for TuneIn Internet radios <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/684">#684</a></p></li>
+<li><p>tizonia-remote: publish in debian packages <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/683">#683</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>passwords in clear text in config file: add warnings to advise users to restrict access <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/678">#678</a></p></li>
+<li><p>Improve tizonia.org security by using HTTPS/SSL <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/672">#672</a></p></li>
+<li><p>Mopidy APT source is dead (404) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/670">#670</a></p></li>
+<li><p>libtizplatform: allow options and comments in the same line of the config file  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/667">#667</a></p></li>
+<li><p>Not able to cast from penguin terminal to chromecast <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/639">#639</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Display Current Playing / RC.Local output via SSH <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/654">#654</a></p></li>
+<li><p>Using Tizonia in Cron jobs <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/651">#651</a></p></li>
+<li><p>AttributeError: module ‘importlib’ has no attribute ‘util’ <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/647">#647</a></p></li>
+<li><p>Error 404 on bintray raspbian buster 0.19 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/645">#645</a></p></li>
+<li><p>Python modules ‘spotifyapi’ or ‘fuzzywuzzy’ not found. <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/644">#644</a></p></li>
+<li><p>[news] gst-omx now makes use of non-pre-announce buffer mode for OMX_UseBuffer <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/416">#416</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>Beautify the final message by using summary() <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/676">#676</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+<li><p>Further reduce boost dependencies <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/674">#674</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+<li><p>Do not require dependencies when not needed. <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/673">#673</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+<li><p>Add features to disable clients and plugins <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/671">#671</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+<li><p>Develop <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/666">#666</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+<li><p>Use external libev if available <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/665">#665</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+<li><p>Preparing for system libev <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/664">#664</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+<li><p>A few meson minor changes <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/663">#663</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+<li><p>Add specific path to includes for vpx headers <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/662">#662</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+<li><p>meson misc <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/661">#661</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+<li><p>Use find_library() for log4c only if necessary <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/659">#659</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+<li><p>Initial meson commit <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/658">#658</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+<li><p>Adapt doxygen paths to meson <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/657">#657</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="v0-19-0-2019-12-13">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.19.0">v0.19.0</a> (2019-12-13)<a class="headerlink" href="#v0-19-0-2019-12-13" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.18.0...v0.19.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>Support Debian Bullseye <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/632">#632</a></p></li>
+<li><p>install.sh: add support for Linux Mint 19.2 Tina <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/629">#629</a></p></li>
+<li><p>Raspbian Buster not supported <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/621">#621</a></p></li>
+<li><p>PulseAudio volume customized <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/620">#620</a></p></li>
+<li><p>Python3 support <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/614">#614</a></p></li>
+<li><p>Spotify: allow configuration of preferred bitrate settings <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/613">#613</a></p></li>
+<li><p>Plex: allow music section name other than ‘Music’ <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/610">#610</a></p></li>
+<li><p>spotify: global playlist search <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/589">#589</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>Spotify: tizonia should exit and display an error when used with a non-premium Spotify account <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/634">#634</a></p></li>
+<li><p>Dirble not accessible (Dirble removal) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/624">#624</a></p></li>
+<li><p>–plex-audio-playlist &lt;arg&gt; returns “A playlist type must be specified.” <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/605">#605</a></p></li>
+<li><p>YouTube: Shuffle option does not work <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/592">#592</a></p></li>
+<li><p>Plex: (UnicodeDecodeError) : ‘ascii’ codec can’t decode byte <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/580">#580</a></p></li>
+<li><p>Segmentation fault with spotify <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/575">#575</a></p></li>
+<li><p>[SoundCloud] (UnicodeDecodeError) : ‘ascii’ codec can’t decode byte 0xc3 in position 0: ordinal not in range(128) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/574">#574</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Unable to locate package tizonia-all <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/640">#640</a></p></li>
+<li><p>Tizonia complains over unsufficient resources <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/622">#622</a></p></li>
+<li><p>OMX_ErrorInsufficientResources when using gmusic <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/617">#617</a></p></li>
+<li><p>gmusic: Could not retrieve the song url! (403: Forbidden) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/615">#615</a></p></li>
+<li><p>Update command failed <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/611">#611</a></p></li>
+<li><p>Tizonia [runs very slow] on Mint 18.3 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/595">#595</a></p></li>
+<li><p>Can’t install Tizonia on ARMHF hardware <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/594">#594</a></p></li>
+<li><p>Cannot render audio on linux mint <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/588">#588</a></p></li>
+<li><p>OMX_ErrorInsufficientResources - Speicherzugriffsfehler <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/587">#587</a></p></li>
+<li><p>[Suggestion] Shuffle option <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/585">#585</a></p></li>
+<li><p>YouTube Audio Steam Token Parameter <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/584">#584</a></p></li>
+<li><p>Advise adding a requirement to run script as normal user <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/573">#573</a></p></li>
+<li><p>release v0.19.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/643">#643</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>Added support for Ubuntu 19.04 (Disco Dingo) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/630">#630</a> (<a class="reference external" href="https://github.com/Aldin-SXR">Aldin-SXR</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="v0-18-0-2019-03-13">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.18.0">v0.18.0</a> (2019-03-13)<a class="headerlink" href="#v0-18-0-2019-03-13" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.17.0...v0.18.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>various graphs : add rewind, fast-forward functionality <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/125">#125</a></p></li>
+<li><p>Spotify: config option to allow/disallow ‘explicit’ tracks <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/568">#568</a></p></li>
+<li><p>Spotify: smarter  ‘–spotify-artist’ search <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/538">#538</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>Arch User Repository: ‘tizonia-all’ builds sometimes break during upgrades <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/485">#485</a></p></li>
+<li><p>Spotify: core dumped with ‘tizonia –spotify-album “living on a prayer” <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/569">#569</a></p></li>
+<li><p>Google Play Music. Artist Not Found <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/565">#565</a></p></li>
+<li><p>tizonia fails with MALLOC_PERTURB_ set <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/563">#563</a></p></li>
+<li><p>Spotify: tizonia repeats the first track <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/560">#560</a></p></li>
+<li><p>dbus-cplusplus: fix no return in non void function <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/555">#555</a></p></li>
+<li><p>Google Play music intermittently cutting songs short <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/547">#547</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>release v0.18.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/572">#572</a></p></li>
+<li><p>configure error <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/540">#540</a></p></li>
+<li><p>docs: document Tizonia’s configuration system <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/368">#368</a></p></li>
+<li><p>docs: document player shortcuts <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/570">#570</a></p></li>
+</ul>
+</div>
+<div class="section" id="v0-17-0-2019-01-17">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.17.0">v0.17.0</a> (2019-01-17)<a class="headerlink" href="#v0-17-0-2019-01-17" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.16.0...v0.17.0">Full Changelog</a></p>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>tizgmusicproxy.py: Keep on getting a syntax error (Non-ASCII character ‘\xe2’) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/542">#542</a></p></li>
+<li><p>Spotify: “unable to login offline: no such user” <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/531">#531</a></p></li>
+<li><p>tizonia: cannot handle whitespaces in its config file <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/468">#468</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>release v0.17.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/550">#550</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>README: arch install notes <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/549">#549</a> (<a class="reference external" href="https://github.com/sjugge">sjugge</a>)</p></li>
+<li><p>Fixed the fetching of user likes &amp; stream on soundcloud <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/548">#548</a> (<a class="reference external" href="https://github.com/seifane">seifane</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="v0-16-0-2018-12-03">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.16.0">v0.16.0</a> (2018-12-03)<a class="headerlink" href="#v0-16-0-2018-12-03" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.15.0...v0.16.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>Spotify: add options to play Spotify recommendations using a track id, artist id, or genre name as seeds <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/536">#536</a></p></li>
+<li><p>Spotify: URIs for track, artist, and album displayed on terminal <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/535">#535</a></p></li>
+<li><p>Spotify: add option to force playing the next song after token is lost <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/534">#534</a></p></li>
+<li><p>Spotify: add option to play an album from Spotify’s new releases list <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/532">#532</a></p></li>
+<li><p>Spotify: add option to search and play a featured playlist <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/529">#529</a></p></li>
+<li><p>Spotify: add option to play top tracks from a number of similar artists <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/528">#528</a></p></li>
+<li><p>Spotify: add options for playback by Spotify ID, URI, or URL <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/527">#527</a></p></li>
+<li><p>Spotify: add fuzzy search capability to –spotify-artist <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/526">#526</a></p></li>
+<li><p>Spotify: hide spotify debug messages <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/525">#525</a></p></li>
+<li><p>Kali Linux support <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/510">#510</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>Spotify: tizonia does not exit when the Spotify login attempt fails <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/533">#533</a></p></li>
+<li><p>Spotify: –spotify-artist ‘Mötley Crüe’ returns Artist not found <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/524">#524</a></p></li>
+<li><p>‘–help config’: information provided is outdated (and confuses people) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/523">#523</a></p></li>
+<li><p>Google Music: ‘–gmusic-unlimited-station’: random station playing <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/522">#522</a></p></li>
+<li><p>Using –gmusic-playlist exits with error ‘maximum recursion depth exceeded in cmp’ <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/519">#519</a></p></li>
+<li><p>–gmusic-unlimited-playlist doesn’t work (key not found) whereas –gmusic-playlist does (and finds the list) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/515">#515</a></p></li>
+<li><p>Linux Mint 18 Sarah: installation issue via install.sh script <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/508">#508</a></p></li>
+<li><p>–gmusic-unlimited-activity plays same playlist for activity every time <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/507">#507</a></p></li>
+<li><p>Google Music: playback stops at the end of a song with ‘gnutls_handshake() failed: An unexpected TLS packet was received.’ <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/500">#500</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Updating Instructions threw an unhandled exception, seems like a syntax error <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/520">#520</a></p></li>
+<li><p>Tizonia Snap exits with OMX_ErrorInsufficientResources error <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/513">#513</a></p></li>
+<li><p>Tizonia can’t find my Spotify playlists <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/506">#506</a></p></li>
+<li><p>googlemusic settings help <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/505">#505</a></p></li>
+<li><p>tizonia-all-git not found in AUR <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/504">#504</a></p></li>
+<li><p>Gmusic-Unlimited Aratelia.audio_source.http:port0 OMX_ErrorInsufficientResources <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/503">#503</a></p></li>
+<li><p>OMX_ErrorInsufficientResources <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/501">#501</a></p></li>
+<li><p>release v0.16.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/537">#537</a></p></li>
+</ul>
+</div>
+<div class="section" id="v0-15-0-2018-06-15">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.15.0">v0.15.0</a> (2018-06-15)<a class="headerlink" href="#v0-15-0-2018-06-15" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.14.0...v0.15.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>player: improved Spotify search capabilities (tracks, artist, album, and playlists) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/495">#495</a></p></li>
+<li><p>spotify_source: use Spotify Web APIs for search functions <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/494">#494</a></p></li>
+<li><p>clients: Spotify Web API client library <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/493">#493</a></p></li>
+<li><p>clients: Spotify Web API proxy/wrapper Python module <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/492">#492</a></p></li>
+<li><p>Spotify Playlists with Single Quotes in Name Can’t Be Found <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/486">#486</a></p></li>
+<li><p>spotify: unable to play some playlists <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/471">#471</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>Spotify: tizonia stalls when trying to open a playlist <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/490">#490</a></p></li>
+<li><p>Google Music: playback stops at the end of a song and playlist stalls <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/489">#489</a></p></li>
+<li><p>player: Spotify playlist search stalls sometimes <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/487">#487</a></p></li>
+<li><p>AUR install depends on python2-eventlet-git which fails to build, instead of python2-eventlet which is in the default repository <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/484">#484</a></p></li>
+<li><p>player: ‘segmentation fault’ while trying to get metadata of a track <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/433">#433</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>release v0.15.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/497">#497</a></p></li>
+</ul>
+</div>
+<div class="section" id="v0-14-0-2018-04-20">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.14.0">v0.14.0</a> (2018-04-20)<a class="headerlink" href="#v0-14-0-2018-04-20" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.13.0...v0.14.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>YouTube Channels support - channel playlist search <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/476">#476</a></p></li>
+<li><p>YouTube Channels support - channel uploads <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/475">#475</a></p></li>
+<li><p>Debian Testing/Buster (10) not available <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/474">#474</a></p></li>
+<li><p>google music: support for free radio stations <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/473">#473</a></p></li>
+<li><p>google music: add option to play the entire user library <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/470">#470</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>RSS Feed in official Website is broken <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/480">#480</a></p></li>
+<li><p>segmentation fault with snap and spotify <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/479">#479</a></p></li>
+<li><p>google music: Playlist shows 0 tracks in Tizonia, has tracks on Google Play web interface <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/478">#478</a></p></li>
+<li><p>httprsrv.c:857:3: note: ‘snprintf’ output between 11 and 138 bytes into a destination of size 128 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/477">#477</a></p></li>
+<li><p>google music: tiz_urltrans_on_buffers_ready: assertion <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/472">#472</a></p></li>
+<li><p>player: symbol lookup error: lib/tizonia0-plugins12/libtizhttpsrc.so.0.0.13: undefined symbol: tiz_str_util_to_lower <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/464">#464</a></p></li>
+<li><p>Google Music: track downloading is interrupted seemingly randomly <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/349">#349</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>python modules _soundcloud_ and _fuzzywuzzy_ were missing <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/469">#469</a></p></li>
+<li><p>how to fix “FATAL. Could not init OpenMAX IL : OMX_ErrorInsufficientResources” <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/466">#466</a></p></li>
+<li><p>Bionic install from repository: libspotify12 missing <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/465">#465</a></p></li>
+<li><p>release v0.14.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/482">#482</a></p></li>
+</ul>
+</div>
+<div class="section" id="v0-13-0-2018-03-11">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.13.0">v0.13.0</a> (2018-03-11)<a class="headerlink" href="#v0-13-0-2018-03-11" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.12.0...v0.13.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>libtizplatform: need API to configure connection timeout in tizurltransfer.h <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/453">#453</a></p></li>
+<li><p>dirble: m3u files are not parsed <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/451">#451</a></p></li>
+<li><p>soundcloud: improve the matching of search results <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/446">#446</a></p></li>
+<li><p>google music: improve the matching of search results <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/445">#445</a></p></li>
+<li><p>player: add progress display <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/444">#444</a></p></li>
+<li><p>Client request: Plex Media Server <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/387">#387</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>Lots of ChannelError messages during Spotify playback <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/443">#443</a></p></li>
+<li><p>aac_decoder: ‘OMX_ErrorInsuficientResources’ is sometimes returned instead of ‘OMX_ErrorStreamCorruptFatal’ <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/459">#459</a></p></li>
+<li><p>dirble: can’t play radio stations - ‘Content-Length’ header comparison should be case-insensitive <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/458">#458</a></p></li>
+<li><p>dirble: error ‘Unable to override decoder/renderer sampling rates’ <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/457">#457</a></p></li>
+<li><p>dirble: buffer underruns in some radio stations (specially with FlumotionHTTPServer) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/456">#456</a></p></li>
+<li><p>dirble: can’t play radio stations if url contains mixed-case ‘http’ prefix <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/455">#455</a></p></li>
+<li><p>player: can’t play radio stations if url contains mixed-case ‘http’ prefix <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/454">#454</a></p></li>
+<li><p>dirble: connection timeout is currently too long (20 s) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/452">#452</a></p></li>
+<li><p>player: no local files played if the playlist contains unicode file names <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/449">#449</a></p></li>
+<li><p>soundcloud: UnicodeDecodeError ‘ascii’ codec can’t decode byte 0xf0 in position 13 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/432">#432</a></p></li>
+<li><p>Building tizonia on Ubuntu 17.10 Artful <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/421">#421</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>There is no tizonia.conf file <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/447">#447</a></p></li>
+<li><p>Most CD ripper programs rip within a newly created folder representing the CD’s name and artist, yet Tizonia appears to be oblivious to all nested folders in ~/Music. <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/442">#442</a></p></li>
+<li><p>Installer script doesn’t copy tizonia.conf file <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/441">#441</a></p></li>
+<li><p>Unable to run on Solus OS <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/434">#434</a></p></li>
+<li><p>release v0.13.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/460">#460</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>Fixed path to default config file for standard install <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/448">#448</a> (<a class="reference external" href="https://github.com/nlwstein">nlwstein</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="v0-12-0-2018-02-11">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.12.0">v0.12.0</a> (2018-02-11)<a class="headerlink" href="#v0-12-0-2018-02-11" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.11.0...v0.12.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>snap: move snapcraft.yaml to its own repo <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/431">#431</a></p></li>
+<li><p>libtizplatform: allow expansion of environment variables in tizonia configuration file <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/429">#429</a></p></li>
+<li><p>tizonia-config: Default configuration files should be installed to $sysconfdir/xdg/subdir/filename with $sysconfdir defaulting to /etc. <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/427">#427</a></p></li>
+<li><p>build system: update ax_boost*.m4 macros with latest version from autoconf-archive <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/426">#426</a></p></li>
+<li><p>build system: Tizonia snap package <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/309">#309</a></p></li>
+<li><p>clients: add a ‘tizchromecastproxy’ Python module <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/298">#298</a></p></li>
+<li><p>Chromecast support <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/296">#296</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>Use of deprecated gethostbyname() <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/425">#425</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Spotify playlist fails <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/435">#435</a></p></li>
+<li><p>release v0.12.0  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/436">#436</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>Make aac_decoder optional <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/422">#422</a> (<a class="reference external" href="https://github.com/lgbaldoni">lgbaldoni</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="v0-11-0-2017-12-17">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.11.0">v0.11.0</a> (2017-12-17)<a class="headerlink" href="#v0-11-0-2017-12-17" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.10.0...v0.11.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>libtizplatform: use $XDG_CONFIG_HOME and $XDG_CONFIG_DIRS to locate tizonia.conf <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/428">#428</a></p></li>
+<li><p>3rdparty: embed pkgw/dbus-cplusplus <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/413">#413</a></p></li>
+<li><p>http_source: youtubeprc - increase the amount of data emitted by the output port <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/411">#411</a></p></li>
+<li><p>webm_demuxer: catch up internal nestegg with kinetiknz/nestegg master <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/405">#405</a></p></li>
+<li><p>build system: top-level ‘configure’ option to enable/disable the ‘alsa’ omx component <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/402">#402</a></p></li>
+<li><p>build system: top-level ‘configure’ option to enable/disable ‘spotify_source’ omx component build <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/396">#396</a></p></li>
+<li><p>tizonia-player: bash completion file distributed in debian package <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/385">#385</a></p></li>
+<li><p>tizonia-player: zsh completion file distributed in debian package <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/384">#384</a></p></li>
+<li><p>tizonia-player: bash completion file <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/307">#307</a></p></li>
+<li><p>clients: add a ‘libtizchromecast’ binding library <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/297">#297</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>player: youtube crash with webm/vorbis stream <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/420">#420</a></p></li>
+<li><p>release v0.11.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/419">#419</a></p></li>
+<li><p>player: garbage on the screen after ‘tizonia’ exits on error <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/418">#418</a></p></li>
+<li><p>player: audio playback from local files is broken for most formats <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/417">#417</a></p></li>
+<li><p>webm_demuxer: dmuxfltprc - allow nestegg initialisation to fail while buffering input data <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/412">#412</a></p></li>
+<li><p>libtizplatform: tizurltransfer needs to work correctly when copying to an omx buffer that already contains data <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/410">#410</a></p></li>
+<li><p>webm_demuxer: not enough input data results in the nestegg object not initializing correctly  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/408">#408</a></p></li>
+<li><p>webm_demuxer: allocation of the nestegg object fails silently with some streams <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/407">#407</a></p></li>
+<li><p>youtube: console informational element ‘stream #’ appears garbled <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/406">#406</a></p></li>
+<li><p>install.sh: make sure pip2 is used on systems that have pip3 as its default pip installation <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/404">#404</a></p></li>
+<li><p>Crashes on yt livestreams <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/403">#403</a></p></li>
+<li><p>Ogg Vorbis decoding is slow and static-y <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/386">#386</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Building on 17.10 hangs <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/414">#414</a></p></li>
+<li><p>aac decoder: pcmmode.eEndian should be set to OMX_EndianLittle instead of OMX_EndianBig . <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/409">#409</a></p></li>
+<li><p>No such file or directory (youtube). <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/401">#401</a></p></li>
+<li><p>Can’t install on Ubuntu 14.04 trusty <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/398">#398</a></p></li>
+<li><p>.config reload <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/397">#397</a></p></li>
+<li><p>Ubuntu 18.04 support <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/393">#393</a></p></li>
+<li><p>Binary for Ubuntu 17.10 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/389">#389</a></p></li>
+<li><p>Can´t autoreconf -ifs <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/388">#388</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>Updating link to soundcloud docs page <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/415">#415</a> (<a class="reference external" href="https://github.com/djsiddz2">djsiddz2</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="v0-10-0-2017-10-22">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.10.0">v0.10.0</a> (2017-10-22)<a class="headerlink" href="#v0-10-0-2017-10-22" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.9.0...v0.10.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>distribution: raspbian stretch <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/370">#370</a></p></li>
+<li><p>build system : top-level ‘configure’ option to enable/disable ‘player’ compilation <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/249">#249</a></p></li>
+<li><p>CI: Migrate to Travis’ new infrastructure <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/124">#124</a></p></li>
+<li><p>player: dirble graph’s default sampling rate should be 44100 instead of 48000 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/382">#382</a></p></li>
+<li><p>dirble: update country search to accept country names in addition to country ISO 3166 codes <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/381">#381</a></p></li>
+<li><p>youtube: add APIs to query the playback queue progress (e.g. currently playing stream 5 or 17) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/380">#380</a></p></li>
+<li><p>arch pl0x <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/335">#335</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>Coverity Scan (CID 1087260) [/libtizplatform/src/avl/avl.c:avl_iterate_index_range] : Dereference null return value <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/205">#205</a></p></li>
+<li><p>Coverity Scan (CID 1352377) [/plugins/http_renderer/src/httprsrv.c:httpr_srv_set_mp3_settings] : Result is not floating-point <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/196">#196</a></p></li>
+<li><p>Coverity Scan (CID 1352358) [/libtizonia/src/tizuricfgport.c:uri_cfgport_GetParameter] : Array compared against 0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/192">#192</a></p></li>
+<li><p>Coverity Scan (CID 1352332) [/plugins/http_renderer/src/httprsrv.c:srv_get_socket_buffer_size] : Unchecked return value from library <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/174">#174</a></p></li>
+<li><p>Coverity Scan (CID 1352331) [/plugins/http_renderer/src/httprsrv.c:srv_send_http_error] : Unchecked return value from library <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/173">#173</a></p></li>
+<li><p>Coverity Scan (CID 1352330) [/plugins/http_renderer/src/httprsrv.c:srv_create_server_socket] : Unchecked return value from library <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/172">#172</a></p></li>
+<li><p>Coverity Scan (CID 1352329) [/plugins/http_source/src/httpsrctrans.c:start_curl] : Unchecked return value <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/171">#171</a></p></li>
+<li><p>Coverity Scan (CID 1352328) [/plugins/http_source/src/scloudprc.c:update_metadata] : Unchecked return value <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/170">#170</a></p></li>
+<li><p>Coverity Scan (CID 1352340) [/plugins/http_renderer/src/httprsrv.c:srv_accept_connection] : Logically dead code <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/167">#167</a></p></li>
+<li><p>Coverity Scan (CID 1352339) [/plugins/http_renderer/src/httprsrv.c:srv_accept_connection] : Logically dead code <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/166">#166</a></p></li>
+<li><p>youtube: URLs are permanently deleted from the playback queue in the presence of temporary communication errors <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/379">#379</a></p></li>
+<li><p>pcm_renderer_alsa: OMX_ErrorInsufficientResources on Raspberry Pi (one-channel playback through FiiO USB DAC) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/378">#378</a></p></li>
+<li><p>‘tizonia –youtube-audio-mix-search’ fails with ‘TypeError: sequence item 9: expected string or Unicode, dict found’ <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/377">#377</a></p></li>
+<li><p>Build failure on Arch Linux <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/376">#376</a></p></li>
+<li><p>Current AUR build is broken on at least two levels <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/375">#375</a></p></li>
+<li><p>player: OMX_ErrorInsufficientResources while pausing on Raspberry PI (using alsa renderer) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/374">#374</a></p></li>
+<li><p>“Illegal instrunction” on “2017-07-05-raspbian-jessie-lite.img” <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/372">#372</a></p></li>
+<li><p>http_renderer: ‘tizonia –server’ hangs after the first song <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/371">#371</a></p></li>
+<li><p>player: the terminal is occasionally left in an inconsistent state when the application fails <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/369">#369</a></p></li>
+<li><p>Various warnings while building with gcc 7.1.1 (Manjaro Linux) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/367">#367</a></p></li>
+<li><p>docs: doc builds fail due to Breathe defect <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/343">#343</a></p></li>
+<li><p>Issues with Google Music : –gmusic-playlist <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/328">#328</a></p></li>
+<li><p>tizonia: pulsearprc.c:592: init_pulseaudio_stream: Assertion `ap_prc-&gt;p_pa_context_’ failed. Aborted (core dumped) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/301">#301</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>tools/install.sh still does not work for ubuntu-16.04 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/373">#373</a></p></li>
+<li><p>The PKGBUILD installs config files to /usr/etc instead of /etc <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/366">#366</a></p></li>
+<li><p>release v0.10.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/383">#383</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>PKGBUILD: Fix style inconsistencies <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/365">#365</a> (<a class="reference external" href="https://github.com/sylveon">sylveon</a>)</p></li>
+<li><p>vp8_decoder: add inport_SetParameter to set nBufferSize <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/pull/363">#363</a> (<a class="reference external" href="https://github.com/CapOM">CapOM</a>)</p></li>
+</ul>
+</div>
+<div class="section" id="v0-9-0-2017-08-04">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.9.0">v0.9.0</a> (2017-08-04)<a class="headerlink" href="#v0-9-0-2017-08-04" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.8.0...v0.9.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>libtizonia: OMX_IndexParamVideoQuantization not supported <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/351">#351</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>release v0.9.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/361">#361</a></p></li>
+<li><p>tizdeezerproxy: removal due to copyright issues <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/360">#360</a></p></li>
+<li><p>libtizonia: nBufferSize is not updated on video output port <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/358">#358</a></p></li>
+<li><p>vp8_decoder: the flush handler should not discard the codec config, only the stored stream data <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/354">#354</a></p></li>
+<li><p>libtizonia: tizscheduler.c::set_thread_name crashes if there is no “third” dot in the component name <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/353">#353</a></p></li>
+<li><p>libtizonia: port hooks (both alloc and eglimage validation) are not restored and get lost after the component’s role is changed or reset <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/348">#348</a></p></li>
+<li><p>aac_decoder: aacdecprc.c:transform_buffer:436 — [OMX_ErrorInsufficientResources] : Unable to store all the data. <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/346">#346</a></p></li>
+<li><p>libtizonia: a port that does not support OMX_UseEGLImage should return OMX_ErrorNotImplemented <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/345">#345</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>libtizonia: allow registration of different egl validation hooks for different component roles <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/350">#350</a></p></li>
+<li><p>support mesa/gallium <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/116">#116</a></p></li>
+</ul>
+</div>
+<div class="section" id="v0-8-0-2017-06-25">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.8.0">v0.8.0</a> (2017-06-25)<a class="headerlink" href="#v0-8-0-2017-06-25" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.7.0...v0.8.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>tizonia-player: oh-my-zsh plugin <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/336">#336</a></p></li>
+<li><p>Google Music : add a ‘–gmusic-podcast’ option <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/334">#334</a></p></li>
+<li><p>Google Music : add a ‘–gmusic-tracks’ option <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/333">#333</a></p></li>
+<li><p>Google Music : add a ‘–gmusic-unlimited-playlist’ <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/332">#332</a></p></li>
+<li><p>webm_demuxer: update ‘nestegg’ library to latest <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/323">#323</a></p></li>
+<li><p>webm_demuxer: implement VP8/VP9 video demuxing in ‘filter’ role <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/322">#322</a></p></li>
+<li><p>vp8_decoder: add support for raw streams <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/314">#314</a></p></li>
+<li><p>build system: debian packaging of YUV renderer component <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/313">#313</a></p></li>
+<li><p>build system: debian packaging of VP8 decoder component <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/312">#312</a></p></li>
+<li><p>tizonia-player: zsh completion file <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/306">#306</a></p></li>
+<li><p>clients: add a ‘tizdeezerproxy’ Python module  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/300">#300</a></p></li>
+<li><p>clients: add a ‘libtizdeezer’ binding library <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/299">#299</a></p></li>
+<li><p>player: add ‘–youtube-audio-mix-search’ option <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/295">#295</a></p></li>
+<li><p>Add support for Deezer <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/294">#294</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>release v0.8.0  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/339">#339</a></p></li>
+<li><p>libtizonia: IL 1.2 slaving behavior needs to be applied to both ports (input and output) if the port settings changed is triggered internally <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/338">#338</a></p></li>
+<li><p>Issues with Google Music : player stalls if connection is lost (libcurl  SSL error with errno 104) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/337">#337</a></p></li>
+<li><p>Issues with Google Music : –gmusic-unlimited-station incorrect “not found” message (minor issue) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/331">#331</a></p></li>
+<li><p>Issues with Google Music : –gmusic-unlimited-activity sometimes does not return any results <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/330">#330</a></p></li>
+<li><p>yuv_renderer: ‘sdlivr_prc_buffers_ready’ last few buffers in the stream sometime are not processed <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/329">#329</a></p></li>
+<li><p>libtizonia: tizvideoport needs to override ‘SetParameter_internal’ <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/327">#327</a></p></li>
+<li><p>yuv_renderer: add port enable/disable functionality <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/326">#326</a></p></li>
+<li><p>Issues with Google Music : –gmusic-unlimited-tracks <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/325">#325</a></p></li>
+<li><p>libtizonia: ‘videoport’ base class has no ‘tiz_port_set_portdef_format’ override <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/321">#321</a></p></li>
+<li><p>tizyoutubeproxy: allow for retries as a workaround for SSLEOFErrors while retrieving youtube stream URLs <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/315">#315</a></p></li>
+<li><p>libtizplatform: can’t locate the global tizonia.conf configuration file (&#64;sysconfdir&#64;) when the user’s config file is not present <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/311">#311</a></p></li>
+<li><p>tizonia.conf: Debian installation puts it under /etc/tizonia/tizonia.conf instead of /etc/tizonia <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/310">#310</a></p></li>
+<li><p>player: command line argument processing is broken on systems with boost 1.59 or greater <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/308">#308</a></p></li>
+<li><p>tools/install.sh: script does not support installation on Ubuntu-based LinuxMint OSes  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/303">#303</a></p></li>
+<li><p>tools/install.sh: script does not support installation on 16.04-based Elementary OS 0.4 Loki <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/302">#302</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Can’t find a supported Debian or Ubuntu-based distribution. <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/304">#304</a></p></li>
+</ul>
+</div>
+<div class="section" id="v0-7-0-2017-03-02">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.7.0">v0.7.0</a> (2017-03-02)<a class="headerlink" href="#v0-7-0-2017-03-02" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.6.0...v0.7.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>clients-youtube: skipping to a new song takes too long the first time, faster after that <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/291">#291</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>Coverity Scan (CID 1087243) [/libtizcore/src/tizcore.c:instantiate_comp_lib] : Copy into fixed size buffer <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/234">#234</a></p></li>
+<li><p>Coverity Scan (CID 1087305) [/libtizcore/src/tizcore.c:get_core] : Logically dead code <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/164">#164</a></p></li>
+<li><p>Coverity Scan (CID 1087304) [/libtizplatform/src/tizrc.c:tiz_rcfile_init] : Logically dead code <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/163">#163</a></p></li>
+<li><p>release v0.7.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/293">#293</a></p></li>
+<li><p>player: tizonia ‘–youtube-audio-playlist’ always returns “Playlist not found” <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/292">#292</a></p></li>
+<li><p>tizonia: application crashes if option values are not provided <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/290">#290</a></p></li>
+<li><p>googlemusic: –gmusic-artist outputs dictionary contents instead of artist name <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/289">#289</a></p></li>
+<li><p>Coverity Scan (CID 1352370) [/usr/include/boost/msm/back/dispatch_table.hpp:dispatch_table] : Uninitialized pointer field <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/237">#237</a></p></li>
+<li><p>Coverity Scan (CID 1352368) [/usr/include/boost/msm/back/state_machine.hpp:state_machine] : Uninitialized scalar field <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/235">#235</a></p></li>
+<li><p>Coverity Scan (CID 1352350) [/player/src/tizgraphmgrops.cpp:deinit] : Double lock <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/216">#216</a></p></li>
+<li><p>Coverity Scan (CID 993663) [/libtizplatform/src/ev/ev.c:infy_cb] : Untrusted array index read <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/197">#197</a></p></li>
+<li><p>Coverity Scan (CID 1087266) [/libtizonia/src/tizutils.c:tiz_fsm_state_to_str] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/175">#175</a></p></li>
+</ul>
+</div>
+<div class="section" id="v0-6-0-2017-01-16">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.6.0">v0.6.0</a> (2017-01-16)<a class="headerlink" href="#v0-6-0-2017-01-16" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.5.0...v0.6.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>libtizplatform: update utarray to v2.0.1 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/288">#288</a></p></li>
+<li><p>libtizplatform: update http-parser to v2.7.1 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/287">#287</a></p></li>
+<li><p>vorbis_decoder: stream metadata retrieval <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/281">#281</a></p></li>
+<li><p>opus_decoder: stream metadata retrieval  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/280">#280</a></p></li>
+<li><p>vorbis_decoder: handling of port flush, enable and disable events <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/278">#278</a></p></li>
+<li><p>libtizplatform: add ‘tiz_audio_coding_to_str’ utility function <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/277">#277</a></p></li>
+<li><p>spotify_source: play a random playlist when one cannot be found in the user library <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/274">#274</a></p></li>
+<li><p>libtizplatform: fix and clean up ‘tiz_check_xxx’ utilities <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/269">#269</a></p></li>
+<li><p>libtizonia: add a muxer port <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/268">#268</a></p></li>
+<li><p>libtizonia: add an ogg port <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/267">#267</a></p></li>
+<li><p>libtizonia: add a webm port <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/266">#266</a></p></li>
+<li><p>libtizonia: rename ‘tiz_buffer_overwrite_mode’ as ‘tiz_buffer_seek_mode’  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/265">#265</a></p></li>
+<li><p>libtizplatform: add ‘tiz_buffer_seek’, ‘tiz_buffer_offset’ and ‘tiz_buffer_overwrite_mode’ apis <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/264">#264</a></p></li>
+<li><p>libtizplatform: remove ‘tiz_buffer_t’ apis that were deprecated in version 0.2.0   <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/263">#263</a></p></li>
+<li><p>libtizcore: avoid reading non-shared object entries during directory scanning <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/262">#262</a></p></li>
+<li><p>libtizonia: add port disabled/enabled accessors in ‘tiz_filter_prc_t’ <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/261">#261</a></p></li>
+<li><p>libtizonia: ‘tiz_filter_prc_t’ needs to support components with multiple input and output ports <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/260">#260</a></p></li>
+<li><p>tizonia/gmusic: graph’s default sampling rate should be 44100 instead of 48000  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/259">#259</a></p></li>
+<li><p>libtizplatform: fix clang-tidy-3.8 warnings <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/258">#258</a></p></li>
+<li><p>libtizonia: fix clang-tidy-3.8 warnings <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/257">#257</a></p></li>
+<li><p>tizplatform: libcurl-based data transfer utility <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/254">#254</a></p></li>
+<li><p>clients: youtube audio streaming proxy Python module <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/253">#253</a></p></li>
+<li><p>clients: youtube audio streaming client library <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/252">#252</a></p></li>
+<li><p>player: youtube audio streaming graph <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/251">#251</a></p></li>
+<li><p>plugins: webm demuxer component  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/250">#250</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>Coverity Scan (CID 1352364) [/libtizplatform/src/tizrc.c:get_node] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/232">#232</a></p></li>
+<li><p>Coverity Scan (CID 1087255) [/libtizplatform/src/tizhttp.c:insert_kv_pair] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/228">#228</a></p></li>
+<li><p>Coverity Scan (CID 1087245) [/libtizplatform/src/tizrc.c:tiz_rcfile_init] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/221">#221</a></p></li>
+<li><p>Coverity Scan (CID 1087244) [/libtizplatform/src/tizvector.c:tiz_vector_init] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/220">#220</a></p></li>
+<li><p>Coverity Scan (CID 1352353) [/libtizplatform/src/tizev.c:enqueue_timer_msg] : Missing unlock <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/219">#219</a></p></li>
+<li><p>Coverity Scan (CID 1352352) [/libtizplatform/src/tizev.c:enqueue_io_msg] : Missing unlock <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/218">#218</a></p></li>
+<li><p>Coverity Scan (CID 1352351) [/libtizplatform/src/tizev.c:enqueue_stat_msg] : Missing unlock <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/217">#217</a></p></li>
+<li><p>Coverity Scan (CID 1352357) [/plugins/http_renderer/src/httprsrv.c:srv_write_omx_buffer] : Macro compares unsigned to 0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/202">#202</a></p></li>
+<li><p>Coverity Scan (CID 1352356) [/plugins/vorbis_decoder/src/vorbisdprc.c:transform_buffer] : Macro compares unsigned to 0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/201">#201</a></p></li>
+<li><p>Coverity Scan (CID 1352334) [/plugins/spotify_source/src/spfysrcprc.c:send_port_auto_detect_events] : Constant expression result <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/200">#200</a></p></li>
+<li><p>Coverity Scan (CID 1352333) [/plugins/pcm_renderer_pa/src/pulsearprc.c:init_pulseaudio_stream] : Operands don’t affect result <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/199">#199</a></p></li>
+<li><p>Coverity Scan (CID 1352349) [/player/src/tizplayapp.cpp:getch_] : Overflowed return value <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/198">#198</a></p></li>
+<li><p>Coverity Scan (CID 1352354) [/libtizonia/src/tizservant.c:srv_issue_trans_event] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/190">#190</a></p></li>
+<li><p>Coverity Scan (CID 1352337) [/libtizplatform/src/tizev.c:ev_io_msg_dequeue] : Same on both sides <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/189">#189</a></p></li>
+<li><p>Coverity Scan (CID 1352336) [/libtizplatform/src/tizev.c:ev_timer_msg_dequeue] : Same on both sides <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/188">#188</a></p></li>
+<li><p>Coverity Scan (CID 1352335) [/libtizplatform/src/tizev.c:ev_stat_msg_dequeue] : Same on both sides <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/187">#187</a></p></li>
+<li><p>Coverity Scan (CID 1087279) [/libtizonia/src/tizfsm.c:fsm_complete_transition] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/186">#186</a></p></li>
+<li><p>Coverity Scan (CID 1087277) [/libtizonia/src/tizidletoexecuting.c:idletoexecuting_trans_complete] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/185">#185</a></p></li>
+<li><p>Coverity Scan (CID 1087276) [/libtizonia/src/tizidletoloaded.c:idletoloaded_trans_complete] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/184">#184</a></p></li>
+<li><p>Coverity Scan (CID 1087275) [/libtizonia/src/tizloadedtoidle.c:loadedtoidle_trans_complete] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/183">#183</a></p></li>
+<li><p>Coverity Scan (CID 1087274) [/libtizonia/src/tizwaitforresources.c:waitforresources_trans_complete] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/182">#182</a></p></li>
+<li><p>Coverity Scan (CID 1087272) [/libtizonia/src/tizstate.c:state_trans_complete] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/181">#181</a></p></li>
+<li><p>Coverity Scan (CID 1087271) [/libtizonia/src/tizpause.c:pause_trans_complete] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/180">#180</a></p></li>
+<li><p>Coverity Scan (CID 1087270) [/libtizonia/src/tizloaded.c:loaded_trans_complete] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/179">#179</a></p></li>
+<li><p>Coverity Scan (CID 1087269) [/libtizonia/src/tizexecuting.c:executing_trans_complete] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/178">#178</a></p></li>
+<li><p>Coverity Scan (CID 1087268) [/libtizonia/src/tizexecutingtoidle.c:executingtoidle_trans_complete] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/177">#177</a></p></li>
+<li><p>Coverity Scan (CID 1087267) [/libtizonia/src/tizpausetoidle.c:pausetoidle_trans_complete] : Mixing enum types <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/176">#176</a></p></li>
+<li><p>Coverity Scan (CID 1352327) [/player/src/tizplayapp.cpp:getch_] : Truncated stdio return value <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/162">#162</a></p></li>
+<li><p>release v0.6.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/286">#286</a></p></li>
+<li><p>vorbis_decoder: handling port settings changes is missing <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/285">#285</a></p></li>
+<li><p>libtizplatform: tiz_vector_clear should not crash if passed a null pointer <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/284">#284</a></p></li>
+<li><p>pcm_renderer_pa: audio is muted after the component is destroyed and then recreated <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/283">#283</a></p></li>
+<li><p>opus_decoder: handling port settings changes is missing <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/282">#282</a></p></li>
+<li><p>opus_decoder: disable -&gt; enable sequence is broken <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/279">#279</a></p></li>
+<li><p>player: spotify playback won’t start after the spotify storage area has been cleaned (or on a first install) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/276">#276</a></p></li>
+<li><p>spotify_source: per-user and per-account spotify cache locations <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/275">#275</a></p></li>
+<li><p>player: spotify playback won’t start if playlist name is not a perfect match AND “invalid” playlists exist in the container     <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/273">#273</a></p></li>
+<li><p>player: oggopusgraph renders PCM at the original sampling rate instead of at the decoders rate <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/271">#271</a></p></li>
+<li><p>opus_decoder: opus decoder expects a comment header at beginning of stream (which may or may not be there) <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/270">#270</a></p></li>
+<li><p>dirble: ‘AttributeError’ while processing station stream dictionaries that have no ‘content_type’ key <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/256">#256</a></p></li>
+<li><p>spotify: playlist processing stalls when a track is not available in Spotify <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/255">#255</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Spotify connection problem. Error 410 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/272">#272</a></p></li>
+<li><p>No pluginsdir variable in pkg-config file. <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/248">#248</a></p></li>
+</ul>
+</div>
+<div class="section" id="v0-5-0-2016-06-17">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.5.0">v0.5.0</a> (2016-06-17)<a class="headerlink" href="#v0-5-0-2016-06-17" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.4.0...v0.5.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>release 0.5.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/247">#247</a></p></li>
+<li><p>tizgmusic: play a random item from the user library or Google Music catalogue when search results are empty <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/246">#246</a></p></li>
+<li><p>tizgmusic: add “situations” search support <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/245">#245</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>tizgmusic: broken after ‘gmusicapi’ renamed the search method <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/244">#244</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>release v0.4.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/159">#159</a></p></li>
+</ul>
+</div>
+<div class="section" id="v0-4-0-2016-05-04">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.4.0">v0.4.0</a> (2016-05-04)<a class="headerlink" href="#v0-4-0-2016-05-04" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.3.0...v0.4.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>release v0.4.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/243">#243</a></p></li>
+<li><p>tizgmusicproxy: station search : If no suitable station is found in the user’s library, then search google play unlimited for a potential match <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/158">#158</a></p></li>
+<li><p>tizonia-player: add Dirble support <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/123">#123</a></p></li>
+<li><p>plugins: Dirble open radio source component <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/122">#122</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>Coverity Scan (CID 1352374) [/player/src/services/dirble/tizdirblegraphops.cpp:dirbleops] : Uninitialized scalar field <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/241">#241</a></p></li>
+<li><p>Coverity Scan (CID 1352373) [/player/src/services/googlemusic/tizgmusicgraphops.cpp:gmusicops] : Uninitialized scalar field <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/240">#240</a></p></li>
+<li><p>Coverity Scan (CID 1352372) [/player/src/services/soundcloud/tizscloudgraphops.cpp:scloudops] : Uninitialized scalar field <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/239">#239</a></p></li>
+<li><p>Coverity Scan (CID 1352371) [/player/src/services/spotify/tizspotifygraphops.cpp:spotifyops] : Uninitialized scalar field <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/238">#238</a></p></li>
+<li><p>Coverity Scan (CID 1352369) [/player/src/tizprobe.cpp:probe] : Uninitialized scalar field <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/236">#236</a></p></li>
+<li><p>Coverity Scan (CID 1352365) [/player/src/tizdaemon.cpp:daemonize] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/233">#233</a></p></li>
+<li><p>Coverity Scan (CID 1352363) [/libtizplatform/src/tizev.c:init_event_loop_thread] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/231">#231</a></p></li>
+<li><p>Coverity Scan (CID 1352362) [/player/src/tizgraphutil.cpp:set_content_uri] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/230">#230</a></p></li>
+<li><p>Coverity Scan (CID 1352361) [/plugins/http_renderer/src/httprsrv.c:srv_accept_socket] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/229">#229</a></p></li>
+<li><p>Coverity Scan (CID 1087251) [/libtizplatform/src/tizsync.c:tiz_cond_init] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/227">#227</a></p></li>
+<li><p>Coverity Scan (CID 1087250) [/libtizplatform/src/tizsync.c:tiz_mutex_init] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/226">#226</a></p></li>
+<li><p>Coverity Scan (CID 1087249) [/libtizplatform/src/tizsync.c:tiz_sem_init] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/225">#225</a></p></li>
+<li><p>Coverity Scan (CID 1087248) [/libtizcore/src/tizcore.c:find_component_paths] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/224">#224</a></p></li>
+<li><p>Coverity Scan (CID 1087247) [/libtizcore/src/tizcore.c:scan_component_folders] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/223">#223</a></p></li>
+<li><p>Coverity Scan (CID 1087246) [/libtizcore/src/tizcore.c:instantiate_component] : Resource leak <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/222">#222</a></p></li>
+<li><p>Coverity Scan (CID 1352366) [/plugins/pcm_renderer_pa/src/pulsearprc.c:pulseaudio_stream_state_cback_handler] : Dereference before null check <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/214">#214</a></p></li>
+<li><p>Coverity Scan (CID 1352348) [/player/src/httpserv/tizhttpservgraphfsm.hpp:operator ()] : Unchecked dynamic_cast <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/213">#213</a></p></li>
+<li><p>Coverity Scan (CID 1352347) [/player/src/httpserv/tizhttpservgraphfsm.hpp:operator ()] : Unchecked dynamic_cast <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/212">#212</a></p></li>
+<li><p>Coverity Scan (CID 1352346) [/player/src/httpserv/tizhttpservgraphfsm.hpp:operator ()] : Unchecked dynamic_cast <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/211">#211</a></p></li>
+<li><p>Coverity Scan (CID 1352345) [/player/src/httpserv/tizhttpservgraphfsm.hpp:operator ()] : Unchecked dynamic_cast <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/210">#210</a></p></li>
+<li><p>Coverity Scan (CID 1352344) [/player/src/httpserv/tizhttpservgraphfsm.hpp:operator ()] : Unchecked dynamic_cast <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/209">#209</a></p></li>
+<li><p>Coverity Scan (CID 1352343) [/player/src/httpserv/tizhttpservgraphfsm.hpp:operator ()] : Unchecked dynamic_cast <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/208">#208</a></p></li>
+<li><p>Coverity Scan (CID 1352342) [/player/src/httpserv/tizhttpservgraphfsm.hpp:operator ()] : Unchecked dynamic_cast <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/207">#207</a></p></li>
+<li><p>Coverity Scan (CID 1352341) [/player/src/httpserv/tizhttpservgraphfsm.hpp:operator ()] : Unchecked dynamic_cast <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/206">#206</a></p></li>
+<li><p>Coverity Scan (CID 1352378) [/player/src/tizgraphcmd.cpp:c_str] : Wrapper object use after free <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/204">#204</a></p></li>
+<li><p>Coverity Scan (CID 1352359) [/player/src/tizgraphutil.cpp:set_role] : Out-of-bounds write <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/203">#203</a></p></li>
+<li><p>Coverity Scan (CID 1352355) [/player/src/tizgraph.cpp:omx_evt] : Inferred misuse of enum <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/191">#191</a></p></li>
+<li><p>http_renderer: Google Music, SoundClound playback does not work in Ubuntu 16.04  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/242">#242</a></p></li>
+<li><p>tizmp3dec: OMX_EventPortSettingsChanged not signalled correclty with mono streams <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/157">#157</a></p></li>
+</ul>
+</div>
+<div class="section" id="v0-3-0-2015-12-24">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.3.0">v0.3.0</a> (2015-12-24)<a class="headerlink" href="#v0-3-0-2015-12-24" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.2.0...v0.3.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>release v0.3.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/156">#156</a></p></li>
+<li><p>libtizplatform: add ‘tiz_event_timer_is_repeat’ to know if a timer is repeat or not <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/153">#153</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>pcm_renderer_alsa: EOS should be signalled after all frames in the last buffer are consumed by ALSA <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/155">#155</a></p></li>
+<li><p>tizmp3dec: component does not always report EOS <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/154">#154</a></p></li>
+<li><p>libtizonia: non-repeat timers are not removed from the tizservant’s watcher map   <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/152">#152</a></p></li>
+<li><p>tizhttpsrc: soundcloud gapless playback <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/151">#151</a></p></li>
+<li><p>tizhttpsrc: google play music gapless playback <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/150">#150</a></p></li>
+<li><p>tizspotifysrc: playback stalls when ‘container_loaded’ is called by spotify <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/149">#149</a></p></li>
+<li><p>tizspotifysrc: playlists are not found in the user library <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/148">#148</a></p></li>
+</ul>
+</div>
+<div class="section" id="v0-2-0-2015-12-14">
+<h2><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/tree/v0.2.0">v0.2.0</a> (2015-12-14)<a class="headerlink" href="#v0-2-0-2015-12-14" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/compare/v0.1.0...v0.2.0">Full Changelog</a></p>
+<p><strong>Improvements:</strong></p>
+<ul class="simple">
+<li><p>tizspotifysrc: playlist name matching improvements <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/146">#146</a></p></li>
+<li><p>alsa_renderer: set a custom ALSA error handler to dump error info to tizonia’s log file <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/145">#145</a></p></li>
+<li><p>release v0.2.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/141">#141</a></p></li>
+<li><p>Simplybuilt website <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/140">#140</a></p></li>
+<li><p>CI: migrate to Travis’ Ubuntu 14.04 image <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/138">#138</a></p></li>
+<li><p>libtizplatform: update http-parser to v2.6.0 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/137">#137</a></p></li>
+<li><p>libtizplatform: update utarray to v1.9.9 <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/136">#136</a></p></li>
+<li><p>tools: add a dev build script <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/133">#133</a></p></li>
+<li><p>google music: support logging in via an auth token <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/132">#132</a></p></li>
+<li><p>docs: update Sphinx config to integrate ‘breathe’ and allow Doxygen output in Read the Docs  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/127">#127</a></p></li>
+<li><p>tizonia-player: add SoundCloud support <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/121">#121</a></p></li>
+<li><p>libtizonia: support for OMX_UseEGLImage <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/118">#118</a></p></li>
+<li><p>Improved, more straightforward command line ‘–help’ option <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/117">#117</a></p></li>
+<li><p>tizonia-player: improve compile times by firewalling the decoder graph fsm <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/115">#115</a></p></li>
+<li><p>SoundCloud streaming source component <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/111">#111</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>mp3_decoder: output buffer size is too small and causes too many exchanges with the renderer <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/110">#110</a></p></li>
+<li><p>http_source sometimes stalls when curl instructs to unregister the socket  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/109">#109</a></p></li>
+<li><p>tizplatform: tiz_queue uses internally TIZ_QUEUE_MAX_ITEMS instead of the ‘capacity’ argument provided <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/144">#144</a></p></li>
+<li><p>tizspotifysrc: don’t allow the component’s main event queue get full (which leads to component stalling or crashing)  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/143">#143</a></p></li>
+<li><p>tizspotifysrc: fix various race conditions causing cracking sound problems <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/142">#142</a></p></li>
+<li><p>build system: remove warnings <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/139">#139</a></p></li>
+<li><p>libtizplatform: rework tizev to dispatch event start/stop/destroy from the async watcher callback <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/135">#135</a></p></li>
+<li><p>libtizplatform: increase line limit in config file parser utility  <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/134">#134</a></p></li>
+<li><p>tizgmusicproxy: (UnicodeEncodeError) : ‘ascii’ codec can’t encode character in ‘tizonia –gmusic-unlimited-album’ “Las 100 mejores canciones del Rock español” <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/130">#130</a></p></li>
+<li><p>tizgmusicproxy: tizonia –gmusic-unlimited-album : IndexError: list index out of range <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/129">#129</a></p></li>
+<li><p>docs: fix build system under ‘docs’ folder to properly build doxygen docs <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/126">#126</a></p></li>
+<li><p>google play music: replace references to ‘All-access’ with ‘Unlimited’ <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/120">#120</a></p></li>
+<li><p>tizgmusicproxy: unicode to ASCII without errors <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/119">#119</a></p></li>
+</ul>
+<p>* <em>This Changelog was automatically generated by <a class="reference external" href="https://github.com/github-changelog-generator/github-changelog-generator">github_changelog_generator</a></em></p>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Juan A. Rubio and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/overview/CHANGELOG.md.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/tizonia/tizonia-openmax-il" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21817639-6']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

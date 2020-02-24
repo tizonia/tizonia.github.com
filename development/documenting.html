@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Documenting Tizonia &#8212; Tizonia 0.20.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="OpenMAX IL Framework" href="openmaxil/openmaxil.html" />
+    <link rel="prev" title="Coding Style" href="style.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/tizonia_logo_200.gif" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=tizonia&repo=tizonia-openmax-il&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+    
+
+<p>
+<a class="badge" href="https://travis-ci.org/tizonia/tizonia-openmax-il">
+    <img
+        alt="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+        src="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html">The Tizonia Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#news">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#upgrade">Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#hall-of-fame">Hall of Fame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/CHANGELOG.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/COPYING.LESSER.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manual/manual.html">User Guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="development.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="development.html#components">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development.html#building-from-source">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development.html#coding-guidelines">Coding Guidelines</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="development.html#writting-documentation">Writting Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="development.html#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://tizonia.org">Tizonia Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il">Source (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il/issues">Issues (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://bintray.com/tizonia">Binaries (Bintray)</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="development.html">Developer Guide</a><ul>
+      <li>Previous: <a href="style.html" title="previous chapter">Coding Style</a></li>
+      <li>Next: <a href="openmaxil/openmaxil.html" title="next chapter">OpenMAX IL Framework</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="documenting-tizonia">
+<h1>Documenting Tizonia<a class="headerlink" href="#documenting-tizonia" title="Permalink to this headline">¶</a></h1>
+<p>We use <a class="reference external" href="http://www.doxygen.nl/">Doxygen</a> to document the C APIs and <a class="reference external" href="https://www.sphinx-doc.org/en/master/">Sphinx</a> to produce our manuals and to give
+everything a nicer look.</p>
+<div class="section" id="how-to-build-the-documentation">
+<h2>How To Build the Documentation<a class="headerlink" href="#how-to-build-the-documentation" title="Permalink to this headline">¶</a></h2>
+<p>The documentation is built in 2 steps:</p>
+<ol class="arabic simple">
+<li><p>The Doxygen API docs are generated first.</p></li>
+<li><p>The Sphinx docs are generated next. The Doxygen API documentation generated
+in the first step is consumed during this stage as they are embedded into
+the final Sphinx output.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install the dependencies</span>
+$ sudo apt install doxygen
+$ sudo -H pip3 install --upgrade sphinx breathe alabaster recommonmark
+
+<span class="c1"># Clone the repo</span>
+$ git clone https://github.com/tizonia/tizonia-openmax-il
+
+<span class="c1"># Change into the &#39;docs&#39; directory</span>
+<span class="nb">cd</span> tizonia-openmax-il/docs
+
+<span class="c1"># Configuration</span>
+$ autoreconf -ifs <span class="o">&amp;&amp;</span> ./configure
+
+<span class="c1"># Generate the Doxygen API docs</span>
+$ make
+
+<span class="c1"># Now change into the &#39;sphinx-src&#39; dir and generate the Sphinx docs website</span>
+<span class="c1"># and the man page</span>
+$ <span class="nb">cd</span> sphinx-src
+$ make html <span class="o">&amp;&amp;</span> make man
+</pre></div>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Juan A. Rubio and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/development/documenting.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/tizonia/tizonia-openmax-il" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21817639-6']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

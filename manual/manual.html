@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>User Guide &#8212; Tizonia 0.20.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Help Topics" href="helptopics.html" />
+    <link rel="prev" title="License" href="../overview/COPYING.LESSER.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/tizonia_logo_200.gif" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=tizonia&repo=tizonia-openmax-il&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+    
+
+<p>
+<a class="badge" href="https://travis-ci.org/tizonia/tizonia-openmax-il">
+    <img
+        alt="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+        src="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html">The Tizonia Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#news">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#upgrade">Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#hall-of-fame">Hall of Fame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/CHANGELOG.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/COPYING.LESSER.html">License</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">User Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="helptopics.html">Help Topics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="config.html">Configuration File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="keyboard.html">Keyboard Shortcuts</a></li>
+<li class="toctree-l2"><a class="reference internal" href="global.html">Global Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spotify.html">Spotify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="googlemusic.html">Google Play Music</a></li>
+<li class="toctree-l2"><a class="reference internal" href="soundcloud.html">SoundCloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="youtube.html">YouTube</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tunein.html">TuneIn</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plex.html">Plex</a></li>
+<li class="toctree-l2"><a class="reference internal" href="server.html">Shoutcast Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="client.html">Shoutcast Client</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chromecast.html">Chromecast</a></li>
+<li class="toctree-l2"><a class="reference internal" href="themes.html">Color Themes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="openmax.html">OpenMAX IL Options</a></li>
+<li class="toctree-l2"><a class="reference internal" href="localmedia.html">Local Media Playback</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mprisv2.html">Remote Control</a></li>
+<li class="toctree-l2"><a class="reference internal" href="raspberrypi.html">Raspberry Pi</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../development/development.html">Developer Guide</a></li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://tizonia.org">Tizonia Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il">Source (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il/issues">Issues (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://bintray.com/tizonia">Binaries (Bintray)</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../overview/COPYING.LESSER.html" title="previous chapter">License</a></li>
+      <li>Next: <a href="helptopics.html" title="next chapter">Help Topics</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="user-guide">
+<h1>User Guide<a class="headerlink" href="#user-guide" title="Permalink to this headline">¶</a></h1>
+<p>Tizonia provides an efficient and unbstrusive music search and listening
+experience by following a few principles:</p>
+<dl class="simple">
+<dt><strong>Simplest CLI UI</strong></dt><dd><p>Because the keyboard is faster than the mouse you get to listen to the music
+that you want in less time. Music plays almost immediately.</p>
+</dd>
+<dt><strong>Play the music, not matter what</strong></dt><dd><p>Tizonia uses fuzzy string matching techniques to match your search keywords
+against the data provided by the streaming services. This maximizes the
+chances of finding the music that you want. When a search returns no
+results Tizonia may at times try a ‘I’m Feeling Lucky’ guess.</p>
+</dd>
+<dt><strong>Non-stop music</strong></dt><dd><p>Tizonia’s play queue always runs in <strong>looped</strong> mode. There is currently no
+way to configure non-looped playback (although this may be added in the
+future, see <a class="footnote-reference brackets" href="#f1" id="id1">1</a>).</p>
+</dd>
+<dt><strong>Limit the distractions</strong></dt><dd><p>By limiting the interactions. No fast-forward or rewind. Only skip to
+next/previous track (see <a class="footnote-reference brackets" href="#f2" id="id2">2</a>). There is no elaborate ‘ncurses’ CLI
+interface to interact with. But there is some track info and a simple visual
+progress bar.</p>
+</dd>
+<dt><strong>Reduced ‘muscle-memory’</strong></dt><dd><p>Finding the music that you want and listening to it should require a single
+command-line option on the terminal. E.g.: <code class="docutils literal notranslate"><span class="pre">tizonia</span> <span class="pre">--spotify-album</span> <span class="pre">Islands</span></code>.
+Bash and Zsh completions are available. There is also a
+<a class="reference external" href="https://ohmyz.sh/">Oh-my-zsh</a> plugin available <a href="#id3"><span class="problematic" id="id4">`</span></a>here
+&lt;<a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/blob/master/player/tools/tizonia.plugin.zsh">https://github.com/tizonia/tizonia-openmax-il/blob/master/player/tools/tizonia.plugin.zsh</a>&gt;_.</p>
+</dd>
+</dl>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="helptopics.html">Help Topics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="config.html">Configuration File</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keyboard.html">Keyboard Shortcuts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="global.html">Global Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spotify.html">Spotify</a></li>
+<li class="toctree-l1"><a class="reference internal" href="googlemusic.html">Google Play Music</a></li>
+<li class="toctree-l1"><a class="reference internal" href="soundcloud.html">SoundCloud</a></li>
+<li class="toctree-l1"><a class="reference internal" href="youtube.html">YouTube</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tunein.html">TuneIn</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plex.html">Plex</a></li>
+<li class="toctree-l1"><a class="reference internal" href="server.html">Shoutcast Server</a></li>
+<li class="toctree-l1"><a class="reference internal" href="client.html">Shoutcast Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chromecast.html">Chromecast</a></li>
+<li class="toctree-l1"><a class="reference internal" href="themes.html">Color Themes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="openmax.html">OpenMAX IL Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="localmedia.html">Local Media Playback</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mprisv2.html">Remote Control</a></li>
+<li class="toctree-l1"><a class="reference internal" href="raspberrypi.html">Raspberry Pi</a></li>
+</ul>
+</div>
+<p class="rubric">Footnotes</p>
+<dl class="footnote brackets">
+<dt class="label" id="f1"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
+<dd><p>There are plans to add an option to disable looped playback: <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/491">https://github.com/tizonia/tizonia-openmax-il/issues/491</a>.</p>
+</dd>
+<dt class="label" id="f2"><span class="brackets"><a class="fn-backref" href="#id2">2</a></span></dt>
+<dd><p>There are plans to add seeking, useful for long shows and podcasts: <a class="reference external" href="https://github.com/tizonia/tizonia-openmax-il/issues/438">https://github.com/tizonia/tizonia-openmax-il/issues/438</a>.</p>
+</dd>
+</dl>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Juan A. Rubio and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/manual/manual.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/tizonia/tizonia-openmax-il" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21817639-6']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

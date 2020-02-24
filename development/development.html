@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Developer Guide &#8212; Tizonia 0.20.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Components" href="PROJECT.html" />
+    <link rel="prev" title="Raspberry Pi" href="../manual/raspberrypi.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../index.html">
+    <img class="logo" src="../_static/tizonia_logo_200.gif" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=tizonia&repo=tizonia-openmax-il&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+    
+
+<p>
+<a class="badge" href="https://travis-ci.org/tizonia/tizonia-openmax-il">
+    <img
+        alt="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+        src="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html">The Tizonia Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#news">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#upgrade">Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/README.html#hall-of-fame">Hall of Fame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/CHANGELOG.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../overview/COPYING.LESSER.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../manual/manual.html">User Guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developer Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#components">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building-from-source">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#coding-guidelines">Coding Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#writting-documentation">Writting Documentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://tizonia.org">Tizonia Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il">Source (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il/issues">Issues (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://bintray.com/tizonia">Binaries (Bintray)</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="../manual/raspberrypi.html" title="previous chapter">Raspberry Pi</a></li>
+      <li>Next: <a href="PROJECT.html" title="next chapter">Components</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="developer-guide">
+<h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+</div>
+<div class="section" id="components">
+<h2>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h2>
+<p>Familiarize yourself with the various building blocks of the project.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="PROJECT.html">Components</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PROJECT.html#command-line-cloud-music-player-and-audio-streaming-client-server">Command-line cloud music player and audio streaming client/server.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PROJECT.html#a-fully-featured-openmax-il-1-2-multimedia-framework">A fully-featured OpenMAX IL 1.2 multimedia framework</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PROJECT.html#openmax-il-1-2-plugins">OpenMAX IL 1.2 plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PROJECT.html#skema-tizonia-s-test-execution-framework-for-openmax-il-components">Skema: Tizonia’s test execution framework for OpenMAX IL components.</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="building-from-source">
+<h2>Building from Source<a class="headerlink" href="#building-from-source" title="Permalink to this headline">¶</a></h2>
+<p>Follow one of these guides to build and run the codebase locally.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="BUILDING_with_meson.html">Building from Source (with Meson) [RECOMMENDED]</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BUILDING_with_meson.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUILDING_with_meson.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUILDING_with_meson.html#building">Building</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="BUILDING.html">Building from Source (with Autotools)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="BUILDING.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUILDING.html#dependencies">Dependencies</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUILDING.html#building">Building</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUILDING.html#tizonia-s-configuration-file">Tizonia’s configuration file</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUILDING.html#resource-manager-s-d-bus-service-activation-file-optional">Resource Manager’s D-BUS service activation file (optional)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUILDING.html#known-issues">Known issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUILDING.html#speeding-up-re-compilation-using-ccache">Speeding up (re-)compilation using ccache</a></li>
+<li class="toctree-l2"><a class="reference internal" href="BUILDING.html#creating-a-json-compilation-database-for-use-with-e-g-emacs-rtags">Creating a JSON compilation database, for use with e.g. Emacs RTags</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="coding-guidelines">
+<h2>Coding Guidelines<a class="headerlink" href="#coding-guidelines" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="style.html">Coding Style</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="style.html#general-philosophy">General Philosophy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#formatting-the-source-code">Formatting the Source Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#indentation">Indentation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="style.html#naming-variables-functions-and-files">Naming Variables, Functions, and Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="writting-documentation">
+<h2>Writting Documentation<a class="headerlink" href="#writting-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="documenting.html">Documenting Tizonia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="documenting.html#how-to-build-the-documentation">How To Build the Documentation</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="api-documentation">
+<h2>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="openmaxil/openmaxil.html">OpenMAX IL Framework</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugins/plugins.html">OpenMAX IL Plugins</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clients/clients.html">Streaming Client Libraries</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Juan A. Rubio and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../_sources/development/development.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/tizonia/tizonia-openmax-il" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21817639-6']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>

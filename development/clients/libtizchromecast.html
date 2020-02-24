@@ -1,0 +1,402 @@
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>libtizchromecast &#8212; Tizonia 0.20.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/language_data.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="libtizgmusic" href="libtizgmusic.html" />
+    <link rel="prev" title="Streaming Client Libraries" href="clients.html" />
+   
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  <div class="document">
+    
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<p class="logo">
+  <a href="../../index.html">
+    <img class="logo" src="../../_static/tizonia_logo_200.gif" alt="Logo"/>
+    
+  </a>
+</p>
+
+
+
+
+
+
+<p>
+<iframe src="https://ghbtns.com/github-btn.html?user=tizonia&repo=tizonia-openmax-il&type=star&count=true&size=large&v=2"
+  allowtransparency="true" frameborder="0" scrolling="0" width="200px" height="35px"></iframe>
+</p>
+
+
+
+
+
+    
+
+<p>
+<a class="badge" href="https://travis-ci.org/tizonia/tizonia-openmax-il">
+    <img
+        alt="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+        src="https://secure.travis-ci.org/tizonia/tizonia-openmax-il.svg?branch=master"
+    />
+</a>
+</p>
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/README.html">The Tizonia Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/README.html#news">News</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/README.html#installation">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/README.html#configuration">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/README.html#upgrade">Upgrade</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/README.html#hall-of-fame">Hall of Fame</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/CONTRIBUTING.html">Contributing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/CHANGELOG.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../overview/COPYING.LESSER.html">License</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../manual/manual.html">User Guide</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../development.html">Developer Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../development.html#components">Components</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../development.html#building-from-source">Building from Source</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../development.html#coding-guidelines">Coding Guidelines</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../development.html#writting-documentation">Writting Documentation</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../development.html#api-documentation">API Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+<ul>
+    
+    <li class="toctree-l1"><a href="https://tizonia.org">Tizonia Website</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il">Source (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://github.com/tizonia/tizonia-openmax-il/issues">Issues (GitHub)</a></li>
+    
+    <li class="toctree-l1"><a href="https://bintray.com/tizonia">Binaries (Bintray)</a></li>
+    
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../../index.html">Documentation overview</a><ul>
+  <li><a href="../development.html">Developer Guide</a><ul>
+  <li><a href="clients.html">Streaming Client Libraries</a><ul>
+      <li>Previous: <a href="clients.html" title="previous chapter">Streaming Client Libraries</a></li>
+      <li>Next: <a href="libtizgmusic.html" title="next chapter">libtizgmusic</a></li>
+  </ul></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <div class="section" id="libtizchromecast">
+<h1>libtizchromecast<a class="headerlink" href="#libtizchromecast" title="Permalink to this headline">¶</a></h1>
+<dl class="group">
+<dt>
+<span class="target" id="group__libtizchromecast"></span><em>group</em> <code class="sig-name descname">libtizchromecast</code></dt>
+<dd><p>library.</p>
+<p>A C/C++ library to access and control a Chromecast device. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Typedefs</p>
+<dl class="typedef">
+<dt id="c.tiz_chromecast_t">
+<span class="target" id="group__libtizchromecast_1ga637350a622835eebbca951716a6d4b11"></span><em class="property">typedef </em>struct tiz_chromecast <code class="sig-name descname">tiz_chromecast_t</code><a class="headerlink" href="#c.tiz_chromecast_t" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Tizonia Chromecast opaque handle. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Functions</p>
+<dl class="function">
+<dt id="c.tiz_chromecast_init">
+<span class="target" id="group__libtizchromecast_1ga39d73f1dd549ec732ac708d6417c61e4"></span>tiz_chromecast_error_t <code class="sig-name descname">tiz_chromecast_init</code><span class="sig-paren">(</span>tiz_chromecast_ptr_t  *<em> app_chromecast</em>, const  tiz_chromecast_ctx_t  *<em> p_cc_ctx_</em>, const char *<em> ap_name_or_ip</em>, const  tiz_chromecast_callbacks_t  *<em> ap_cbacks</em>, void *<em> ap_user_data</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize the tiz_chromecast_t handle.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>ETizCcErrorNoError on success. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">app_chromecast</span></code>: A pointer to the Tizonia Chromecast handle to be initialised. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">p_cc_ctx</span></code>: A pointer to an already initialised global context. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_name_or_ip</span></code>: A Chromecast device’s name or ip address. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_cbacks</span></code>: A structure with callbacks to inform the client of the various events (cast and media status changes and error events). </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_user_data</span></code>: User’s data that is returned in each callback.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_chromecast_poll">
+<span class="target" id="group__libtizchromecast_1gac7a2f1c372b895700e466d2ec4f319d5"></span>tiz_chromecast_error_t <code class="sig-name descname">tiz_chromecast_poll</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_chromecast_t" title="tiz_chromecast_t">tiz_chromecast_t</a>  *<em> ap_chromecast</em>, int<em> a_poll_time_ms</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_poll" title="Permalink to this definition">¶</a></dt>
+<dd><p>Poll to read any events received on the chromecast socket. This function needs to be called periodically (e.g. from the client’s event loop).</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>ETizCcErrorNoError on success. </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_chromecast</span></code>: The Tizonia Chromecast handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_poll_time_ms</span></code>: The polling time, in milliseconds.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_chromecast_load_url">
+<span class="target" id="group__libtizchromecast_1ga0284c85c02443a08be70169ab3f4ca90"></span>tiz_chromecast_error_t <code class="sig-name descname">tiz_chromecast_load_url</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_chromecast_t" title="tiz_chromecast_t">tiz_chromecast_t</a>  *<em> ap_chromecast</em>, const char *<em> ap_url</em>, const char *<em> ap_content_type</em>, const char *<em> ap_title</em>, const char *<em> ap_album_art</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_load_url" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load a new audio stream URL on the Chromecast device’s default media application.</p>
+<p>After calling this method, the various playback methods (pause, stop, volume, etc) can be used to interact with the media application in the Chromecast device.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>ETizCcErrorNoError on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_chromecast</span></code>: The Tizonia Chromecast handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_url</span></code>: The stream’s URL. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_content_type</span></code>: MIME content type of the stream being loaded. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_title</span></code>: The title of the stream being loaded. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_album_art</span></code>: The stream’s album art URL.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_chromecast_play">
+<span class="target" id="group__libtizchromecast_1gac5c5bafdc76bcad3610183a946fedbec"></span>tiz_chromecast_error_t <code class="sig-name descname">tiz_chromecast_play</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_chromecast_t" title="tiz_chromecast_t">tiz_chromecast_t</a>  *<em> ap_chromecast</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_play" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resume media playback.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>ETizCcErrorNoError on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_chromecast</span></code>: The Tizonia Chromecast handle.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_chromecast_stop">
+<span class="target" id="group__libtizchromecast_1gad464dbce0589638dff022a79a9fcc5a6"></span>tiz_chromecast_error_t <code class="sig-name descname">tiz_chromecast_stop</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_chromecast_t" title="tiz_chromecast_t">tiz_chromecast_t</a>  *<em> ap_chromecast</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stop media playback.</p>
+<p>After this command the content will no longer remain loaded.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>ETizCcErrorNoError on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_chromecast</span></code>: The Tizonia Chromecast handle.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_chromecast_pause">
+<span class="target" id="group__libtizchromecast_1gad5ddb71bd71c5d492a5bd11a6979ea65"></span>tiz_chromecast_error_t <code class="sig-name descname">tiz_chromecast_pause</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_chromecast_t" title="tiz_chromecast_t">tiz_chromecast_t</a>  *<em> ap_chromecast</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_pause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pause media playback.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>ETizCcErrorNoError on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_chromecast</span></code>: The Tizonia Chromecast handle.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_chromecast_volume">
+<span class="target" id="group__libtizchromecast_1ga28fce68f77ad6fc8132ded4bd27a2f8a"></span>tiz_chromecast_error_t <code class="sig-name descname">tiz_chromecast_volume</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_chromecast_t" title="tiz_chromecast_t">tiz_chromecast_t</a>  *<em> ap_chromecast</em>, int<em> a_volume</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_volume" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set a volume level (0-100).</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>ETizCcErrorNoError on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_chromecast</span></code>: The Tizonia Chromecast handle. </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">a_volume</span></code>: The volume level (0-100).</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_chromecast_volume_up">
+<span class="target" id="group__libtizchromecast_1gafe1313d6decb214916116e395f49d8df"></span>tiz_chromecast_error_t <code class="sig-name descname">tiz_chromecast_volume_up</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_chromecast_t" title="tiz_chromecast_t">tiz_chromecast_t</a>  *<em> ap_chromecast</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_volume_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Increase playback volumen.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>ETizCcErrorNoError on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_chromecast</span></code>: The Tizonia Chromecast handle.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_chromecast_volume_down">
+<span class="target" id="group__libtizchromecast_1ga41f8ca3748848f10cab31696d4e37f9e"></span>tiz_chromecast_error_t <code class="sig-name descname">tiz_chromecast_volume_down</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_chromecast_t" title="tiz_chromecast_t">tiz_chromecast_t</a>  *<em> ap_chromecast</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_volume_down" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decrease playback volume.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>ETizCcErrorNoError on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_chromecast</span></code>: The Tizonia Chromecast handle.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_chromecast_mute">
+<span class="target" id="group__libtizchromecast_1ga1daa86ffa9061f47883bfd2ea230472b"></span>tiz_chromecast_error_t <code class="sig-name descname">tiz_chromecast_mute</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_chromecast_t" title="tiz_chromecast_t">tiz_chromecast_t</a>  *<em> ap_chromecast</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_mute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Mute playback.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>ETizCcErrorNoError on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_chromecast</span></code>: The Tizonia Chromecast handle.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_chromecast_unmute">
+<span class="target" id="group__libtizchromecast_1ga91328c92dc763acb85267ce00d601fdf"></span>tiz_chromecast_error_t <code class="sig-name descname">tiz_chromecast_unmute</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_chromecast_t" title="tiz_chromecast_t">tiz_chromecast_t</a>  *<em> ap_chromecast</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_unmute" title="Permalink to this definition">¶</a></dt>
+<dd><p>Unmute playback.</p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>ETizCcErrorNoError on success </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_chromecast</span></code>: The Tizonia Chromecast handle.</p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_chromecast_destroy">
+<span class="target" id="group__libtizchromecast_1gaca56c26f231891bac1c92e7ba6fbd696"></span>void <code class="sig-name descname">tiz_chromecast_destroy</code><span class="sig-paren">(</span><a class="reference internal" href="#c.tiz_chromecast_t" title="tiz_chromecast_t">tiz_chromecast_t</a>  *<em> ap_chromecast</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_destroy" title="Permalink to this definition">¶</a></dt>
+<dd><p>Destroy the Tizonia Chromecast object.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ap_chromecast</span></code>: The Tizonia Chromecast handle. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="c.tiz_chromecast_error_str">
+<span class="target" id="group__libtizchromecast_1gadbbf0930abcc6d8be1e647de15bb2c73"></span>const char* <code class="sig-name descname">tiz_chromecast_error_str</code><span class="sig-paren">(</span>const tiz_chromecast_error_t<em> error</em><span class="sig-paren">)</span><a class="headerlink" href="#c.tiz_chromecast_error_str" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return an error code string.</p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">error</span></code>: The Tizonia Chromecast error code. </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</div>
+
+
+          </div>
+          
+        </div>
+      </div>
+    <div class="clearer"></div>
+  </div>
+    <div class="footer">
+      &copy;2020, Juan A. Rubio and contributors.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 2.3.1</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="../../_sources/development/clients/libtizchromecast.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+    <a href="https://github.com/tizonia/tizonia-openmax-il" class="github">
+        <img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"  class="github"/>
+    </a>
+    
+
+    
+    <script type="text/javascript">
+
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-21817639-6']);
+      _gaq.push(['_setDomainName', 'none']);
+      _gaq.push(['_setAllowLinker', true]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+    </script>
+    
+  </body>
+</html>
