@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2020-03-09T20:44:24+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2020-03-09T21:27:00+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
 </subtitle><entry><title type="html">Tizonia 0.21.0 brings changes to minimize the YouTube API quota issues</title><link href="http://www.tizonia.org/news/2020/03/08/release-0-21-0/" rel="alternate" type="text/html" title="Tizonia 0.21.0 brings changes to minimize the YouTube API quota issues" /><published>2020-03-08T21:22:00+00:00</published><updated>2020-03-08T21:22:00+00:00</updated><id>http://www.tizonia.org/news/2020/03/08/release-0-21-0</id><content type="html" xml:base="http://www.tizonia.org/news/2020/03/08/release-0-21-0/">&lt;p&gt;Tizonia version
 &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.21.0&quot;&gt;0.21.0&lt;/a&gt;
 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Laujar_de_Andarax&quot;&gt;Laujar&lt;/a&gt;” is
@@ -9,8 +9,9 @@ out with 45 commits, 153 files changed, 885 insertions(+), 292 deletions(-).&lt;
 &lt;h3 id=&quot;changes-in-the-youtube-data-api-v3&quot;&gt;Changes in the YouTube Data API v3&lt;/h3&gt;
 
 &lt;p&gt;Recently, Google has been making changes to their YouTube Data API
-v3. Apparently, old API keys that were not used have been disabled. And the new
-API keys seems to enjoy a smaller quota.&lt;/p&gt;
+v3. Apparently, old API keys that had not been used for some time have been
+disabled. And the new API keys created to replace the old ones seem to enjoy a
+smaller quota (unclear why).&lt;/p&gt;
 
 &lt;p&gt;This has impacted Tizonia and other open-source project that like Tizonia use
 the YouTube API to stream videos or audio from YouTube.&lt;/p&gt;
@@ -20,9 +21,9 @@ the YouTube API to stream videos or audio from YouTube.&lt;/p&gt;
 &lt;/div&gt;
 
 &lt;p&gt;If you see an error like this while using Tizonia, then it is recommended that
-you obtain your own API key, to avoid using Tizonia’s internal API key, that
-might get exhausted on a daily basis. There are tutorials in the Internet that
-explain how to do this. Here is an
+you obtain your own API key, to avoid making use of Tizonia’s internal API key,
+whose quota might have been exhausted on that day. There are tutorials on the
+Internet that explain how to do this. Here is an
 &lt;a href=&quot;https://www.slickremix.com/docs/get-api-key-for-youtube/&quot;&gt;example&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;You then need to add your API key in Tizonia’s configuration file. Or
@@ -52,6 +53,11 @@ contains all the details.&lt;/p&gt;
   &lt;li&gt;&lt;a href=&quot;https://snapcraft.io/tizonia&quot;&gt;Snap Store&lt;/a&gt;.&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/tizonia/docker-tizonia&quot;&gt;docker-tizonia&lt;/a&gt;.&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h3 id=&quot;thanks&quot;&gt;Thanks!&lt;/h3&gt;
+
+&lt;p&gt;Many thanks to all the people that have contributed to this release, with code,
+bug reports or other feedback.&lt;/p&gt;
 
 &lt;h3 id=&quot;contributing&quot;&gt;Contributing&lt;/h3&gt;
 
@@ -138,8 +144,8 @@ contains all the details.&lt;/p&gt;
 
 &lt;h3 id=&quot;thanks&quot;&gt;Thanks!&lt;/h3&gt;
 
-&lt;p&gt;Many thanks to all the people that has contributed to this release, with code,
-bugs or feedback. Special mention to &lt;a href=&quot;https://github.com/lgbaldoni&quot;&gt;lgbaldoni&lt;/a&gt;
+&lt;p&gt;Many thanks to all the people that have contributed to this release, with code,
+bug reports or feedback. Special mention to &lt;a href=&quot;https://github.com/lgbaldoni&quot;&gt;lgbaldoni&lt;/a&gt;
 for contributing the Meson build system. Also thanks to
 &lt;a href=&quot;https://github.com/SolarAquarion&quot;&gt;SolarAquarion&lt;/a&gt; for taking over the
 maintainership of the

@@ -124,8 +124,9 @@ out with 45 commits, 153 files changed, 885 insertions(+), 292 deletions(-).</p>
 <h3 id="changes-in-the-youtube-data-api-v3">Changes in the YouTube Data API v3</h3>
 
 <p>Recently, Google has been making changes to their YouTube Data API
-v3. Apparently, old API keys that were not used have been disabled. And the new
-API keys seems to enjoy a smaller quota.</p>
+v3. Apparently, old API keys that had not been used for some time have been
+disabled. And the new API keys created to replace the old ones seem to enjoy a
+smaller quota (unclear why).</p>
 
 <p>This has impacted Tizonia and other open-source project that like Tizonia use
 the YouTube API to stream videos or audio from YouTube.</p>
@@ -135,9 +136,9 @@ the YouTube API to stream videos or audio from YouTube.</p>
 </div>
 
 <p>If you see an error like this while using Tizonia, then it is recommended that
-you obtain your own API key, to avoid using Tizonia’s internal API key, that
-might get exhausted on a daily basis. There are tutorials in the Internet that
-explain how to do this. Here is an
+you obtain your own API key, to avoid making use of Tizonia’s internal API key,
+whose quota might have been exhausted on that day. There are tutorials on the
+Internet that explain how to do this. Here is an
 <a href="https://www.slickremix.com/docs/get-api-key-for-youtube/">example</a>.</p>
 
 <p>You then need to add your API key in Tizonia’s configuration file. Or
@@ -167,6 +168,11 @@ contains all the details.</p>
   <li><a href="https://snapcraft.io/tizonia">Snap Store</a>.</li>
   <li><a href="https://github.com/tizonia/docker-tizonia">docker-tizonia</a>.</li>
 </ul>
+
+<h3 id="thanks">Thanks!</h3>
+
+<p>Many thanks to all the people that have contributed to this release, with code,
+bug reports or other feedback.</p>
 
 <h3 id="contributing">Contributing</h3>
 
