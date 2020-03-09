@@ -1,5 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2020-02-25T09:05:32+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
-</subtitle><entry><title type="html">TuneIn Internet radio and podcasts, and color-themes in Tizonia 0.20.0</title><link href="http://www.tizonia.org/news/2020/02/20/release-0-20-0/" rel="alternate" type="text/html" title="TuneIn Internet radio and podcasts, and color-themes in Tizonia 0.20.0" /><published>2020-02-20T20:20:00+00:00</published><updated>2020-02-20T20:20:00+00:00</updated><id>http://www.tizonia.org/news/2020/02/20/release-0-20-0</id><content type="html" xml:base="http://www.tizonia.org/news/2020/02/20/release-0-20-0/">&lt;p&gt;Tizonia version
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2020-03-09T14:41:18+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+</subtitle><entry><title type="html">Tizonia 0.21.0 brings solutions for YouTube API quota issues</title><link href="http://www.tizonia.org/news/2020/03/08/release-0-21-0/" rel="alternate" type="text/html" title="Tizonia 0.21.0 brings solutions for YouTube API quota issues" /><published>2020-03-08T21:22:00+00:00</published><updated>2020-03-08T21:22:00+00:00</updated><id>http://www.tizonia.org/news/2020/03/08/release-0-21-0</id><content type="html" xml:base="http://www.tizonia.org/news/2020/03/08/release-0-21-0/">&lt;p&gt;Tizonia version
+&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.21.0&quot;&gt;0.21.0&lt;/a&gt;
+codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Laujar_de_Andarax&quot;&gt;Laujar&lt;/a&gt;” is
+out with 45 commits, 153 files changed, 885 insertions(+), 292 deletions(-).&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;changes-in-the-youtube-data-api-v3&quot;&gt;Changes in the YouTube Data API v3&lt;/h3&gt;
+
+&lt;p&gt;Recently, Google has been making changes to their YouTube Data API
+v3. Apparently, old API keys that were not used have been disabled. And the new
+API keys seems to enjoy a smaller quota.&lt;/p&gt;
+
+&lt;p&gt;This has impacted Tizonia and other open-source project that like Tizonia use
+the YouTube API to stream videos or audio from YouTube.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[YouTube] (GdataError) : Youtube Error 403: Daily Limit Exceeded. The quota will be reset at midnight Pacific Time (PT). You may monitor your quota usage and adjust limits in the API Console
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;If you see an error like this while using Tizonia, then it is recommended that
+you obtain your own API key, to avoid using Tizonia’s internal API key, that
+might get exhausted on a daily basis. There are tutorials in the Internet that
+explain how to do this. Here is an
+&lt;a href=&quot;https://www.slickremix.com/docs/get-api-key-for-youtube/&quot;&gt;example&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;You then need to add your API key in Tizonia’s configuration file. Or
+alternatively, provide it in the command-line using the &lt;code class=&quot;highlighter-rouge&quot;&gt;--youtube-api-key&lt;/code&gt;
+command-line option.&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# YouTube configuration
+# -------------------------------------------------------------------------
+# To avoid passing this information on the command line, uncomment and
+# configure as needed.
+#
+# youtube.api_key = youtube api key. Optional but RECOMMENDED to avoid
+#                   problems when the daily quota of the interal api key
+#                   is exceeded.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;h3 id=&quot;binaries-and-distribution&quot;&gt;Binaries and distribution&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md&quot;&gt;CHANGELOG.md&lt;/a&gt;
+contains all the details.&lt;/p&gt;
+
+&lt;p&gt;Tizonia v0.21.0 will be soon in the following channels:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://bintray.com/tizonia&quot;&gt;Bintray&lt;/a&gt; (Debian packages)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://aur.archlinux.org/packages/tizonia-all/&quot;&gt;AUR&lt;/a&gt; (Arch Linux)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://snapcraft.io/tizonia&quot;&gt;Snap Store&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tizonia/docker-tizonia&quot;&gt;docker-tizonia&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;contributing&quot;&gt;Contributing&lt;/h3&gt;
+
+&lt;p&gt;Please have a look at our &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/contribute&quot;&gt;contribution
+guidelines&lt;/a&gt; if you
+are interested in participating. We are always looking for help, be it with
+feature requests, bug reporting, code contributions or general feedback.&lt;/p&gt;
+
+&lt;p&gt;We need maintainers for our various packaging systems, like Snap, or Docker. If
+you have an interest on these things, please reach out!&lt;/p&gt;
+
+&lt;h3 id=&quot;give-us-your-star&quot;&gt;Give us your star!&lt;/h3&gt;
+
+&lt;p&gt;Finally, if you enjoy using Tizonia and have a GitHub account, consider giving
+us your &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/stargazers&quot;&gt;star&lt;/a&gt;!. That
+really means a lot! :-)&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.21.0 codenamed “Laujar” is out with 45 commits, 153 files changed, 885 insertions(+), 292 deletions(-).</summary></entry><entry><title type="html">TuneIn Internet radio and podcasts, and color-themes in Tizonia 0.20.0</title><link href="http://www.tizonia.org/news/2020/02/20/release-0-20-0/" rel="alternate" type="text/html" title="TuneIn Internet radio and podcasts, and color-themes in Tizonia 0.20.0" /><published>2020-02-20T20:20:00+00:00</published><updated>2020-02-20T20:20:00+00:00</updated><id>http://www.tizonia.org/news/2020/02/20/release-0-20-0</id><content type="html" xml:base="http://www.tizonia.org/news/2020/02/20/release-0-20-0/">&lt;p&gt;Tizonia version
 &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.20.0&quot;&gt;0.20.0&lt;/a&gt;
 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Alic%C3%BAn&quot;&gt;Alicun&lt;/a&gt;” is
 out with 227 commits, 1260 files changed, 17729 insertions(+), 4953 deletions(-).&lt;/p&gt;
@@ -882,52 +950,4 @@ tracker&lt;/a&gt; on GitHub.&lt;/p&gt;
 
 &lt;p&gt;One of these are more likely to happen in the next release. Which one?. If you
 want to contribute or simply would like to put your vote for one of them, just
-leave a message in the corresponding GitHub issue.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.12.0 codenamed “Carboneras” is out!.</summary></entry><entry><title type="html">Snap package and Docker image available now!</title><link href="http://www.tizonia.org/news/2017/12/30/snap-package-and-docker-image/" rel="alternate" type="text/html" title="Snap package and Docker image available now!" /><published>2017-12-30T09:15:00+00:00</published><updated>2017-12-30T09:15:00+00:00</updated><id>http://www.tizonia.org/news/2017/12/30/snap-package-and-docker-image</id><content type="html" xml:base="http://www.tizonia.org/news/2017/12/30/snap-package-and-docker-image/">&lt;p&gt;A lot of people have recently come to &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues&quot;&gt;Tizonia’s issue
-tracker&lt;/a&gt; on GitHub to
-request binaries for their specific Linux distro, version, and/or platform.&lt;/p&gt;
-
-&lt;p&gt;Unfortunately, packaging a complex piece of software like Tizonia to
-run on many Linux distributions is an incredibly difficult and time-consuming
-activity.&lt;/p&gt;
-
-&lt;p&gt;As of today, Tizonia is written in &lt;strong&gt;three&lt;/strong&gt; languages, C, C++ and Python and
-contains a command-line application, &lt;strong&gt;two&lt;/strong&gt; daemon servers, &lt;strong&gt;twelve&lt;/strong&gt; helper
-libraries to access the various music services and around &lt;strong&gt;twenty-five&lt;/strong&gt;
-OpenMAX IL plugins to support the media decoding activities. Using the
-traditional packaging systems, like Debian &lt;strong&gt;‘deb’&lt;/strong&gt;, or Red Hat &lt;strong&gt;‘rpm’&lt;/strong&gt;
-simply does not scale well without a huge human power behind the packaging
-activities of the project.&lt;/p&gt;
-
-&lt;p&gt;So &lt;a href=&quot;https://www.theverge.com/circuitbreaker/2016/6/17/11963334/ubuntu-snap-app-packaging-for-linux&quot;&gt;new cross-distribution app package
-methods&lt;/a&gt;
-for Linux are starting to show feasibility these days. One of them is the
-&lt;a href=&quot;https://en.wikipedia.org/wiki/Snappy_(package_manager)&quot;&gt;Snappy&lt;/a&gt; package
-system. ‘Snaps’ are containerised software packages that can be installed on
-&lt;a href=&quot;https://snapcraft.io&quot;&gt;many Linux distributions&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;tizonia-snap-package&quot;&gt;Tizonia Snap Package&lt;/h3&gt;
-
-&lt;p&gt;From now, a snap package of Tizonia can be downloaded and installed for
-&lt;strong&gt;amd64, i386, and armhf&lt;/strong&gt; devices in Debian, SUSE, Arch, Gentoo,
-Fedora, Ubuntu and derivatives.&lt;/p&gt;
-
-&lt;p&gt;See &lt;a href=&quot;http://tizonia.org/docs/snap/&quot;&gt;Tizonia’s Snap documention&lt;/a&gt; for details on
-how to install it on your distro of choice.&lt;/p&gt;
-
-&lt;h3 id=&quot;tizonia-docker-image&quot;&gt;Tizonia Docker Image&lt;/h3&gt;
-
-&lt;p&gt;Another insteresting software distribution method is
-&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;. Docker is a modern technology to allow
-distribution of containerized software applications.&lt;/p&gt;
-
-&lt;p&gt;See &lt;a href=&quot;http://tizonia.org/docs/docker/&quot;&gt;Tizonia’s Docker image documention&lt;/a&gt; for
-the details on how to download the image and use it on your favorite platform.&lt;/p&gt;
-
-&lt;h3 id=&quot;other-cross-distro-packaging-systems&quot;&gt;Other Cross-distro Packaging Systems&lt;/h3&gt;
-
-&lt;p&gt;There are a couple of other contenders in this Linux cross-distribution
-packaging system space. They are &lt;a href=&quot;https://flatpak.org/&quot;&gt;Flatpak&lt;/a&gt; and
-&lt;a href=&quot;https://appimage.org/&quot;&gt;AppImage&lt;/a&gt;. So far AppImage looks very insteresting,
-since it is the only one that does not require prior downloading of a
-‘run-time’ of some kind, which all the other systems need (Docker, Snap and
-Flatpak). Perhaps Tizonia will be available as an AppImage soon!&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">A lot of people have recently come to Tizonia’s issue tracker on GitHub to request binaries for their specific Linux distro, version, and/or platform.</summary></entry></feed>
+leave a message in the corresponding GitHub issue.&lt;/p&gt;</content><author><name>juanrubio</name></author><summary type="html">Tizonia version 0.12.0 codenamed “Carboneras” is out!.</summary></entry></feed>
