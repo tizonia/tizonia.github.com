@@ -1,10 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2020-03-09T21:27:00+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2020-03-10T10:36:15+00:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
 </subtitle><entry><title type="html">Tizonia 0.21.0 brings changes to minimize the YouTube API quota issues</title><link href="http://www.tizonia.org/news/2020/03/08/release-0-21-0/" rel="alternate" type="text/html" title="Tizonia 0.21.0 brings changes to minimize the YouTube API quota issues" /><published>2020-03-08T21:22:00+00:00</published><updated>2020-03-08T21:22:00+00:00</updated><id>http://www.tizonia.org/news/2020/03/08/release-0-21-0</id><content type="html" xml:base="http://www.tizonia.org/news/2020/03/08/release-0-21-0/">&lt;p&gt;Tizonia version
 &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.21.0&quot;&gt;0.21.0&lt;/a&gt;
 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Laujar_de_Andarax&quot;&gt;Laujar&lt;/a&gt;” is
 out with 45 commits, 153 files changed, 885 insertions(+), 292 deletions(-).&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tizonia.org/news/2020/02/20/release-0-20-0/&quot;&gt;0.20.0&lt;/a&gt; was released last
+month with &lt;a href=&quot;https://tizonia.org/docs/tunein/&quot;&gt;TuneIn&lt;/a&gt; and
+&lt;a href=&quot;https://tizonia.org/docs/themes/&quot;&gt;color-themes&lt;/a&gt;. A new release of Tizonia is
+out now with fixes for YouTube and for users of Arch-based distros.&lt;/p&gt;
 
 &lt;h3 id=&quot;changes-in-the-youtube-data-api-v3&quot;&gt;Changes in the YouTube Data API v3&lt;/h3&gt;
 
@@ -40,6 +45,18 @@ command-line option.&lt;/p&gt;
 #                   is exceeded.
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
+
+&lt;h3 id=&quot;fixed-for-audio-cuts-in-google-play-music-and-plex-on-arch-based-distros&quot;&gt;Fixed for ‘Audio cuts in Google Play Music and Plex on Arch-based distros’&lt;/h3&gt;
+&lt;p&gt;This issue was not reproducible in Debian-based distros, but it has been
+affecting for some time users of Arch-based distros.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/issues/679&quot;&gt;Plex audio cuts out after 18 seconds on Arch distro&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The new Meson-based build system that was released in 0.20.0 should also be
+benefiting Arch users as it allows faster native builds of Tizonia’s AUR
+package.&lt;/p&gt;
 
 &lt;h3 id=&quot;binaries-and-distribution&quot;&gt;Binaries and distribution&lt;/h3&gt;
 

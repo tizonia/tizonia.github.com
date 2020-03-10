@@ -121,6 +121,11 @@ out with 45 commits, 153 files changed, 885 insertions(+), 292 deletions(-).</p>
 
 <p><br /></p>
 
+<p><a href="https://tizonia.org/news/2020/02/20/release-0-20-0/">0.20.0</a> was released last
+month with <a href="https://tizonia.org/docs/tunein/">TuneIn</a> and
+<a href="https://tizonia.org/docs/themes/">color-themes</a>. A new release of Tizonia is
+out now with fixes for YouTube and for users of Arch-based distros.</p>
+
 <h3 id="changes-in-the-youtube-data-api-v3">Changes in the YouTube Data API v3</h3>
 
 <p>Recently, Google has been making changes to their YouTube Data API
@@ -155,6 +160,18 @@ command-line option.</p>
 #                   is exceeded.
 </code></pre>
 </div>
+
+<h3 id="fixed-for-audio-cuts-in-google-play-music-and-plex-on-arch-based-distros">Fixed for ‘Audio cuts in Google Play Music and Plex on Arch-based distros’</h3>
+<p>This issue was not reproducible in Debian-based distros, but it has been
+affecting for some time users of Arch-based distros.</p>
+
+<ul>
+  <li><a href="https://github.com/tizonia/tizonia-openmax-il/issues/679">Plex audio cuts out after 18 seconds on Arch distro</a></li>
+</ul>
+
+<p>The new Meson-based build system that was released in 0.20.0 should also be
+benefiting Arch users as it allows faster native builds of Tizonia’s AUR
+package.</p>
 
 <h3 id="binaries-and-distribution">Binaries and distribution</h3>
 
