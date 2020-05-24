@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2020-05-24T16:02:34+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.4.3">Jekyll</generator><link href="http://www.tizonia.org/feed.xml" rel="self" type="application/atom+xml" /><link href="http://www.tizonia.org/" rel="alternate" type="text/html" /><updated>2020-05-24T16:30:29+01:00</updated><id>http://www.tizonia.org/</id><title type="html">The Tizonia Project</title><subtitle>Command-line cloud music player for Linux that supports Spotify, Google Play Music, YouTube, SoundCloud, and Dirble.
 </subtitle><entry><title type="html">Tizonia 0.22.0 adds support for iHeartRadio</title><link href="http://www.tizonia.org/news/2020/05/22/release-0-22-0/" rel="alternate" type="text/html" title="Tizonia 0.22.0 adds support for iHeartRadio" /><published>2020-05-22T23:17:00+01:00</published><updated>2020-05-22T23:17:00+01:00</updated><id>http://www.tizonia.org/news/2020/05/22/release-0-22-0</id><content type="html" xml:base="http://www.tizonia.org/news/2020/05/22/release-0-22-0/">&lt;p&gt;Tizonia version
 &lt;a href=&quot;https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.22.0&quot;&gt;0.22.0&lt;/a&gt;
 codenamed “&lt;a href=&quot;https://en.wikipedia.org/wiki/Ser%C3%B3n&quot;&gt;Seron&lt;/a&gt;” is
@@ -6,14 +6,15 @@ out with 133 commits, 326 files changed, 14484 insertions(+), 2468 deletions(-).
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;iheartradio-support-added&quot;&gt;iHeartRadio support added&lt;/h3&gt;
+&lt;h3 id=&quot;iheartradio&quot;&gt;iHeartRadio&lt;/h3&gt;
 
-&lt;p&gt;There is so much great music streamed every day by thousands of radio stations
-all over the world. Just having the chance to tap into that wealth is
-absolutely amazing when you are a music lover. With Tizonia you can now stream
-from both TuneIn and iHeartRadio radio directories (no subscriptions needed!).&lt;/p&gt;
+&lt;p&gt;There is so much great music streamed every day in the Internet by thousands of
+radio stations all over the world. As a music lover, just having the chance to
+tap into that is absolutely amazing. Now with Tizonia you can stream from both
+TuneIn and iHeartRadio Internet radio directories. Remember, no subscriptions
+needed!.&lt;/p&gt;
 
-&lt;p&gt;The interface for iHeartRadio is really simple:&lt;/p&gt;
+&lt;p&gt;The interface for iHeartRadio is super simple:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;--iheart-search arg
    iheart station search.
