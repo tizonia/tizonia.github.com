@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tizonia 0.22.0 adds support for iHeartRadio</title>
+    <meta name="description" content="Tizonia version0.22.0codenamed “Seron” isout with 133 commits, 326 files changed, 14484 insertions(+), 2468 deletions(-).">
+
+
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+
+    <link rel="shortcut icon" href="/favicon.ico?1">
+    <!-- Begin Jekyll SEO tag v2.3.0 -->
+<title>Tizonia 0.22.0 adds support for iHeartRadio | The Tizonia Project</title>
+<meta property="og:title" content="Tizonia 0.22.0 adds support for iHeartRadio" />
+<meta name="author" content="juanrubio" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Tizonia version 0.22.0 codenamed “Seron” is out with 133 commits, 326 files changed, 14484 insertions(+), 2468 deletions(-)." />
+<meta property="og:description" content="Tizonia version 0.22.0 codenamed “Seron” is out with 133 commits, 326 files changed, 14484 insertions(+), 2468 deletions(-)." />
+<link rel="canonical" href="http://www.tizonia.org/news/2020/05/22/release-0-22-0/" />
+<meta property="og:url" content="http://www.tizonia.org/news/2020/05/22/release-0-22-0/" />
+<meta property="og:site_name" content="The Tizonia Project" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-05-22T23:17:00+01:00" />
+<script type="application/ld+json">
+{"description":"Tizonia version 0.22.0 codenamed “Seron” is out with 133 commits, 326 files changed, 14484 insertions(+), 2468 deletions(-).","headline":"Tizonia 0.22.0 adds support for iHeartRadio","dateModified":"2020-05-22T23:17:00+01:00","datePublished":"2020-05-22T23:17:00+01:00","sameAs":null,"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://www.tizonia.org/news/2020/05/22/release-0-22-0/"},"image":null,"url":"http://www.tizonia.org/news/2020/05/22/release-0-22-0/","name":null,"publisher":null,"author":{"@type":"Person","name":"juanrubio"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <link rel="canonical" href="http://www.tizonia.org/news/2020/05/22/release-0-22-0/">
+    <link rel="alternate" type="application/rss+xml" title="The Tizonia Project" href="http://www.tizonia.org/feed.xml" />
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container navbar-container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+            <a class="navbar-brand" href="/">
+                <span><img src="/img/logonav.png"></span> The Tizonia Project
+            </a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li  class="active" ><a href="/news/2020/05/22/release-0-22-0/">News</a></li>
+            <li ><a href="/docs/spotify/">Explore</a></li>
+            <li ><a href="/docs/debian/">Installation</a></li>
+            <li ><a href="https://docs.tizonia.org">Docs</a></li>
+            <li ><a href="/docs/chat">Support</a></li>
+            <li class="active"><a href="https://github.com/tizonia/tizonia-openmax-il">GitHub</a></li>
+            </ul>
+            <div class="navbar-right">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group has-feedback">
+                        <input id="search-box" type="text" class="form-control" placeholder="Search...">
+                        <i class="fa fa-search form-control-feedback"></i>
+                    </div>
+                </form>
+                <ul class="nav navbar-nav">
+                    <li><a href="https://github.com/tizonia/tizonia-openmax-il"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="container">
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="well">
+                <h4>RECENT POSTS</h4>
+                <ul class="list-unstyled post-list-container">
+                    
+                    <li><a href="/news/2020/05/22/release-0-22-0/"  class="active" >Tizonia 0.22.0 adds support for iHeartRadio</a></li>
+                    
+                    <li><a href="/news/2020/03/08/release-0-21-0/" >Tizonia 0.21.0 brings changes to minimize the YouTube API quota issues</a></li>
+                    
+                    <li><a href="/news/2020/02/20/release-0-20-0/" >TuneIn Internet radio and podcasts, and color-themes in Tizonia 0.20.0</a></li>
+                    
+                    <li><a href="/news/2019/03/19/release-0-19-0/" >Global Spotify playlist search and other improvements in Tizonia 0.19.0</a></li>
+                    
+                    <li><a href="/news/2019/03/17/release-0-18-0/" >Fixed 'Google Play Music tracks cut short' in Tizonia 0.18.0</a></li>
+                    
+                    <li><a href="/news/2019/01/17/release-0-17-0/" >Spotify login issues fixed in Tizonia 0.17.0</a></li>
+                    
+                    <li><a href="/news/2018/12/03/release-0-16-0/" >More ways to discover music on Spotify with Tizonia 0.16.0</a></li>
+                    
+                    <li><a href="/news/2018/06/15/release-0-15-0/" >Totally revamped Spotify support in Tizonia 0.15.0</a></li>
+                    
+                    <li><a href="/news/2018/04/21/release-0-14-0/" >Tizonia v0.14.0 adds YouTube Channels and Google Play Music stations for non-subscribers</a></li>
+                    
+                    <li><a href="/news/2018/03/09/release-0-13-0/" >Tizonia v0.13.0 adds support for Plex media servers</a></li>
+                    
+                    <li><a href="/allposts">All posts ...</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <h1>Tizonia 0.22.0 adds support for iHeartRadio</h1>
+            <p>May 22, 2020 • juanrubio</p>
+            <div  id="markdown-content-container"><p>Tizonia version
+<a href="https://github.com/tizonia/tizonia-openmax-il/releases/tag/v0.22.0">0.22.0</a>
+codenamed “<a href="https://en.wikipedia.org/wiki/Ser%C3%B3n">Seron</a>” is
+out with 133 commits, 326 files changed, 14484 insertions(+), 2468 deletions(-).</p>
+
+<p><br /></p>
+
+<h3 id="iheartradio-support-added">iHeartRadio support added</h3>
+
+<p>There is so much great music streamed every day by thousands of radio stations
+all over the world. Just having the chance to tap into that wealth is
+absolutely amazing when you are a music lover. With Tizonia you can now stream
+from both TuneIn and iHeartRadio radio directories (no subscriptions needed!).</p>
+
+<p>The interface for iHeartRadio is really simple:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>--iheart-search arg
+   iheart station search.
+
+--iheart-keywords arg
+    Additional keywords that may be used in conjunction with the iheart search option. Optional (may be repeated).
+</code></pre>
+</div>
+
+<p>Here are some examples:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>$ tizonia --iheart-search "top 40"
+
+$ tizonia --iheart-search "kiss"
+
+$ tizonia --iheart-search "ny"
+
+$ tizonia --iheart-search "albuquerque"
+
+$ tizonia --iheart-search "90s"
+
+$ tizonia --iheart-search "rock" --iheart-keywords 'The Rocket'
+</code></pre>
+</div>
+
+<p>For more information, check out the
+<a href="https://docs.tizonia.org/manual/iheart.html">iHeart</a> section of the project
+documentation.</p>
+
+<h3 id="spotify-access-to-private-playlists-and-spotifys-made-for-you-playlists">Spotify: access to private playlists and Spotify’s ‘Made for you’ playlists</h3>
+
+<p>New options have been added to play private playlists and other private lists
+like the user’s top tracks, top artists, recent and liked tracks.</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  --spotify-user-liked-tracks           Play the user's liked tracks.
+  --spotify-user-recent-tracks          Play the user's most recently played
+                                        tracks.
+  --spotify-user-top-tracks             Play the user's top tracks.
+  --spotify-user-top-artists            Play top tracks from the user's top
+                                        artists.
+  --spotify-user-playlist arg           Play a playlist from the users private
+                                        library, including Daily Mixes and
+                                        Discover Weekly.
+</code></pre>
+</div>
+
+<p>Also two more options have been added to conveniently access recommendations by track and artist name.</p>
+<div class="highlighter-rouge"><pre class="highlight"><code>  --spotify-recommendations-by-track arg
+                                        Play Spotify recommendations by track
+                                        name.
+  --spotify-recommendations-by-artist arg
+                                        Play Spotify recommendations by artist
+                                        name.
+
+</code></pre>
+</div>
+
+<h3 id="new-keyboard-shortcuts">New keyboard shortcuts</h3>
+
+<p>A few new actions are now available via keyboard shortcuts. See below for the
+complete list:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>➜  ~  tizonia --help keyboard
+tizonia 0.22.0. Copyright (C) 2020 Juan A. Rubio and contributors
+This software is part of the Tizonia project &lt;https://tizonia.org&gt;
+
+GNU Lesser GPL version 3 &lt;http://gnu.org/licenses/lgpl.html&gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Keyboard control:
+
+   [p] / [PgDn] skip to previous track/station.
+   [n] / [PgUp] skip to next track/station.
+   [Home] / [End] go to beginning/end of playlist.
+   &lt;number&gt; [g] go to track/station &lt;number&gt; in playlist.
+   [+/-] [Up/Down] increase/decrease volume.
+   [m] mute.
+   [l] print playlist.
+   [?] keyboard help.
+   [space] pause playback.
+   [q] quit.
+</code></pre>
+</div>
+
+<h3 id="binaries-and-distribution">Binaries and distribution</h3>
+
+<p>Binaries for Ubuntu 20.04 (Focal) are now available. Support for Ubuntu Xenial has been dropped.</p>
+
+<p><a href="https://github.com/tizonia/tizonia-openmax-il/blob/master/CHANGELOG.md">CHANGELOG.md</a>
+contains all the details.</p>
+
+<p>Tizonia v0.22.0 will soon be in the following channels:</p>
+<ul>
+  <li><a href="https://bintray.com/tizonia">Bintray</a> (Debian packages)</li>
+  <li><a href="https://aur.archlinux.org/packages/tizonia-all/">AUR</a> (Arch Linux)</li>
+  <li><a href="https://github.com/tizonia/docker-tizonia">docker-tizonia</a>.</li>
+</ul>
+
+<h3 id="call-for-maintainers---tizonia-snap">Call for Maintainers - Tizonia Snap</h3>
+<p>If you enjoy using Tizonia packaged as a Snap and would like to contribute, the
+Snap of Tizonia is in need of a refresh. This is not a difficult task, and it
+would be great if someone from the community wanted to step up and provide help
+with the maintainership of the Snap package.</p>
+
+<p>For more details, visit the Snap package repository:</p>
+<ul>
+  <li><a href="https://github.com/tizonia/tizonia-snap">tizonia-snap</a>.</li>
+</ul>
+
+<h3 id="contributing">Contributing</h3>
+
+<p>Please have a look at our <a href="https://github.com/tizonia/tizonia-openmax-il/contribute">contribution
+guidelines</a> if you
+are interested in participating. We are always looking for help, be it with
+feature requests, bug reporting, code contributions or general feedback.</p>
+
+<h3 id="thanks">Thanks!</h3>
+
+<p>Many thanks to all the people that have contributed to this release, with code,
+with bug reports or other feedback. Checkout our <a href="https://github.com/tizonia/tizonia-openmax-il#hall-of-fame">Hall of
+Fame</a>.</p>
+
+<h3 id="give-us-your-star">Give us your star!</h3>
+
+<p>Finally, if you enjoy using Tizonia and have a GitHub account, consider giving
+your <a href="https://github.com/tizonia/tizonia-openmax-il/stargazers">star</a>!. That
+would really mean a lot! :-)</p>
+</div>
+            <hr>
+            <ul class="pager">
+                
+                <li class="previous">
+                    <a href="/news/2020/03/08/release-0-21-0/">
+                        <span aria-hidden="true">&larr;</span> Older
+                    </a>
+                </li>
+                 
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+    <div class="container">
+
+        <p class="text-center">
+            The Tizonia Project 2020 |
+            Powered by <a href="https://github.com/aksakalli/jekyll-doc-theme">Jekyll Doc Theme</a>
+        </p>
+        <!-- <p class="text-muted">Place sticky footer content here.</p> -->
+    </div>
+</footer>
+
+    <script>
+  var baseurl = ''
+</script>
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap.min.js "></script>
+<script src="/js/typeahead.bundle.min.js "></script>
+
+<script src="/js/main.js "></script>
+
+    
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-21817639-6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-21817639-6');
+</script>
+
+    
+</body>
+
+</html>
